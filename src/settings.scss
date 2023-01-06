@@ -1,0 +1,30 @@
+/* Colors */
+
+$red: #9D0000;
+$blue: #0012B0;
+$black: #0f0f0f;
+$grey: #2a2a2a;
+$white: #f7f7f7;
+
+
+/* images */
+
+$bg: url(./assets/images/Background.png);
+$superhero: url(./assets/images/SuperHeros.png);
+$supervilain: url(./assets/images/SuperVilain.png);
+$bluesmoke: url(./assets/images/BlueSmoke.svg);
+$redsmoke: url(./assets/images/RedSmoke.svg);
+
+
+/* mixins */
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* fonts */
+
+$fontTitre: './assets/fonts/GUERRILLA.ttf';
+$fontTexte: './assets/fonts/BarlowCondensed-Regular.ttf';
