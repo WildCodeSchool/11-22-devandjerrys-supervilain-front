@@ -1,0 +1,37 @@
+.blockFilterCatalogue{
+    background-color: $white;
+    width: 480px;
+    height: 100%;
+    @include flex;
+    flex-direction: column;
+    align-items:flex-end;
+    padding: 0px 10px;
+    .blockButtonFilterCatalogue{
+        @include flex;
+        justify-content: space-around;
+        width: 100%;
+        .addFilter{
+            @include flex;
+            background-color: #FFF;
+            height: 40px;
+            width: 170px;
+            border: solid 1px;
+            font-family: myFirstText;
+            font-weight: bold;
+            gap:5px;
+            span{
+                font-size: 20px;
+            }
+        }
+        .search{
+            background-color:$blue;
+            border-radius: 10px;
+            width: 150px;
+            height: 30px;
+            color: $white;
+            font-family: myFirstFont;
+            border: none;
+            box-shadow: 0px 0px 2px 1px $blue;
+        }
+    }
+}
