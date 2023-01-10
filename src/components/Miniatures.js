@@ -1,17 +1,28 @@
-// import '../screens/Miniatures.scss'
-//
-const Miniatures = props => (
+import loki from '../assets/images/loki.png'
+
+const Miniatures = () => (
   <div className='vilainpictures'>
-    <p>
+    <h2>
       SELECTIONNEZ LES SUPER-VILAINS
       <br />
       QUE VOUS SOUHAITEZ
-    </p>
+    </h2>
 
     <div className='cards'>
-      <img className='cards-photo' src={props.image} />
-      <h4>Pouvoir:{props.power}</h4>
-      <h4>Prix:{props.price}</h4>
+      <div className='card-body'>
+        <div className='pseudo'>
+          <h2>LOKI</h2>
+        </div>
+
+        <div className='picture'>
+          <img className='frame' src={loki} alt='Photo du vilain' />
+        </div>
+
+        <div className='description'>
+          <h3>POUVOIR: BLABLA </h3>
+          <h3>PRIX: 10000000 </h3>
+        </div>
+      </div>
     </div>
   </div>
 )
