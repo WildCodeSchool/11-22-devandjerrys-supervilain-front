@@ -1,0 +1,30 @@
+.footer-container {
+    @include flex;
+    justify-content: space-around;
+    gap: 1000px;
+}
+
+.logo-container {    
+    ul {
+        @include flex
+    }
+    li {
+        list-style-type: none;
+        margin-right: 10px;
+    }
+    a {
+        text-decoration: none;
+        
+    }
+    img {
+        width : 30px;
+        height: 30px;
+    }
+}
+.contact {
+
+    a {
+        color: $white;
+        font-family: $fontTexte;
+    }
+}
