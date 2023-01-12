@@ -2,12 +2,6 @@ import loki from '../assets/images/loki.png'
 
 const Miniatures = () => (
   <div className='vilainpictures'>
-    <h2>
-      SELECTIONNEZ LES SUPER-VILAINS
-      <br />
-      QUE VOUS SOUHAITEZ
-    </h2>
-
     <div className='cards'>
       <div className='card-body'>
         <div className='pseudo'>
@@ -20,7 +14,7 @@ const Miniatures = () => (
 
         <div className='description'>
           <h3>POUVOIR: BLABLA </h3>
-          <h3>PRIX: 10000000 </h3>
+          <h3>PRIX: 10000000 $ </h3>
         </div>
       </div>
     </div>

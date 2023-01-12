@@ -1,35 +1,82 @@
-.vilainpictures h2{
-    
-    color:$white;
+.vilainpictures {
+    color: $white;
     font-family: $fontTitre;
-}
-.cards{
-    .card-body{
-        background:no-repeat url('../assets/images/cadre.png');
-        width: 450px;
+
+    .pseudo {
+        text-align: center;
+        left: 130px;
+        position: relative;
+        top: 25px;
+        width: fit-content;
+    }
+
+    .card-body {
+        width: 350px;
         height: 400px;
-        position:relative;
-        margin: 20px 0 0 30px;
+        background: no-repeat url("../assets/images/cadre.png");
+        background-size: contain;
+        position: relative;
         padding: 10px 0 0 10px;
     }
-    .description{
-        color:$white;
-        font-family: $fontTexte;
+
+    .description {
+        color: #f7f7f7;
+        font-family: "Barlow";
+        text-align: center;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        // align-items: flex-start;
         position: absolute;
         padding: 35px;
-        top: 260px;
+        top: 60%;
     }
-    .pseudo{
-            left: 130px;
-            position: relative;
-            top: 25px;
-        }  
-    }
-    .frame{
-        height: 300px;
+
+    .frame {
+        width: 300px;
         display: flex;
+    }
+}
+
+@media screen and (min-width: 958px) and (max-width:2048px) {
+    .vilainpictures {
+        color: $white;
+        font-family: $fontTitre;
+        // width: 38%;
+
+        .cards {
+            .card-body {
+                display: block;
+                background: no-repeat url("../assets/images/cadre.png");
+                background-size: contain;
+                width: 350px;
+                height: 400px;
+                position: relative;
+                padding: 10px 0 0 10px;
             }
-    
+
+            .description {
+                color: $white;
+                font-family: $fontTexte;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                position: absolute;
+                padding: 35px;
+                top: 60%;
+            }
+
+            .pseudo {
+                left: 130px;
+                position: relative;
+                top: 25px;
+                width: fit-content;
+            }
+
+            .frame {
+                width: 300px;
+                display: flex;
+            }
+        }
+    }
+}
