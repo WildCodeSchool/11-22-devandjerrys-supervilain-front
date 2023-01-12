@@ -11,14 +11,14 @@ function App() {
   const [titre, setTitre] = useState('test')
   return (
     <div className='App'>
-      <Header titre={titre}/>
+      <Header titre={titre} />
       <Routes>
-        <Route path='/' element={<Home titre={titre} setTitre={setTitre} />}/>
-        <Route path='/Connectezvous' element={<Connect/>} />
+        <Route path='/' element={<Home titre={titre} setTitre={setTitre} />} />
+        <Route path='/Connectezvous' element={<Connect />} />
         <Route path='/catalogue' element={<Catalogue />} />
         <Route path='/cards' element={<Cards />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
