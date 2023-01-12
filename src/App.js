@@ -3,9 +3,8 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './screens/Home'
 import Header from './components/Header'
 import Footer from './components/Footer'
-
-
 import Catalogue from './screens/Catalogue'
+import Cards from './components/Cards'
 
 function App() {
   const [titre, setTitre] = useState('test')
@@ -15,6 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home titre={titre} setTitre={setTitre} />} />
         <Route path='/catalogue' element={<Catalogue />} />
+        <Route path='/cards' element={<Cards />} />
       </Routes>
       <Footer/>
     </div>
