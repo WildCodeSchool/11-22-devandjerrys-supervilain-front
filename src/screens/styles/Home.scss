@@ -20,17 +20,18 @@ body {
     padding: 20px;
     gap: 200px;
     position: relative;
-    font-family: $fontTitre;
     text-transform: uppercase;
     
     .text-superheros {
         position: absolute;
-        left: 150px
+        left: 150px;
+        font-family: $fontTitre;
     }
 
     .text-supervilain {
         position: absolute;
         right: 150px;
+        font-family: $fontTitre;
     }
 }
 

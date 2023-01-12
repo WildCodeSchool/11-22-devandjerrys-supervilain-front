@@ -41,8 +41,7 @@ const Header = () => {
           </button>
         </div>
         <h1 className='title-home'>
-          THE <span className='red'>DEAD</span>{' '}
-          <span className='blue'>AGENCY</span>
+          THE <span className='red'>DEAD</span> <span className='blue'>AGENCY</span>
         </h1>
       </div>
     </>
