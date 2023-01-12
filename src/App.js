@@ -1,15 +1,13 @@
 import { Route, Routes } from 'react-router-dom'
 import Home from './screens/Home'
-import Panier from './components/Panier'
-import ModalPaiement from './components/ModalPaiement'
+import Catalogue from './screens/Catalogue'
 
 function App() {
   return (
     <div className='App'>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/panier' element={<Panier />} />
-        <Route path='/modalPaiement' element={<ModalPaiement />} />
+        <Route path='/catalogue' element={<Catalogue />} />
       </Routes>
     </div>
   )

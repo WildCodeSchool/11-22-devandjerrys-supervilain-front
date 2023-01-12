@@ -6,7 +6,10 @@ const Panier = () => {
     <div className='panier'>
       <div className='panier-header'>
         <h2>VOTRE PANIER</h2>
-        <h3> VOICI LES SUPER-VILAINS QUE VOUS AVEZ SELECTIONNES</h3>
+        <h3 className='titre'>
+          {' '}
+          VOICI LES SUPER-VILAINS QUE VOUS AVEZ SELECTIONNES
+        </h3>
         <div className='panier-bloc'>
           <div className='panier-list'>
             <img className='image' src='' alt='' />
