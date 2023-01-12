@@ -1,3 +1,28 @@
+.header-container {
+  @include flex;
+  position: relative;
+  width: 100vw;
+  height: 20vh;
+}
+
+/* style title */
+.title-home {
+   position: absolute;
+   color: $white;
+   font-family: $fontTitre;
+   font-size: 5rem;
+   font-weight: 1;
+   right: 300px;
+   top: 40px;
+   .red {
+      color: $red;
+     }
+     .blue {
+        color: $blue;
+     }
+  }    
+/* end style title */
+
 /* style burger */
 .menu__burger{
     display: flex;
@@ -19,7 +44,7 @@
     align-items: center;
     position: fixed;
     left: -100vw;
-    top: 60px;
+    top: 80px;
     height: 40vh;
     width: 230px;
     padding: 0.3em;
@@ -76,8 +101,8 @@
     color: transparent;
     display: block;
     position: fixed;
-    top: 1rem;
-    left: 1rem;
+    top: 2rem;
+    left: 3rem;
 
     &:hover {
         cursor: pointer;   
@@ -108,7 +133,7 @@
     transform: translateY(10px);
  }
  .show-burger .menu__links{
-    left: 15px;
+    left: 45px;
     visibility: visible;
  }
  .show-burger .burger-bar::before {
@@ -120,25 +145,6 @@
  .show-burger .burger-bar {
     width: 0;
     background: transparent;
- }
-
- /* end style burger */
-
- .header-container {
-   @include flex;
- }
-
- /* style title */
- .title {
-    color: $white;
-    font-family: $fontTitre;
-    font-weight: 1;
-    font-size: 80px;
-    .red {
-       color: $red;
-      }
-      .blue {
-         color: $blue;
-      }
-   }    
- /* end style title */
+   }
+   
+   /* end style burger */

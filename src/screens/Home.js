@@ -1,34 +1,33 @@
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+
 import superheros from '../assets/images/superheros.png'
 import supervilain from '../assets/images/supervilain.png'
 import redsmoke from '../assets/images/redsmoke.svg'
 import bluesmoke from '../assets/images/bluesmoke.svg'
+import { Link } from 'react-router-dom'
 
-
-const Home = () => {
+const Home = (props) => {
+  props.setTitre('THE DEAD AGENCY')
   return (
     <>
-    <Header />
     <div className='home-container'>
-      <div className='title-container'>
-        <h3 className="title-superheros">" Vous souhaitez recruter des super-vilain ? <br />Inscrivez-vous et faites votre choix ! "</h3>
-        <h3 className="title-supervilain">" Vous souhaitez intégrer notre catalogue de super-vilain ? <br />Inscrivez-vous et passez le test ! "</h3>
+        <h1 className="title">{props.titre}</h1>
+      <div className='text-container'>
+        <h3 className="text-superheros">" Vous souhaitez recruter des super-vilain ? <br />Inscrivez-vous et faites votre choix ! "</h3>
+        <h3 className="text-supervilain">" Vous souhaitez integrer notre catalogue de super-vilain ? <br />Inscrivez-vous et passez le test ! "</h3>
       </div>  
       <div className="images-container">
         <img src={superheros} alt="superheros" className='image-superhéros'></img>
         <img src={supervilain} alt="supervilain" className='image-supervilain'></img>
       </div>
       <div className="btn-container">
-        <button type='button' className='btn-superheros'>Vous êtes un super-héros</button>
-        <button type='button' className='btn-supervilain'>Vous êtes un super-vilain</button>
+      <Link to="/#"><button type='button' className='btn-superheros'>Vous etes un super-heros</button></Link>
+      <Link to="/#"><button type='button' className='btn-supervilain'>Vous etes un super-vilain</button></Link>
       </div>
       <div className="smoke-container">
-        <div ><img src={redsmoke} alt="red smoke" className="redsmoke"></img></div>
         <div ><img src={bluesmoke} alt="blue smoke" className="bluesmoke"></img></div>
+        <div ><img src={redsmoke} alt="red smoke" className="redsmoke"></img></div>
       </div>
     </div> 
-    {/* <Footer /> */}
   </>
   )
 }
