@@ -10,10 +10,6 @@ $white: #f7f7f7;
 /* images */
 
 $bg: url(./assets/images/Background.png);
-$superhero: url(./assets/images/SuperHeros.png);
-$supervilain: url(./assets/images/SuperVilain.png);
-$bluesmoke: url(./assets/images/BlueSmoke.svg);
-$redsmoke: url(./assets/images/RedSmoke.svg);
 
 
 /* mixins */
@@ -24,18 +20,16 @@ $redsmoke: url(./assets/images/RedSmoke.svg);
     align-items: center;
 }
 
+
 /* fonts */
 
 $fontTitre : 'Guerrilla';
 $fontTexte : 'Barlow';
-
 @font-face {
-  font-family: $fontTitre;
-  src: url('./assets/fonts/GUERRILLA.ttf');
-  
+    font-family: $fontTitre;
+    src: url(./assets/fonts/GUERRILLA.ttf)
 }
 @font-face {
-      font-family: $fontTexte;
-      src: url('./assets/fonts/BarlowCondensed-Regular.ttf');
-      
-    }
+    font-family: $fontTexte;
+    src: url(./assets/fonts/BarlowCondensed-Regular.ttf)
+}
