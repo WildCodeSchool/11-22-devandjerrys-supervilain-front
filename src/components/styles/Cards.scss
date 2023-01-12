@@ -1,0 +1,26 @@
+.powerList {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.wanted {
+    font-family: $fontTitre;
+    font-size: 110px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.containerModal {
+    width: 80vw;
+    border: 10px;
+    border-style: double;
+    border-radius: 5px;
+}
+
+.profilPicture img {
+    border-style: solid;
+    width: 405px;
+    height: 505px;
+}
