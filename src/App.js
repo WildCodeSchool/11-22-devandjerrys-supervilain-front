@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import Inscription from './screens/inscriptionSuperVilain'
+import InscriptionSuperVilain from './screens/InscriptionSuperVilain'
 import Home from './screens/Home'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div className='App'>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/inscriptionSuperVilain' element={<Inscription />} />
+        <Route path='/inscription' element={<InscriptionSuperVilain />} />
       </Routes>
     </div>
   )

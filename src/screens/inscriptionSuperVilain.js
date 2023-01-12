@@ -5,11 +5,8 @@ const inscriptionSuperVilain = () => (
   <div>
     <Header />
     <div className='isv-container'>
-      <div className='isv-card'>
-        <h2>
-          TEST REUSSI, INSCRIVEZ-VOUS POUR FAIRE PARTI DE NOTRE CATALOGUE!
-        </h2>
-      </div>
+      <h2>TEST REUSSI, INSCRIVEZ-VOUS POUR FAIRE PARTI DE NOTRE CATALOGUE!</h2>
+      <div className='isv-card'></div>
       <Inscription />
     </div>
   </div>
