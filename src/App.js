@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import InscriptionSuperVilain from './screens/InscriptionSuperVilain'
+import InscriptionSuperVilain from './screens/inscriptionSuperVilain'
 import Home from './screens/Home'
 
 function App() {

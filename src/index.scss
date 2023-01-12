@@ -1,12 +1,15 @@
 /* Styles */
 @import "./settings.scss";
 @import "./App.scss";
+// @import "../screens/Miniatures.scss";
 @import "./components/styles/Header.scss";
 @import "./screens/styles/Home.scss";
 @import "./components/styles/Footer.scss";
+// @import "../src/screens/Catalogue.scss";
+// @import "./assets/fonts/GUERRILLA.ttf";
+// @import "./assets/fonts/BarlowCondensed-Regular.ttf";
 @import "./screens/InscriptionSuperVilain.scss";
 @import "./components/Inscription.scss";
-
 
 
 /* Settings Global */
@@ -18,6 +21,8 @@
 }
 
 body {
+ background: $bg;
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
