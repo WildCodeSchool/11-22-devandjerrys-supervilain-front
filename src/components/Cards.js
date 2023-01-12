@@ -16,7 +16,7 @@ function Cards({closeModal}) {
                     <li>Folies</li>
                 </ul>
             </header>
-            <body>
+            <body className="bodyCards">
                 <div className="profilPicture">
                     <img src={Joker} alt="mechant"/>
                 </div>
@@ -42,7 +42,7 @@ function Cards({closeModal}) {
                 
             </body>
             <footer className="footer">
-            <div className="description">
+            <div className="descriptions">
                         <p >Le Joker affiche un goût particulier pour les farces macabres. Les armes chimiques n'ont pas de secret pour lui et il porte en permanence plusieurs sortes d’acides ainsi que son venin de Joker. Sans oublier le pistolet d'où sort un drapeau 'BANG!'</p>
                     </div>
                 <div className="highFooter">

@@ -32,6 +32,7 @@
 }
 //-----------BODY------------//
 .containerModal body {
+    background-color: $white;
     display: flex;
     margin: 5px;
 }
@@ -43,7 +44,12 @@
     
 }
 
+.bodyCards {
+    background-color: $white;
+}
+
 .caractPerso {
+    background-color: $white;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -147,14 +153,14 @@
     height: 10vh;
 }
 //------------FOOTER--------//
-.description {
+.descriptions {
     border-style: solid;
     margin: 5px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.description p {
+.descriptions p {
     font-family: $fontTexte;
     font-size: 24px;
 }
