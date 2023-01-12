@@ -1,0 +1,82 @@
+.vilainpictures {
+    color: $white;
+    font-family: $fontTitre;
+
+    .pseudo {
+        text-align: center;
+        left: 130px;
+        position: relative;
+        top: 25px;
+        width: fit-content;
+    }
+
+    .card-body {
+        width: 350px;
+        height: 400px;
+        background: no-repeat url("../assets/images/cadre.png");
+        background-size: contain;
+        position: relative;
+        padding: 10px 0 0 10px;
+    }
+
+    .description {
+        color: #f7f7f7;
+        font-family: "Barlow";
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        // align-items: flex-start;
+        position: absolute;
+        padding: 35px;
+        top: 60%;
+    }
+
+    .frame {
+        width: 300px;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 958px) and (max-width:2048px) {
+    .vilainpictures {
+        color: $white;
+        font-family: $fontTitre;
+        // width: 38%;
+
+        .cards {
+            .card-body {
+                display: block;
+                background: no-repeat url("../assets/images/cadre.png");
+                background-size: contain;
+                width: 350px;
+                height: 400px;
+                position: relative;
+                padding: 10px 0 0 10px;
+            }
+
+            .description {
+                color: $white;
+                font-family: $fontTexte;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                position: absolute;
+                padding: 35px;
+                top: 60%;
+            }
+
+            .pseudo {
+                left: 130px;
+                position: relative;
+                top: 25px;
+                width: fit-content;
+            }
+
+            .frame {
+                width: 300px;
+                display: flex;
+            }
+        }
+    }
+}

@@ -1,8 +1,8 @@
 
 import superheros from '../assets/images/superheros.png'
 import supervilain from '../assets/images/supervilain.png'
-import redsmoke from '../assets/images/redsmoke.svg'
-import bluesmoke from '../assets/images/bluesmoke.svg'
+import redsmoke from '../assets/images/RedSmoke.svg'
+import bluesmoke from '../assets/images/BlueSmoke.svg'
 import { Link } from 'react-router-dom'
 
 const Home = (props) => {
