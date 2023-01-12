@@ -1,9 +1,8 @@
-import Header from '../components/Header'
 import Miniatures from '../components/Miniatures'
+import Panier from '../components/Panier'
 
 const Catalogue = () => (
-  <div>
-    <Header />
+  <div className='globalcontainer'>
     <div className='container'>
       <div className='choose'>
         <h2>
@@ -17,6 +16,7 @@ const Catalogue = () => (
       <Miniatures />
       <Miniatures />
     </div>
+    <Panier />
   </div>
 )
 

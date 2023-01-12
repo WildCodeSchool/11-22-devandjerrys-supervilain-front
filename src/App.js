@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
-import Catalogue from './screens/Catalogue'
-
 import Home from './screens/Home'
+import Catalogue from './screens/Catalogue'
 
 function App() {
   return (
