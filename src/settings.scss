@@ -23,11 +23,15 @@ $redsmoke: url(./assets/images/RedSmoke.svg);
     justify-content: center;
     align-items: center;
 }
-
 /* fonts */
 
-// $fontTitre;
-// $fontTexte;
-//  @font-face {font-family: "$fontTitre";src:url('./assets/fonts/GUERRILLA.ttf')};
-
-//  @font-face {font-family:"$fontTexte";src:url ('./assets/fonts/BarlowCondensed-Regular.ttf')};
+$fontTitre : 'Guerrilla';
+$fontTexte : 'Barlow';
+@font-face {
+    font-family: $fontTitre;
+    src: url(./assets/fonts/GUERRILLA.ttf)
+}
+@font-face {
+    font-family: $fontTexte;
+    src: url(./assets/fonts/BarlowCondensed-Regular.ttf)
+}
