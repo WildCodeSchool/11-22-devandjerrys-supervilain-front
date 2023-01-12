@@ -26,5 +26,13 @@ $redsmoke: url(./assets/images/RedSmoke.svg);
 
 /* fonts */
 
-$fontTitre: './assets/fonts/GUERRILLA.ttf';
-$fontTexte: './assets/fonts/BarlowCondensed-Regular.ttf';
+$fontTitre : 'Guerrilla';
+$fontTexte : 'Barlow';
+@font-face {
+    font-family: $fontTitre;
+    src: url(./assets/fonts/GUERRILLA.ttf)
+}
+@font-face {
+    font-family: $fontTexte;
+    src: url(./assets/fonts/BarlowCondensed-Regular.ttf)
+}
