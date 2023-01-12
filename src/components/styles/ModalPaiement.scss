@@ -1,0 +1,36 @@
+.background {
+display: flex;
+justify-content: center;
+align-items: center;
+height:100vh;
+background-color: grey;
+}
+.modalPaiement{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 430px;
+    background-color: $white;
+    border-radius: 30px;
+}
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: $fontTexte;
+}
+.button-paiement {
+    margin-top: 50px;
+    background-color: green;
+    color: $white;
+    border : 1px solid green;
+    border-radius: 30px;
+    width: 93px;
+    height: 28px;
+}

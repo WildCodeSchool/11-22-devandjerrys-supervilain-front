@@ -1,8 +1,7 @@
 .filterCatalogue{
-    width: 100%;
+    width: 50%;
     @include flex;
     justify-content: space-between;
-    background-color: $white;
 
     margin: 5px 0px;
     select, .delete {
@@ -24,7 +23,7 @@
     input{    
         width: 100px;
         background-color: $white;
-        font-family: "./assets/fonts/BarlowCondensed-Regular.ttf";
+        font-family: $fontTexte;
         border: solid 1px $black;
         height: 40px;
         padding: 10px;

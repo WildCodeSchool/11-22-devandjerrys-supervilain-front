@@ -1,22 +1,19 @@
 .blockFilterCatalogue{
-    background-color: $white;
-    width: 480px;
+    width: 50%;
     height: 100%;
     @include flex;
     flex-direction: column;
-    align-items:flex-end;
-    padding: 0px 10px;
+    padding: 10px;
     .blockButtonFilterCatalogue{
         @include flex;
         justify-content: space-around;
-        width: 100%;
+        width: 50%;
         .addFilter{
             @include flex;
-            background-color: #FFF;
             height: 40px;
-            width: 170px;
+            width: 50%;
             border: solid 1px;
-            font-family: myFirstText;
+            font-family: $fontTexte;
             font-weight: bold;
             gap:5px;
             span{
@@ -29,7 +26,7 @@
             width: 150px;
             height: 30px;
             color: $white;
-            font-family: myFirstFont;
+            font-family: $fontTexte;
             border: none;
             box-shadow: 0px 0px 2px 1px $blue;
         }
