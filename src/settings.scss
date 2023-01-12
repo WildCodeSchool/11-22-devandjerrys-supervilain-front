@@ -16,7 +16,19 @@ $bluesmoke: url(./assets/images/BlueSmoke.svg);
 $redsmoke: url(./assets/images/RedSmoke.svg);
 
 
-/* mixins */
+/* mixins */$fontTitre: myFirstFont;
+$fontTexte: myFirstText;
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('./assets/fonts/GUERRILLA.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: myFirstText;
+    src: url('./assets/fonts/BarlowCondensed-Regular.ttf');
+    font-weight: bold;
+    }
 
 @mixin flex {
     display: flex;
@@ -30,12 +42,12 @@ $fontTitre: myFirstFont;
 $fontTexte: myFirstText;
 
 @font-face {
-  font-family: myFirstFont;
-  src: url('./assets/fonts/GUERRILLA.ttf');
-  font-weight: bold;
+    font-family: myFirstFont;
+    src: url('./assets/fonts/GUERRILLA.ttf');
+    font-weight: bold;
 }
 @font-face {
-      font-family: myFirstText;
-      src: url('./assets/fonts/BarlowCondensed-Regular.ttf');
-      font-weight: bold;
-    }
+    font-family: myFirstText;
+    src: url('./assets/fonts/BarlowCondensed-Regular.ttf');
+    font-weight: bold;
+}
