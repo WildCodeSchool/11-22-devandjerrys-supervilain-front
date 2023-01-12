@@ -7,6 +7,7 @@
 }
 
 .containerModal {
+    background-color: $white;
     width: 50vw;
     height: 100vh;
     border: 10px;
@@ -30,7 +31,7 @@
     font-family: $fontTexte;
 }
 //-----------BODY------------//
-body {
+.containerModal body {
     display: flex;
     margin: 5px;
 }
@@ -170,11 +171,6 @@ body {
     margin-bottom: 8px;
 }
 
-footer h2 {
-    display: flex;
-    justify-content: center;
-}
-
 .caractPerso li h3 {
     font-size: 40px;
     font-family: $fontTitre;
@@ -188,11 +184,12 @@ footer h2 {
 }
 
 
-
-footer h2 {
+.footer h2 {
     margin-top: 20px;
     font-family: $fontTitre;
     font-size: 140px;
+    display: flex;
+    justify-content: center;
 }
 //------BUTTON SHOP--------//
 .buttonShop {

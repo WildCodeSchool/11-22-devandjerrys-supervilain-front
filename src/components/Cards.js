@@ -41,7 +41,7 @@ function Cards({closeModal}) {
                 </div>  
                 
             </body>
-            <footer>
+            <footer className="footer">
             <div className="description">
                         <p >Le Joker affiche un goût particulier pour les farces macabres. Les armes chimiques n'ont pas de secret pour lui et il porte en permanence plusieurs sortes d’acides ainsi que son venin de Joker. Sans oublier le pistolet d'où sort un drapeau 'BANG!'</p>
                     </div>
