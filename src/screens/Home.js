@@ -24,8 +24,8 @@ const Home = (props) => {
       <Link to="/#"><button type='button' className='btn-supervilain'>Vous etes un super-vilain</button></Link>
       </div>
       <div className="smoke-container">
-        <div ><img src={bluesmoke} alt="blue smoke" className="bluesmoke"></img></div>
-        <div ><img src={redsmoke} alt="red smoke" className="redsmoke"></img></div>
+        <img src={bluesmoke} alt="blue smoke" className="bluesmoke"></img>
+        <img src={redsmoke} alt="red smoke" className="redsmoke"></img>
       </div>
     </div> 
   </>

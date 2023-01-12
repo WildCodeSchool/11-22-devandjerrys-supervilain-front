@@ -33,5 +33,9 @@
         color: $white;
         font-family: $fontTexte;
         font-size: 1.8em;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
