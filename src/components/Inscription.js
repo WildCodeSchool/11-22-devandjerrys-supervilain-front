@@ -93,8 +93,8 @@ const Inscription = () => {
             confirmer le mot de passe :
             <input
               type='text'
-              size='8'
               required
+              size='8'
               placeholder=''
               value={passWordConf}
               onChange={e => setPassWordConf(e.target.value)}
@@ -110,6 +110,10 @@ const Inscription = () => {
           >
             GO
           </button>
+
+          {/* <img className='blood' src='../src/asset/images/Blood-Splatter.png'>
+            blood
+          </img> */}
         </form>
         {isUserLoggedIn && <Message />}
       </div>
@@ -117,25 +121,18 @@ const Inscription = () => {
   )
 }
 function Message() {
-  useEffect(() => {
-    // console.log('User is log in')
-    // return () => console.log('Bye')
-  }, [])
+  useEffect(() => {}, [])
   return <h1 className='welcome'>HI, YOU'RE WELCOME</h1>
 }
-// function Message() {
-//   const theMessage =
-//     ( pseudo  !== 0 &&  passWordConf  !== 0 &&  passWordConf  !== 0) = true
-//     ( value={pseudo}  !== 0 &&  value={passWord}  !== 0 &&  value={passWordConf}  !== 0) = true
-//     ( input.value.pseudo  !== 0 &&  passWordConf  !== 0 &&  passWordConf  !== 0) = true
-
-//   {
-//     if (theMessage) {
-//       return <p className='welcome'>HI, YOU'RE WELCOME</p>
-//     }
-//     return <p className='No'>NOPE!!!</p>
+// function Message2(props) {
+//   const { isUserLoggedIn } = props
+//   if (isUserLoggedIn) {
+//     return <h1 className='welcome'>HI, YOU'RE WELCOME</h1>
 //   }
+
+//   return <h1 className='no'>NOPE!!!</h1>
 // }
+
 // {studentList.filter((student) => !showFailedOnly || student.note < 10).map((student, index) => (
 //   <li key={index}>
 //     Name: {student.name} Note: {student.note}
