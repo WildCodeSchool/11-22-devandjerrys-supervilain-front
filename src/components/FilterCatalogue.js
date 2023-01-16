@@ -1,8 +1,25 @@
 import { useEffect, useState } from 'react'
 
 const FilterCatalogue = () => {
-  const power = ['Vol', 'Télékinésie', 'génie']
-  const especes = ['Humain', 'Mutant', 'Entité cosmique', 'Asgardian']
+  const power = [
+    'Vol',
+    'Télékinésie',
+    'Télépathie',
+    'Génie',
+    'Magnétisme',
+    'Champs de force',
+    'Multimilliardaire',
+    'Téléportation',
+    'Immortalité',
+    'Arts martiaux'
+  ]
+  const especes = [
+    'Humain',
+    'Mutant',
+    'Entité cosmique',
+    'Asgardian',
+    'New God'
+  ]
   const filterNameForUser = [
     'Pouvoir principal',
     'Espèces',

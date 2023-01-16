@@ -1,21 +1,34 @@
+import axios from 'axios'
 import { useState, useEffect } from 'react'
 import FilterCatalogue from './FilterCatalogue.js'
 import ResultatCatalogue from './ResultatCatalogue.js'
 const BlockFiltreCatalogue = () => {
   const [filterCatalogueArray, setFilterCatalogueArray] = useState([])
-  const [filterCatalogueResult, setFilterCatalogueResult] = useState('')
+  const [filterCatalogueResult, setFilterCatalogueResult] = useState([])
+  const [vilains, setVilains] = useState('')
+  const [test, setTest] = useState('')
+  useEffect(() => {
+    axios
+      .get('http://localhost:4242/catalogue/vilain')
+      .then(res => res.data)
+      .then(data => {
+        setVilains(data)
+        setTest(data)
+      })
+  }, [])
 
   const addFilter = () => {
-    // ajoute une ligne de filtre
-    filterCatalogueArray.push(
+    setFilterCatalogueArray(prevState => [
+      ...prevState,
       <FilterCatalogue
         key={filterCatalogueArray.length}
         id={'filterChoise' + filterCatalogueArray.length}
       />
-    )
-    setFilterCatalogueArray(filterCatalogueArray.map(e => e)) // Met à jour l'affichage
+    ]) // Met à jour l'affichage
   }
   const filterCatalogue = () => {
+    setVilains(test)
+    // console.log('filterCatalogue1', vilains)
     const filter = document.querySelectorAll('.filterRow')
     const result = []
 
@@ -39,11 +52,9 @@ const BlockFiltreCatalogue = () => {
 
       result.push(categoryTemp)
     }
+
     setFilterCatalogueResult(result)
   }
-  useEffect(() => {
-    filterCatalogue()
-  }, [])
   return (
     <>
       <div className='blockFilterCatalogue'>
@@ -57,7 +68,12 @@ const BlockFiltreCatalogue = () => {
           </button>
         </div>
       </div>
-      <ResultatCatalogue filterCatalogueResult={filterCatalogueResult} />
+      <ResultatCatalogue
+        filterCatalogueResult={filterCatalogueResult}
+        vilains={vilains}
+        setVilains={setVilains}
+        test={test}
+      />
     </>
   )
 }

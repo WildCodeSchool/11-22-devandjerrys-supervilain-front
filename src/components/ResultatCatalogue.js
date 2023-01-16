@@ -1,55 +1,107 @@
-import axios from 'axios'
 import { useState, useEffect } from 'react'
-const ResultatCatalogue = props => {
-  const [poulet, setPoulet] = useState('a')
-  const [isLoading, setLoading] = useState(true)
-  /*   const test = () => {
-    axios
-      .get('http://localhost:4242/catalogue/vilain')
-      .then(res => res.data)
-      .then(data =>
-        setPoulet(
-          data.filter(
-            e =>
-              e.powerAndStats.power.includes('Vol') &&
-              e.powerAndStats.intelligence > 90 &&
-              e.price > 900000
-          )
-        )
-      )
-  } */
-  const test = () => {
-    axios
-      .get('http://localhost:4242/catalogue/vilain')
-      .then(res => res.data)
-      .then(data => {
-        if (props.filterCatalogueResult[0].power) {
-          setPoulet(
-            data.find(e => {
-              console.log('data', data)
-              console.log('condition1', e.powerAndStats.power)
-              console.log('condition2', props.filterCatalogueResult[0].power[0])
-              console.log(
-                'filter',
-                e.powerAndStats.power.includes(
-                  props.filterCatalogueResult[0].power[0]
-                )
-              )
-              e.powerAndStats.power.includes(
-                props.filterCatalogueResult[0].power[0]
-              )
-            })
-          )
-        }
-      })
-      .then(res => setLoading(false))
-  }
+const ResultatCatalogue = ({
+  vilains,
+  setVilains,
+  filterCatalogueResult,
+  test
+}) => {
+  const [vilainsResult, setVilainsResult] = useState('')
+
   useEffect(() => {
-    test()
+    filterCatalogueResult.map(itemFiltre => {
+      // setVilains(test)
+      console.log('vilains', vilains)
+      switch (Object.keys(itemFiltre)[0]) {
+        case 'power': {
+          const result = vilains.filter(vilain =>
+            vilain.powerAndStats.power.includes(itemFiltre.power[0])
+          )
+          setVilains(result)
+          break
+        }
+        case 'species': {
+          const result = vilains.filter(vilain =>
+            vilain.appearance.species.includes(itemFiltre.species[0])
+          )
+          setVilains(result)
+          break
+        }
+        case 'price': {
+          const result = vilains.filter(
+            vilain =>
+              vilain.price >= itemFiltre.price[0][0] &&
+              vilain.price <= itemFiltre.price[0][1]
+          )
+          setVilains(result)
+          break
+        }
+        case 'populary': {
+          const result = vilains.filter(
+            vilain =>
+              vilain.powerAndStats.populary >= itemFiltre.populary[0][0] &&
+              vilain.powerAndStats.populary <= itemFiltre.populary[0][1]
+          )
+          setVilains(result)
+          break
+        }
+        case 'cruelty': {
+          const result = vilains.filter(
+            vilain =>
+              vilain.powerAndStats.cruelty >= itemFiltre.cruelty[0][0] &&
+              vilain.powerAndStats.cruelty <= itemFiltre.cruelty[0][1]
+          )
+          setVilains(result)
+          break
+        }
+        case 'strength': {
+          const result = vilains.filter(
+            vilain =>
+              vilain.powerAndStats.strength >= itemFiltre.strength[0][0] &&
+              vilain.powerAndStats.strength <= itemFiltre.strength[0][1]
+          )
+          setVilains(result)
+          break
+        }
+        case 'intelligence': {
+          const result = vilains.filter(
+            vilain =>
+              vilain.powerAndStats.intelligence >=
+                itemFiltre.intelligence[0][0] &&
+              vilain.powerAndStats.intelligence <= itemFiltre.intelligence[0][1]
+          )
+          setVilains(result)
+          break
+        }
+        default:
+          break
+      }
+    })
+  }, [filterCatalogueResult])
 
-    console.log('poulet', poulet)
-  }, [props.filterCatalogueResult])
+  useEffect(() => {
+    setVilainsResult('')
 
-  return <div>{/* !isLoading ? <p>{poulet.pseudo}</p> : <p></p> */}</div>
+    console.log(vilains)
+    vilains
+      ? vilains.map(vilain => {
+          setVilainsResult(prevState => [
+            ...prevState,
+            <div key={vilain.pseudo}>
+              <p key={vilain.pseudo}>{vilain.pseudo}</p>
+              <p key={vilain.price}>prix : {vilain.price}</p>
+              <br />
+            </div>
+          ])
+        })
+      : console.log('bug')
+  }, [vilains])
+
+  return (
+    <div className='resultatCatalogue'>
+      {/* {!isLoading ? <p>{vilains}</p> : <p></p>} */}
+
+      {vilainsResult}
+    </div>
+  )
 }
 export default ResultatCatalogue
