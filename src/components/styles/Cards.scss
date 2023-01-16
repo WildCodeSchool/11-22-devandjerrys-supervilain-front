@@ -1,12 +1,15 @@
 //-----------CSS Modal------------//
 .backgroundModal {
+    position: absolute;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    z-index: 4000;
 }
 
 .containerModal {
+    
     background-color: $white;
     width: 50vw;
     height: 100vh;

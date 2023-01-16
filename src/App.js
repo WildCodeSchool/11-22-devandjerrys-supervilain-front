@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Catalogue from './screens/Catalogue'
 import Cards from './components/Cards'
+import Miniatures from './components/Miniatures'
 
 function App() {
   const [titre, setTitre] = useState('test')
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<Home titre={titre} setTitre={setTitre} />} />
         <Route path='/catalogue' element={<Catalogue />} />
         <Route path='/cards' element={<Cards />} />
+        <Route path='/miniature' element={<Miniatures/>}/>
       </Routes>
       <Footer/>
     </div>

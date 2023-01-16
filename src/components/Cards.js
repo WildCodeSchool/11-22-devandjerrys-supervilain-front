@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import SuperVilain from "../assets/images/SuperVilain.png"
 import Joker from "../assets/images/370-joker.jpg"
 import Approved from "../assets/images/approved.png"
