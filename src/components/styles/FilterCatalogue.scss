@@ -1,0 +1,31 @@
+.filterCatalogue{
+    width: 50%;
+    @include flex;
+    justify-content: space-between;
+
+    margin: 5px 0px;
+    select, .delete {
+        background-color: $white;
+        font-family: $fontTexte;
+        border: solid 1px $black;
+        height: 40px;
+        padding: 10px;
+        width: 140px;
+    }
+    .filterListcategory{
+        width: 160px;
+    }
+    .delete{
+        width: 80px;
+    }
+}
+.filterChoice{
+    input{    
+        width: 100px;
+        background-color: $white;
+        font-family: $fontTexte;
+        border: solid 1px $black;
+        height: 40px;
+        padding: 10px;
+    }
+}
