@@ -1,9 +1,15 @@
+import { useState } from 'react'
 import loki from '../assets/images/loki.png'
+import Cards from './Cards'
 
-const Miniatures = () => (
+
+const Miniatures = () =>{
+ const [openModal, setOpenModal]= useState(false) 
+  return (
+    <>
   <div className='vilainpictures'>
     <div className='cards'>
-      <div className='card-body'>
+      <div className='card-body' onClick={() => {setOpenModal(true);}}>
         <div className='pseudo'>
           <h2>LOKI</h2>
         </div>
@@ -16,9 +22,12 @@ const Miniatures = () => (
           <h3>POUVOIR: BLABLA </h3>
           <h3>PRIX: 10000000 $ </h3>
         </div>
+        
       </div>
     </div>
   </div>
+  {openModal && <Cards closeModal={setOpenModal}/>}
+  </>
 )
-
+}
 export default Miniatures

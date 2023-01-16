@@ -1,12 +1,15 @@
 //-----------CSS Modal------------//
 .backgroundModal {
+    position: absolute;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    z-index: 4000;
 }
 
 .containerModal {
+    
     background-color: $white;
     width: 50vw;
     height: 100vh;
@@ -17,16 +20,15 @@
 //------------HEADER---------//
 .wanted {
     font-family: $fontTitre;
-    font-size: 110px;
+    font-size: 100px;
     display: flex;
     justify-content: center;
-    padding: 5px;
 }
 
 .powerList {
     display: flex;
     justify-content: space-around;
-    padding: 20px;
+    padding-bottom: 10px;
     font-size: 25px;
     font-family: $fontTexte;
 }
@@ -155,9 +157,9 @@
 //------------FOOTER--------//
 .descriptions {
     border-style: solid;
-    margin: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 15px;
 }
 
 .descriptions p {
@@ -180,7 +182,6 @@
 .caractPerso li h3 {
     font-size: 40px;
     font-family: $fontTitre;
-    margin: 10px;
 }
 
 .caractPerso li p {
@@ -190,14 +191,14 @@
 }
 
 
-.footer h2 {
-    margin-top: 20px;
-    font-family: $fontTitre;
-    font-size: 140px;
+.footer {
+    margin-top: 15px;
+}
+//------BUTTON SHOP--------//
+.blockButtonShop{
     display: flex;
     justify-content: center;
 }
-//------BUTTON SHOP--------//
 .buttonShop {
     background-color: rgb(86, 244, 86);
     height: 40px;
