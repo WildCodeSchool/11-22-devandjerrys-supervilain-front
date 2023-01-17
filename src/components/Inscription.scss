@@ -12,7 +12,9 @@
     margin-left: 10px;
     position:relative;
     color:$black;
-    height: 25px;
+    height: 30px;
+    font-family: $fontTexte;
+    font-size: 20px;
 }
 .Inscription {
     box-shadow: 0px 0px 47px 1px $white;
@@ -37,7 +39,9 @@
             font-size: 25px;
             margin-bottom: 60px;
         }
-
+        p{
+            font-family: $fontTexte;
+        }
         button {
             filter: brightness(1);
             color: $white;
@@ -96,28 +100,36 @@
 transform: scale(1.5);
 background: $black;
 color: $white;
-
 }
-.welcome{
-    background: $red;
-    display:flex;
+
+.message{
+background: #9D0000;
+    display: flex;
     position: absolute;
     z-index: 5;
-    left:28%;
-    border:10px;
+    left: 12%;
+    font-size: 30px;
+    top:110px;
+    border: 10px;
     border-radius: 10px;
-    height:150px;
-    width: 206px;
+    height: 200px;
+    width: 370px;
     padding: 25px;
-    color:$white;
-    font-family: $fontTitre;
-    box-shadow: 3px 5px 9px $red;
+    color: #f7f7f7;
+    font-family: "Guerrilla";
+    box-shadow: 3px 5px 9px #9d0000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-.blood{
-    display:none;
+.bloodSplatter{
+    display:flex;
+    position: absolute;
+    top:-200px;
+    height: 400px;
 }
 .no{
-    background: $grey;
+background: $grey;
 display:flex;
 position: absolute;
 z-index: 5;
@@ -130,4 +142,7 @@ padding: 25px;
 color:$white;
 font-family: $fontTitre;
 box-shadow: 3px 5px 9px $red;
+}
+@media screen and (min-weight:1024px) {
+    
 }
