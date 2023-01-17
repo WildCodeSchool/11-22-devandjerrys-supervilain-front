@@ -1,9 +1,20 @@
 import { useEffect, useState } from 'react'
 
-const FilterCatalogue = props => {
-  const power = ['Vol', 'Télékinésie', 'génie']
-  const especes = ['Humain', 'Mutant', 'Entité cosmique', 'Asgardian']
-  const filter = [
+const FilterCatalogue = () => {
+  const power = [
+    'Vol',
+    'Télékinésie',
+    'Télépathie',
+    'Génie',
+    'Magnétisme',
+    'Champs de force',
+    'Multimilliardaire',
+    'Téléportation',
+    'Immortalité',
+    'Arts martiaux'
+  ]
+  const especes = ['Human', 'Mutant', 'Entité cosmique', 'Asgardian', 'New God']
+  const filterNameForUser = [
     'Pouvoir principal',
     'Espèces',
     'Prix',
@@ -11,6 +22,15 @@ const FilterCatalogue = props => {
     'Cruauté',
     'Force',
     'Intelligence'
+  ]
+  const filterNameInJson = [
+    'power',
+    'species',
+    'price',
+    'populary',
+    'cruelty',
+    'strength',
+    'intelligence'
   ]
   const [listFilterCategory, setlistFilterCategory] = useState()
   const [listChoice, setListChoice] = useState()
@@ -26,25 +46,25 @@ const FilterCatalogue = props => {
     switch (
       e.value //Vérifie la catégorie choisie
     ) {
-      case 'Pouvoir principal':
+      case 'power':
         addListChoice(power)
         break
-      case 'Espèces':
+      case 'species':
         addListChoice(especes)
         break
-      case 'Prix':
+      case 'price':
         addInputChoice('price')
         break
-      case 'Popularité':
+      case 'populary':
         addInputChoice('populary')
         break
-      case 'Cruauté':
+      case 'cruelty':
         addInputChoice('cruelty')
         break
-      case 'Force':
+      case 'strength':
         addInputChoice('strength')
         break
-      case 'Intelligence':
+      case 'intelligence':
         addInputChoice('intelligence')
         break
       default:
@@ -74,8 +94,8 @@ const FilterCatalogue = props => {
   const addListFilterCategory = () => {
     // Affiche la liste des catégories de filtres
     setlistFilterCategory(
-      filter.map(e => (
-        <option key={e} value={e}>
+      filterNameForUser.map((e, i) => (
+        <option key={e} value={filterNameInJson[i]}>
           {e}
         </option>
       ))
@@ -87,27 +107,27 @@ const FilterCatalogue = props => {
   const deleteFilter = e => {
     // Supprime la ligne de filtre séléctionné
     e.preventDefault()
-    e.target.form.remove()
+    e.target.parentElement.remove()
   }
 
   return (
-    <form className='filterCatalogue' id={props.id}>
+    <div className='filterRow'>
       <select
         name='filtercategory'
-        className='filterListcategory'
+        className='filterListcategory filter'
         onChange={e => showListChoise(e.target)}
       >
         <option value='default'>Choisissez un filtre</option>
         {listFilterCategory}
       </select>
-      {listChoice ? <select>{listChoice}</select> : null}
+      {listChoice ? <select className='filter'>{listChoice}</select> : null}
       {inputChoice ? <>{inputChoice}</> : null}
       {deletable ? (
         <button onClick={e => deleteFilter(e)} className='delete'>
           Delete
         </button>
       ) : null}
-    </form>
+    </div>
   )
 }
 

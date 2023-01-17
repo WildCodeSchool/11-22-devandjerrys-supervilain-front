@@ -6,7 +6,6 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Catalogue from './screens/Catalogue'
 
-
 function App() {
   const [titre, setTitre] = useState('test')
   return (

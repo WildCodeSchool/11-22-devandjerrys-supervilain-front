@@ -1,0 +1,10 @@
+.resultatCatalogue{
+    min-height: 66vh;
+    width: 70vw;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+    margin-top: 50px;
+}

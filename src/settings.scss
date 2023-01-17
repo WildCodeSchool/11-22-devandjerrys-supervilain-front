@@ -12,7 +12,19 @@ $white: #f7f7f7;
 $bg: url(./assets/images/Background.png);
 
 
-/* mixins */
+/* mixins */$fontTitre: myFirstFont;
+$fontTexte: myFirstText;
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('./assets/fonts/GUERRILLA.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: myFirstText;
+    src: url('./assets/fonts/BarlowCondensed-Regular.ttf');
+    font-weight: bold;
+    }
 
 @mixin flex {
     display: flex;

@@ -2,7 +2,8 @@
     width: 50%;
     @include flex;
     justify-content: space-between;
-
+    flex-direction: column;
+    align-items: flex-start;
     margin: 5px 0px;
     select, .delete {
         background-color: $white;
@@ -10,18 +11,23 @@
         border: solid 1px $black;
         height: 40px;
         padding: 10px;
-        width: 140px;
+        width: 180px;
+    }
+    .filterRow{
+        margin: 5px 0px;
+        display: flex;
+        gap: 30px;
     }
     .filterListcategory{
         width: 160px;
     }
     .delete{
-        width: 80px;
+        width: 50px;
     }
 }
 .filterChoice{
     input{    
-        width: 100px;
+        width: 90px;
         background-color: $white;
         font-family: $fontTexte;
         border: solid 1px $black;
