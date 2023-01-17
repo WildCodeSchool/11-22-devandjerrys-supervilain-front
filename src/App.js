@@ -5,6 +5,7 @@ import Connect from './components/Connectez-vous'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Catalogue from './screens/Catalogue'
+import ModalPaiement from './components/ModalPaiement'
 
 function App() {
   const [titre, setTitre] = useState('test')
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<Home titre={titre} setTitre={setTitre} />} />
         <Route path='/Connectezvous' element={<Connect />} />
         <Route path='/catalogue' element={<Catalogue />} />
+        <Route path='/modalPaiement' element={<ModalPaiement />} />
       </Routes>
       <Footer />
     </div>
