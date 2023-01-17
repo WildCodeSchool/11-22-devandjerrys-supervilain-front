@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
+import Miniatures from '../components/Miniatures'
 const ResultatCatalogue = ({
   vilains,
   setVilains,
   filterCatalogueResult,
   test
 }) => {
-  const [vilainsResult, setVilainsResult] = useState('')
+  const [vilainsResult, setVilainsResult] = useState([])
 
   useEffect(() => {
     filterCatalogueResult.map(itemFiltre => {
@@ -86,22 +87,18 @@ const ResultatCatalogue = ({
       ? vilains.map(vilain => {
           setVilainsResult(prevState => [
             ...prevState,
-            <div key={vilain.pseudo}>
-              <p key={vilain.pseudo}>{vilain.pseudo}</p>
-              <p key={vilain.price}>prix : {vilain.price}</p>
-              <br />
-            </div>
+            <Miniatures
+              key={vilain.pseudo}
+              pseudo={vilain.pseudo}
+              power={vilain.powerAndStats.power[0]}
+              price={vilain.price}
+              miniatures={vilain.images.miniature}
+            />
           ])
         })
       : console.log('bug')
   }, [vilains])
 
-  return (
-    <div className='resultatCatalogue'>
-      {/* {!isLoading ? <p>{vilains}</p> : <p></p>} */}
-
-      {vilainsResult}
-    </div>
-  )
+  return <div className='resultatCatalogue'>{vilainsResult}</div>
 }
 export default ResultatCatalogue

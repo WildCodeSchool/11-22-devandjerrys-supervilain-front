@@ -13,13 +13,7 @@ const FilterCatalogue = () => {
     'Immortalité',
     'Arts martiaux'
   ]
-  const especes = [
-    'Humain',
-    'Mutant',
-    'Entité cosmique',
-    'Asgardian',
-    'New God'
-  ]
+  const especes = ['Human', 'Mutant', 'Entité cosmique', 'Asgardian', 'New God']
   const filterNameForUser = [
     'Pouvoir principal',
     'Espèces',

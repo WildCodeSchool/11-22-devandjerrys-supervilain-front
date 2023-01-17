@@ -1,19 +1,16 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import FilterCatalogue from './FilterCatalogue.js'
-import ResultatCatalogue from './ResultatCatalogue.js'
-const BlockFiltreCatalogue = () => {
+const BlockFiltreCatalogue = props => {
   const [filterCatalogueArray, setFilterCatalogueArray] = useState([])
-  const [filterCatalogueResult, setFilterCatalogueResult] = useState([])
-  const [vilains, setVilains] = useState('')
-  const [test, setTest] = useState('')
+  console.log(props.test)
   useEffect(() => {
     axios
       .get('http://localhost:4242/catalogue/vilain')
       .then(res => res.data)
       .then(data => {
-        setVilains(data)
-        setTest(data)
+        props.setVilains(data)
+        props.setTest(data)
       })
   }, [])
 
@@ -27,7 +24,7 @@ const BlockFiltreCatalogue = () => {
     ]) // Met à jour l'affichage
   }
   const filterCatalogue = () => {
-    setVilains(test)
+    props.setVilains(props.test)
     // console.log('filterCatalogue1', vilains)
     const filter = document.querySelectorAll('.filterRow')
     const result = []
@@ -53,7 +50,7 @@ const BlockFiltreCatalogue = () => {
       result.push(categoryTemp)
     }
 
-    setFilterCatalogueResult(result)
+    props.setFilterCatalogueResult(result)
   }
   return (
     <>
@@ -68,12 +65,12 @@ const BlockFiltreCatalogue = () => {
           </button>
         </div>
       </div>
-      <ResultatCatalogue
+      {/*     <ResultatCatalogue
         filterCatalogueResult={filterCatalogueResult}
         vilains={vilains}
         setVilains={setVilains}
         test={test}
-      />
+      /> */}
     </>
   )
 }

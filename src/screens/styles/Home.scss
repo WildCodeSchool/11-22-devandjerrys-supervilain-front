@@ -1,11 +1,152 @@
+body {
+    overflow-x: hidden;
+}
+
 .home-container {
-    background: no-repeat url(../../assets/images/Background.png) center / cover;
+    position: relative;
     width: 100vw;
     height: 100vh;
 }
 
-.home {
-    h3 {
-        color: white;
+.title {
+    display: none;
+}
+/* TEXTE */
+.text-container {
+    @include flex;
+    color: $white;
+    width: 100vw;
+    height: 40vh;
+    padding: 20px;
+    gap: 200px;
+    position: relative;
+    font-family: $fontTitre;
+    text-transform: uppercase;
+    
+    .text-superheros {
+        position: absolute;
+        left: 150px
+    }
+
+    .text-supervilain {
+        position: absolute;
+        right: 150px;
     }
 }
+
+/* IMAGES SUPERHEROS SUPERVILAIN */
+.images-container {
+    @include flex;
+    width: 100vw;
+    height: 40vh;
+    padding: 20px;
+    position: relative;
+    animation: float 6s ease-in-out infinite;
+    z-index: 2;
+    
+    .image-superhéros{
+        position: absolute;
+        left: 225px;
+        filter: drop-shadow(-18px -14px 0px rgba(0, 0, 0, 0.50));
+    }
+    
+    .image-supervilain{
+        position: absolute;
+        right: 250px;
+        filter: drop-shadow(18px -14px 0px rgba(0, 0, 0, 0.50));
+    }
+}
+@keyframes float {
+    0% {
+        
+        transform: translatey(0px);
+    }
+    50% {
+        
+        transform: translatey(-20px);
+    }
+    100% {
+        
+        transform: translatey(0px);
+    }
+}
+
+/* BOUTONS SUPERHEROS SUPERVILAIN */
+.btn-container {
+    @include flex;
+    width: 100vw;
+    
+
+    .btn-superheros {
+        position: absolute;
+        left: 220px;
+        cursor: pointer;
+        background: $blue;
+        border: 2px solid $white;
+        box-shadow: -4px 4px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        width: 170px;
+        height: 80px;
+        color: $white;
+        font-family: $fontTitre;
+        text-transform: uppercase;
+        font-size: 1.1em;
+        z-index: 2;
+        transition: 0.5s ease-in-out;
+
+        &:hover {
+            color: $grey;
+            background-color: $white;
+        }
+    }
+    .btn-supervilain {
+        position: absolute;
+        right: 290px;
+        cursor: pointer;
+        background: $red;
+        border: 2px solid $white;
+        box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        width: 170px;
+        height: 80px;
+        color: $white;
+        font-family: $fontTitre;
+        text-transform: uppercase;
+        font-size: 1.1em;
+        z-index: 2;
+        transition: 0.5s ease-in-out;
+
+        &:hover {
+            color: $grey;
+            background-color: $white;
+        }
+    }
+}
+
+.smoke-container {
+    @include flex;
+    justify-content: space-between;
+    width: 100vw;
+    position: absolute;
+    bottom: -200px;
+    
+
+    .bluesmoke {
+        position: relative;
+        top: 100px;
+        right: 200px;
+        width: 100%;
+        transform: scale(1.1);
+        opacity: 50%;
+
+    }
+    .redsmoke {
+        position: relative;
+        top: 100px;
+        width: 100%;
+        transform: scale(1.1);
+        opacity: 50%;
+        margin-left: 50px;
+    }
+}
+
