@@ -10,19 +10,28 @@ $white: #f7f7f7;
 /* images */
 
 $bg: url(./assets/images/Background.png);
-$superhero: url(./assets/images/SuperHeros.png);
-$supervilain: url(./assets/images/SuperVilain.png);
-$bluesmoke: url(./assets/images/BlueSmoke.svg);
-$redsmoke: url(./assets/images/RedSmoke.svg);
 
 
-/* mixins */
+/* mixins */$fontTitre: myFirstFont;
+$fontTexte: myFirstText;
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('./assets/fonts/GUERRILLA.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: myFirstText;
+    src: url('./assets/fonts/BarlowCondensed-Regular.ttf');
+    font-weight: bold;
+    }
 
 @mixin flex {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 /* fonts */
 
