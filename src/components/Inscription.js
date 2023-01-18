@@ -19,7 +19,7 @@ const Inscription = () => {
         `NOPE !!! le pseudo est déjà présent ou le mot de passe n'est pas conforme `
       )
     } else {
-      setMessageConf(`WELCOME  : ${pseudo}`)
+      setMessageConf(`WELCOME   ${pseudo}`)
     }
     setIsUserLoggedIn(prevState => !prevState)
   }

@@ -22,31 +22,30 @@
     text-shadow: 16px 16px 20px $grey;
     border-radius: 15px;
     background: $white;
-    width: 500px;
-    height: 450px;
+    width: 450px;
+    height: 420px;
     display: flex;
     color: $black;
     flex-direction: column;
     position: absolute;
-    left:35%;
-    padding: 60px;
-
+    padding: 40px;
 
         h3 {
             min-height: 70px;
             padding: 10px;
             text-align: center;
-            font-size: 25px;
+            font-size: 23px;
             margin-bottom: 60px;
         }
-        p{
+        .mess{
             font-family: $fontTexte;
+            text-transform: uppercase;
         }
         button {
             filter: brightness(1);
             color: $white;
             font-family: $fontTitre;
-            font-size: 25px;
+            font-size: 23px;
             width: 50px;
             height: 50px;
             position: absolute;
@@ -66,13 +65,12 @@
             transform: scale(1.2);
             
         }
-        
 
         .Inscription-pseudo {
             @extend .formRules;
             input{
                 @extend .inputForm;
-                min-width: 300px;
+                min-width: 288px;
             }
             
         }
@@ -81,7 +79,7 @@
             @extend .formRules;
             input{
                 @extend .inputForm;
-                min-width: 259px;
+                min-width: 250px;
             }
         }
 
@@ -89,21 +87,21 @@
             @extend .formRules;
             input{
                 @extend .inputForm;
-                min-width: 171px;
+                min-width: 160px;
             }
         }
 }
 
 .Inscription:hover{
-    -ms-transform: scale(1.5); /* IE 9 */
--webkit-transform: scale(1.5); /* Safari 3-8 */
-transform: scale(1.5);
+-ms-transform: scale(1.4); /* IE 9 */
+-webkit-transform: scale(1.4); /* Safari 3-8 */
+transform: scale(1.4);
 background: $black;
 color: $white;
 }
 
 .message{
-background: #9D0000;
+    background: $red;
     display: flex;
     position: absolute;
     z-index: 5;
@@ -125,24 +123,29 @@ background: #9D0000;
 .bloodSplatter{
     display:flex;
     position: absolute;
-    top:-200px;
-    height: 400px;
+    top: -180px;
+    height: 350px;
 }
-.no{
-background: $grey;
-display:flex;
-position: absolute;
-z-index: 5;
-left:28%;
-border:10px;
-border-radius: 10px;
-height:150px;
-width: 206px;
-padding: 25px;
-color:$white;
-font-family: $fontTitre;
-box-shadow: 3px 5px 9px $red;
+.All{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
 }
-@media screen and (min-weight:1024px) {
-    
+@media screen and (max-width: 620px) and (min-width:320px) {
+    .All{
+        min-width: 50%;
+        min-height: 30%;
+    }
+.Inscription {
+   min-width: 50%;
+    min-height: 30%;
+}
+.Inscription:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+-webkit-transform: scale(1.1); /* Safari 3-8 */
+transform: scale(1.1);
+background: $black;
+color: $white;
+
+}
 }

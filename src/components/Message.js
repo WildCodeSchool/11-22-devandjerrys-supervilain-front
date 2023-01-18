@@ -1,7 +1,7 @@
 function Message(props) {
   return (
     <div className='message'>
-      <p>{props.messageConf}</p>
+      <p className='mess'>{props.messageConf}</p>
     </div>
   )
 }
