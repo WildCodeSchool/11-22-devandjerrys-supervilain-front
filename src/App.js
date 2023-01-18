@@ -6,17 +6,21 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Catalogue from './screens/Catalogue'
 import Cards from './components/Cards'
+import NewsAndGame from './screens/NewsAndGame'
 
 function App() {
-  const [titre, setTitre] = useState('test')
+  const [title, setTitle] = useState('')
+  const [titleColorRed, setTitleColorRed] = useState('')
+  const [titleColorBlue, setTitleColorBlue] = useState('')
   return (
     <div className='App'>
-      <Header titre={titre} />
+      <Header title={title} titleColorRed={titleColorRed} titleColorBlue={titleColorBlue} setTitle={setTitle} setTitleColorRed={setTitleColorRed} setTitleColorBlue={setTitleColorBlue}/>
       <Routes>
-        <Route path='/' element={<Home titre={titre} setTitre={setTitre} />} />
+        <Route path='/' element={<Home />} />
         <Route path='/Connectezvous' element={<Connect />} />
-        <Route path='/catalogue' element={<Catalogue />} />
+        <Route path='/catalogue' element={<Catalogue setTitle={setTitle} setTitleColorRed={setTitleColorRed} setTitleColorBlue={setTitleColorBlue}/>} />
         <Route path='/cards' element={<Cards />} />
+        <Route path='/news-game' element={<NewsAndGame setTitle={setTitle} setTitleColorRed={setTitleColorRed} setTitleColorBlue={setTitleColorBlue}/>} />
       </Routes>
       <Footer />
     </div>

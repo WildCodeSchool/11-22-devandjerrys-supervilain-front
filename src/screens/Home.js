@@ -5,12 +5,11 @@ import redsmoke from '../assets/images/RedSmoke.svg'
 import bluesmoke from '../assets/images/BlueSmoke.svg'
 import { Link } from 'react-router-dom'
 
-const Home = (props) => {
-  props.setTitre('THE DEAD AGENCY')
+const Home = () => {
+  
   return (
     <>
     <div className='home-container'>
-        <h1 className="title">{props.titre}</h1>
       <div className='text-container'>
         <h3 className="text-superheros">" Vous souhaitez recruter des super-vilain ? <br />Inscrivez-vous et faites votre choix ! "</h3>
         <h3 className="text-supervilain">" Vous souhaitez integrer notre catalogue de super-vilain ? <br />Inscrivez-vous et passez le test ! "</h3>
