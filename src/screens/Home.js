@@ -1,4 +1,3 @@
-
 import superheros from '../assets/images/SuperHeros.png'
 import supervilain from '../assets/images/SuperVilain.png'
 import redsmoke from '../assets/images/RedSmoke.svg'

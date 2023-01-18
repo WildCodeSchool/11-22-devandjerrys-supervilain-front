@@ -9,7 +9,7 @@ function Cards({ closeModal }) {
       <div className='containerModal'>
         <header>
           <button onClick={() => closeModal(false)}>X</button>
-          <h1 className='wanted'>WANTED</h1>
+          <h1 className='wanted'>J O K E R</h1>
           <ul className='powerList'>
             <li>Genie Criminel</li>
             <li>Chimiste</li>
@@ -69,13 +69,12 @@ function Cards({ closeModal }) {
             <h3>DO NOT APPROACH</h3>
             <h3>EXTREMELY DANGEROUS</h3>
           </div>
-          <h2>J O K E R</h2>
+          <div className='blockButtonShop'>
+            <button className='buttonShop' onClick={() => closeModal(false)}>
+              ADD TO SHOPPING CART
+            </button>
+          </div>
         </footer>
-      </div>
-      <div>
-        <button className='buttonShop' onClick={() => closeModal(false)}>
-          ADD TO SHOPPING CART
-        </button>
       </div>
     </div>
   )

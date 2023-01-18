@@ -3,11 +3,11 @@
     font-family: $fontTitre;
 
     .pseudo {
-        text-align: center;
-        left: 130px;
+        left: 13px;
         position: relative;
         top: 25px;
-        width: fit-content;
+        width: 89%;
+        text-align: center;
     }
 
     .card-body {
@@ -63,15 +63,9 @@
                 align-items: flex-start;
                 position: absolute;
                 padding: 35px;
-                top: 60%;
+                top: 65%;
             }
 
-            .pseudo {
-                left: 130px;
-                position: relative;
-                top: 25px;
-                width: fit-content;
-            }
 
             .frame {
                 width: 300px;
