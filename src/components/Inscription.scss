@@ -27,18 +27,34 @@
     display: flex;
     color: $black;
     flex-direction: column;
-    position: absolute;
     padding: 40px;
-
-        h3 {
-            min-height: 70px;
+    .message{
+        background: $red;
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        // left: 12%;
+        font-size: 30px;
+        top:400px;
+        border: 10px;
+        border-radius: 10px;
+        height: 200px;
+        width: 370px;
+        padding: 25px;
+        color: #f7f7f7;
+        box-shadow: 3px 5px 9px #9d0000;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+        h3 {font-family: $fontTitre;
             padding: 10px;
             text-align: center;
             font-size: 23px;
             margin-bottom: 60px;
         }
         .mess{
-            font-family: $fontTexte;
+            font-family: $fontTitre;
             text-transform: uppercase;
         }
         button {
@@ -48,9 +64,6 @@
             font-size: 23px;
             width: 50px;
             height: 50px;
-            position: absolute;
-            top: 70%;
-            left: 40%;
             border-radius: 10px;
             background-color: $red;
             box-shadow: 3px 5px 9px $red;
@@ -66,13 +79,22 @@
             
         }
 
+        
         .Inscription-pseudo {
-            @extend .formRules;
+            height: 60px;
+            font-family: $fontTexte;
+            font-weight: bold;
+            font-size: 20px;
+            
             input{
                 @extend .inputForm;
                 min-width: 288px;
             }
-            
+            form{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
         }
 
         .Inscription-MDP {
@@ -98,14 +120,14 @@
 transform: scale(1.4);
 background: $black;
 color: $white;
-}
+
 
 .message{
-    background: $red;
+    background: $grey;
     display: flex;
     position: absolute;
     z-index: 5;
-    left: 12%;
+    // left: 12%;
     font-size: 30px;
     top:110px;
     border: 10px;
@@ -114,22 +136,23 @@ color: $white;
     width: 370px;
     padding: 25px;
     color: #f7f7f7;
-    font-family: "Guerrilla";
     box-shadow: 3px 5px 9px #9d0000;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
 }
 .bloodSplatter{
     display:flex;
     position: absolute;
     top: -180px;
     height: 350px;
+    
 }
 .All{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    
 }
 @media screen and (max-width: 620px) and (min-width:320px) {
     .All{

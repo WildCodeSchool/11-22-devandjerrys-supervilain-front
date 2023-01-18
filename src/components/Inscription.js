@@ -16,7 +16,7 @@ const Inscription = () => {
     e.preventDefault()
     if (vilain.includes(pseudo) || passWord !== passWordConf) {
       setMessageConf(
-        `NOPE !!! le pseudo est déjà présent ou le mot de passe n'est pas conforme `
+        `NOPE !!! le pseudo est deja present ou le mot de passe n'est pas conforme `
       )
     } else {
       setMessageConf(`WELCOME   ${pseudo}`)

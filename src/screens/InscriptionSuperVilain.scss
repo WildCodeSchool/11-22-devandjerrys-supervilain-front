@@ -10,14 +10,15 @@
     position: relative;
 }
 .isv-smoke{
+    transform: rotate(180deg);
     display: flex;
-    // height: 100vh;
+    height: 100vh;
     position: absolute;
     right: 45%;
     top: 67px;
     z-index: -1;
-    animation: animateSmoke 15s linear infinite;
-animation-direction: normal;
+    animation: animateSmoke 20s linear infinite;
+    animation-direction: normal;
 }
 @keyframes animateSmoke {
     0% {
