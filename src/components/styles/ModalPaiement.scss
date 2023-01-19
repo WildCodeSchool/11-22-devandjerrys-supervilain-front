@@ -2,9 +2,7 @@
 display: flex;
 justify-content: center;
 align-items: center;
-height:100vh;
-background-color: grey;
-
+height: 48vh;
 }
 
 .modalPaiement{
@@ -31,13 +29,14 @@ background-color: grey;
         
     }
     
-    input {
-        box-sizing: border-box;
-        width: 100%;
-        padding: 0.5rem 0.7rem;
-        border-radius: 10px;
-        border: 1px black solid; 
-    }
+}
+
+.modalPaiement input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.5rem 0.7rem;
+    border-radius: 10px;
+    border: 1px black solid; 
 }
 
 .button-paiement {

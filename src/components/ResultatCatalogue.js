@@ -94,6 +94,7 @@ const ResultatCatalogue = ({
               power={vilain.powerAndStats.power[0]}
               price={vilain.price}
               miniatures={vilain.images.miniature}
+              vilain={vilain}
             />
           ])
         })
