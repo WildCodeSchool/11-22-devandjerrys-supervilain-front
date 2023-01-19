@@ -29,6 +29,7 @@
     flex-direction: column;
     padding: 40px;
     .message{
+
         background: $red;
         display: flex;
         position: absolute;
@@ -41,11 +42,12 @@
         height: 200px;
         width: 370px;
         padding: 25px;
-        color: #f7f7f7;
-        box-shadow: 3px 5px 9px #9d0000;
+        color: $white;
+        box-shadow: 3px 5px 9px $red;
         justify-content: center;
         align-items: center;
         text-align: center;
+        
     }
         h3 {font-family: $fontTitre;
             padding: 10px;
@@ -120,6 +122,7 @@
 transform: scale(1.4);
 background: $black;
 color: $white;
+text-shadow:3px 5px 9px $white;
 
 
 .message{
@@ -135,11 +138,12 @@ color: $white;
     height: 200px;
     width: 370px;
     padding: 25px;
-    color: #f7f7f7;
-    box-shadow: 3px 5px 9px #9d0000;
+    color: $white;
+    box-shadow: 3px 5px 9px $red;
     justify-content: center;
     align-items: center;
     text-align: center;
+    text-shadow:3px 2px 5px $white;
 }
 }
 .bloodSplatter{
