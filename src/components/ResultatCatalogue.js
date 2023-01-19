@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Miniatures from '../components/Miniatures'
+
 const ResultatCatalogue = ({
   vilains,
   setVilains,

@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Approved from '../assets/images/approved.png'
 
 function Cards({ closeModal, vilain }) {

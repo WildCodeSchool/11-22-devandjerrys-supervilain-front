@@ -14,19 +14,20 @@ height: 48vh;
     background-color: $white;
     border-radius: 30px;
     
-}
-
-.description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.label {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-family: $fontTexte;
+    
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .label {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: $fontTexte;
+        
+    }
     
 }
 
