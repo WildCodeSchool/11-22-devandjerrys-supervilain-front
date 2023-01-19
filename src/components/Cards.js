@@ -1,68 +1,62 @@
-import React from 'react'
-import SuperVilain from '../assets/images/SuperVilain.png'
-import Joker from '../assets/images/370-joker.jpg'
 import Approved from '../assets/images/approved.png'
 
-function Cards({ closeModal }) {
+function Cards({ closeModal, vilain }) {
   return (
     <div className='backgroundModal'>
       <div className='containerModal'>
         <header>
           <button onClick={() => closeModal(false)}>X</button>
-          <h1 className='wanted'>J O K E R</h1>
+          <h1 className='wanted'>{vilain.pseudo}</h1>
           <ul className='powerList'>
-            <li>Genie Criminel</li>
-            <li>Chimiste</li>
-            <li>Folies</li>
+            <li>{vilain.powerAndStats.power[0]}</li>
+            <li>{vilain.powerAndStats.power[1]}</li>
+            <li>{vilain.powerAndStats.power[2]}</li>
           </ul>
         </header>
-        <body className='bodyCards'>
+        <div className='bodyCards'>
           <div className='profilPicture'>
-            <img src={Joker} alt='mechant' />
+            <img src={vilain.images.lg} alt='mechant' />
           </div>
           <div>
             <ul className='caractPerso'>
               <li className='l1'>
                 <h3>PRIX</h3>
-                <p>1000K</p>
+                <p>{vilain.price}</p>
               </li>
               <li className='l2'>
                 <h3>CRUAUTE</h3>
-                <p>100/100</p>
+                <p>{vilain.powerAndStats.cruelty}/100</p>
               </li>
               <li className='l3'>
                 <h3>FORCE</h3>
-                <p>10/100</p>
+                <p>{vilain.powerAndStats.strength}/100</p>
               </li>
               <li className='l4'>
                 <h3>INTELLIGENCE</h3>
-                <p>100/100</p>
+                <p>{vilain.powerAndStats.intelligence}/100</p>
               </li>
               <li className='l5'>
                 <h3>ESPECE</h3>
-                <p>Humain</p>
+                <p>{vilain.appearance.species}</p>
               </li>
               <li className='l6'>
                 <h3>TAILLE</h3>
-                <p>196cm</p>
+                <p>{vilain.appearance.height}</p>
               </li>
               <li className='l7'>
                 <h3>POPULARITE</h3>
-                <p>100/100</p>
+                <p>{vilain.powerAndStats.populary}/100</p>
               </li>
               <li className='l8'>
                 <img src={Approved} alt='tampon'></img>
               </li>
             </ul>
           </div>
-        </body>
+        </div>
         <footer className='footer'>
           <div className='descriptions'>
             <p>
-              Le Joker affiche un goût particulier pour les farces macabres. Les
-              armes chimiques n'ont pas de secret pour lui et il porte en
-              permanence plusieurs sortes d’acides ainsi que son venin de Joker.
-              Sans oublier le pistolet d'où sort un drapeau 'BANG!'
+              {vilain.description}
             </p>
           </div>
           <div className='highFooter'>

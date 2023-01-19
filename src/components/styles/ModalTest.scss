@@ -1,0 +1,16 @@
+
+
+.modalbackground{
+    
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+
+}
+
+.modalcontainer{
+    border-style: solid;
+    background-image: url('../../assets/images/backgroundModalTest.png');
+    width: 450px;
+    height: 500px;
+}

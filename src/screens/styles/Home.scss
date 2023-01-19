@@ -8,9 +8,6 @@ body {
     height: 100vh;
 }
 
-.title {
-    display: none;
-}
 /* TEXTE */
 .text-container {
     @include flex;
@@ -20,17 +17,20 @@ body {
     padding: 20px;
     gap: 200px;
     position: relative;
-    font-family: $fontTitre;
     text-transform: uppercase;
     
     .text-superheros {
         position: absolute;
-        left: 150px
+        left: 150px;
+        font-family: $fontTitre;
+        z-index: 5;
     }
 
     .text-supervilain {
         position: absolute;
         right: 150px;
+        font-family: $fontTitre;
+        z-index: 5;
     }
 }
 
@@ -128,12 +128,12 @@ body {
     justify-content: space-between;
     width: 100vw;
     position: absolute;
-    bottom: -200px;
+    bottom: -170px;
     
 
     .bluesmoke {
         position: relative;
-        top: 100px;
+        top: -50px;
         right: 200px;
         width: 100%;
         transform: scale(1.1);
@@ -142,7 +142,7 @@ body {
     }
     .redsmoke {
         position: relative;
-        top: 100px;
+        top: -50px;
         width: 100%;
         transform: scale(1.1);
         opacity: 50%;

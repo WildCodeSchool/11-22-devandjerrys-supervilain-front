@@ -1,33 +1,34 @@
-const ModalPaiement = () => {
-  function handleClick(e) {
-    e.preventDefault()
-  }
+import Carte from '../assets/images/cb_visa.png'
+import React from 'react'
+
+const ModalPaiement = ({ closeModal }) => {
   return (
     <div className='background'>
       <div className='modalPaiement'>
         <form className='description'>
-          <label>
-            Nom sur la carte
-            <input type='text' name='name' />
-          </label>
+          <div className='label1'>
+            <input type='text' name='name' placeholder=' Nom sur la carte' />
+          </div>
+
+          <div className='label'>
+            <img className='visaCarte' src={Carte} alt='logo' />
+            <input type='text' name='name' placeholder=' N° de carte' />
+          </div>
           <br />
-          <label>
-            N° de carte
-            <input type='text' name='name' />
-          </label>
+          <div className='label'>
+            <input type='text' name='name' placeholder=" Date d'expiration" />
+          </div>
           <br />
-          <label>
-            Date d'expiration
-            <input type='text' name='name' />
-          </label>
+          <div className='label'>
+            <input type='text' name='name' placeholder=' Cryptogramme visuel' />
+          </div>
           <br />
-          <label>
-            Cryptogramme visuel
-            <input type='text' name='name' />
-          </label>
-          <br />
-          <button href='#' className='button-paiement' onClick={handleClick}>
-            PAYEZ
+          <button
+            href='#'
+            className='button-paiement'
+            onClick={() => closeModal(false)}
+          >
+            &#128274; PAYEZ
           </button>
         </form>
       </div>
