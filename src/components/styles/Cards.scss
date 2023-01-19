@@ -194,17 +194,17 @@
 @media screen and (max-width: 768px) {
     .backgroundModal {
         position: absolute;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 4000;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 4000;
     
     }
 
     .containerModal{
         position: fixed;
         display: flex;
-        height: 100vh;
+        height: 84vh;
         width: 100vw;
         flex-direction: column;
         left: 0;
