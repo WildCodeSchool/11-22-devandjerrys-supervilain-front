@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './screens/Home'
-import Connect from './components/Connectez-vous'
+import Connect from './screens/Connectez-vous'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Catalogue from './screens/Catalogue'
