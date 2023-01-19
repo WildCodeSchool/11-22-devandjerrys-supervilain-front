@@ -1,10 +1,14 @@
 /* Styles */
 @import "./settings.scss";
 @import "./App.scss";
+@import "./screens/InscriptionSuperVilain.scss";
+@import "./components/Inscription.scss";
 @import "../src/screens/Miniatures.scss";
 @import "./components/styles/Header.scss";
 @import "./screens/styles/Home.scss";
 @import "./components/styles/Footer.scss";
+@import "./components/styles/BlockFilterCatalogue.scss";
+@import "./components/styles/FilterCatalogue.scss";
 @import "./components/styles/Connectez-vous.scss";
 @import "./components/styles/Cards.scss";
 @import "./components/styles/Panier.scss";
@@ -12,7 +16,8 @@
 @import "../src/screens/Catalogue.scss";
 @import "./components/styles/Test.scss";
 @import "./components/styles/ModalTest.scss";
-
+@import "./components/styles/ResultatCatalogue.scss";
+@import "./screens/Contact.scss";
 
 
 

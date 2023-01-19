@@ -1,12 +1,15 @@
 //-----------CSS Modal------------//
 .backgroundModal {
+    position: absolute;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    z-index: 4000;
 }
 
 .containerModal {
+    
     background-color: $white;
     width: 50vw;
     height: 100vh;
@@ -17,25 +20,21 @@
 //------------HEADER---------//
 .wanted {
     font-family: $fontTitre;
-    font-size: 110px;
+    font-size: 100px;
     display: flex;
     justify-content: center;
-    padding: 5px;
+    text-transform: uppercase;
 }
 
 .powerList {
     display: flex;
     justify-content: space-around;
-    padding: 20px;
+    padding-bottom: 10px;
     font-size: 25px;
     font-family: $fontTexte;
 }
 //-----------BODY------------//
-.containerModal body {
-    background-color: $white;
-    display: flex;
-    margin: 5px;
-}
+
         //Image & Caract//
 .profilPicture img {
     border-style: solid;
@@ -45,7 +44,9 @@
 }
 
 .bodyCards {
+    display: flex;
     background-color: $white;
+    margin: 5px;
 }
 
 .caractPerso {
@@ -59,7 +60,12 @@
     height: 49vh;
     list-style: none;
     margin-left: 5px;
-    border-style: solid;
+  
+}
+
+.l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8 {
+    border: 2px black solid;
+    border-radius: 1px;
 }
 
 .l1 { 
@@ -67,9 +73,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border-style: solid;
-    border-top: 0;
-    border-left: 0;
+
     grid-area: 1 / 1 / 2 / 2;
      
 }
@@ -78,10 +82,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border-style: solid;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
+
     grid-area: 1 / 2 / 2 / 3; 
 }
 .l3 { 
@@ -89,9 +90,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border-style: solid;
-    border-top: 0;
-    border-left: 0;
+
     grid-area: 2 / 1 / 3 / 2; 
 }
 .l4 { 
@@ -99,10 +98,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border-style: solid;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
+
     grid-area: 2 / 2 / 3 / 3; 
 }
 .l5 { 
@@ -110,9 +106,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border-style: solid;
-    border-top: 0;
-    border-left: 0;
+
     grid-area: 3 / 1 / 4 / 2; 
 }
 .l6 { 
@@ -120,10 +114,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border-style: solid;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
+
     grid-area: 3 / 2 / 4 / 3; 
 }
 .l7 { 
@@ -131,10 +122,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border-style: solid;
-    border-top: 0;
-    border-left: 0;
-    border-bottom: 0;
+
     grid-area: 4 / 1 / 5 / 2; 
 }
 .l8 {
@@ -142,11 +130,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border-style: solid;
-    border-top: 0;
-    border-left: 0;
-    border-bottom: 0;
-    border-right: 0;
+
     grid-area: 4 / 2 / 5 / 3; 
 }
 .l8 img {
@@ -155,9 +139,10 @@
 //------------FOOTER--------//
 .descriptions {
     border-style: solid;
-    margin: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    
 }
 
 .descriptions p {
@@ -180,7 +165,6 @@
 .caractPerso li h3 {
     font-size: 40px;
     font-family: $fontTitre;
-    margin: 10px;
 }
 
 .caractPerso li p {
@@ -190,14 +174,14 @@
 }
 
 
-.footer h2 {
-    margin-top: 20px;
-    font-family: $fontTitre;
-    font-size: 140px;
+.footer {
+    margin-top: 15px;
+}
+//------BUTTON SHOP--------//
+.blockButtonShop{
     display: flex;
     justify-content: center;
 }
-//------BUTTON SHOP--------//
 .buttonShop {
     background-color: rgb(86, 244, 86);
     height: 40px;
@@ -205,4 +189,46 @@
     border-radius: 20px;
     margin: 20px;
     font-family: $fontTitre;
+}
+
+@media screen and (max-width: 768px) {
+    .backgroundModal {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 4000;
+    
+    }
+
+    .containerModal{
+        position: fixed;
+        display: flex;
+        height: 84vh;
+        width: 100vw;
+        flex-direction: column;
+        left: 0;
+    }
+
+    .bodyCards {
+        display: flex;
+    }
+
+
+    .profilPicture img {
+        width: 335px;
+    }
+
+    .buttonShop {
+        margin: 1px;
+    }
+
+    .descriptions {
+        height: 30px;
+    }
+
+    .descriptions p {
+        overflow: scroll;
+        height: 28px;
+    }
 }
