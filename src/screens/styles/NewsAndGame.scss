@@ -1,3 +1,4 @@
+
 .news-container {
     @include flex;
     flex-direction: column;
@@ -22,6 +23,7 @@
             width: 300px;
             height: 200px;
             border: 2px solid white;
+            border-radius: 8px;
             margin: 10px 100px;
 
             .card-title {
@@ -49,10 +51,77 @@
         font-family: $fontTitre;
     }
 
-    .the-game {
+    .game {
+        position: relative;
         width: 80vw;
         height: 400px;
-        border: 2px solid white;
+        border: 2px solid $white;
+        border-radius: 8px;
         margin-top: 50px;
+        background-color: $whiteOpacity;
+
+        .game-body {
+            @include flex;
+            flex-direction: column;
+            
+            .game-input {
+                @include flex;
+                justify-content: space-around;
+                flex-direction: row;
+                color: $white;
+                font-size: 2rem;
+            }
+            .firstletterfirstname {
+                width: 100%;
+                height: auto;
+                margin-top: 80px;
+                .firstname {
+                    width: 50px;
+                    height: 50px;
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    font-family: $fontTitre;
+                    background-color: transparent;
+                    border: 2px solid $white;
+                    border-radius: 8px;
+                    padding: 1rem;
+                    color: $red;
+                }
+            }
+            .firstletterlastname {
+                width: 100%;
+                height: auto;
+                margin-top: 80px;
+                
+                .lastname {
+                    width: 50px;
+                    height: 50px;
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    font-family: $fontTitre;
+                    background-color: transparent;
+                    border: 2px solid $white;
+                    border-radius: 8px;
+                    padding: 1rem;
+                    color: $red;
+                    
+                }
+            }
+            .valide-name {
+                position:absolute;
+                width: 200px;
+                height: 50px;
+                bottom: -25px;
+                cursor: pointer;
+                font-size: 1.5rem;
+                font-family: $fontTitre;
+                text-transform: uppercase;
+                border-radius: 8px;
+                color: $white;
+                border: 2px solid $white;
+                background: linear-gradient(180deg, $blue 0%, $red 100%);
+                z-index: 20;
+            }
+        }
     }
 }

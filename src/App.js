@@ -13,6 +13,8 @@ function App() {
   const [title, setTitle] = useState('')
   const [titleColorRed, setTitleColorRed] = useState('')
   const [titleColorBlue, setTitleColorBlue] = useState('')
+
+  
   return (
     <div className='App'>
       <Header title={title} titleColorRed={titleColorRed} titleColorBlue={titleColorBlue} setTitle={setTitle} setTitleColorRed={setTitleColorRed} setTitleColorBlue={setTitleColorBlue}/>

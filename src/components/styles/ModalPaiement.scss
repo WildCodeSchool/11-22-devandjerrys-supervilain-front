@@ -16,28 +16,28 @@ background-color: grey;
     background-color: $white;
     border-radius: 30px;
     
-}
-
-.description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.label {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-family: $fontTexte;
     
-}
-
-input {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0.5rem 0.7rem;
-    border-radius: 10px;
-    border: 1px black solid; 
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .label {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: $fontTexte;
+        
+    }
+    
+    input {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0.5rem 0.7rem;
+        border-radius: 10px;
+        border: 1px black solid; 
+    }
 }
 
 .button-paiement {

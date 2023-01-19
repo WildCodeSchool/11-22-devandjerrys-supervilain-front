@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import FilterCatalogue from './FilterCatalogue.js'
+
 const BlockFiltreCatalogue = props => {
   const [filterCatalogueArray, setFilterCatalogueArray] = useState([])
   console.log(props.test)

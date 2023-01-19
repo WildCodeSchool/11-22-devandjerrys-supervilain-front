@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import BlockFiltreCatalogue from '../components/BlockFilterCatalogue'
 import Panier from '../components/Panier'
-import ResultatCatalogue from '../components/ResultatCatalogue.js'
+import ResultatCatalogue from '../components/ResultatCatalogue'
+import Miniatures from '../components/Miniatures'
 
 const Catalogue = (props) => {
 
@@ -12,6 +13,7 @@ const Catalogue = (props) => {
   const [filterCatalogueResult, setFilterCatalogueResult] = useState([])
   const [vilains, setVilains] = useState([])
   const [test, setTest] = useState([])
+
   return(
     <>
       <BlockFiltreCatalogue test={test}
@@ -34,7 +36,7 @@ const Catalogue = (props) => {
             vilains={vilains}
             setVilains={setVilains}
             test={test}
-          />
+            />
             <Miniatures />
             <Miniatures />
             <Miniatures />
