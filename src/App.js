@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
+import InscriptionSuperVilain from './screens/inscriptionSuperVilain'
 import Home from './screens/Home'
 import Connect from './components/Connectez-vous'
 import Header from './components/Header'
@@ -13,6 +14,7 @@ function App() {
     <div className='App'>
       <Header titre={titre} />
       <Routes>
+        <Route path='/inscription' element={<InscriptionSuperVilain />} />
         <Route path='/' element={<Home titre={titre} setTitre={setTitre} />} />
         <Route path='/Connectezvous' element={<Connect />} />
         <Route path='/catalogue' element={<Catalogue />} />
