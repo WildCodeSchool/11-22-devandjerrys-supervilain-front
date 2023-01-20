@@ -25,7 +25,7 @@ const BlockFiltreCatalogue = props => {
     ]) // Met à jour l'affichage
   }
   const filterCatalogue = () => {
-    props.setVilains(props.test)
+    // props.setVilains(props.test)
     // console.log('filterCatalogue1', vilains)
     const filter = document.querySelectorAll('.filterRow')
     const result = []

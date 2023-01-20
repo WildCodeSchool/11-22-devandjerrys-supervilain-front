@@ -10,8 +10,8 @@ const ResultatCatalogue = ({
   const [vilainsResult, setVilainsResult] = useState([])
 
   useEffect(() => {
+    setVilains(test)
     filterCatalogueResult.map(itemFiltre => {
-      // setVilains(test)
       console.log('vilains', vilains)
       switch (Object.keys(itemFiltre)[0]) {
         case 'power': {
