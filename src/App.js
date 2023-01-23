@@ -13,24 +13,23 @@ import Contact from './screens/Contact'
 import ModalPaiement from './components/ModalPaiement'
 
 function App() {
-  const [title, setTitle] = useState('')
   const [titleColorRed, setTitleColorRed] = useState('')
   const [titleColorBlue, setTitleColorBlue] = useState('')
 
   
   return (
     <div className='App'>
-      <Header title={title} titleColorRed={titleColorRed} titleColorBlue={titleColorBlue} setTitle={setTitle} setTitleColorRed={setTitleColorRed} setTitleColorBlue={setTitleColorBlue}/>
+      <Header  titleColorRed={titleColorRed} titleColorBlue={titleColorBlue} setTitleColorRed={setTitleColorRed} setTitleColorBlue={setTitleColorBlue}/>
       <Routes>
         
-        <Route path='/' element={<Home title={title} setTitle={setTitle} />}/>
+        <Route path='/' element={<Home />}/>
         <Route path='/Connectezvous' element={<Connect />} />
-        <Route path='/catalogue' element={<Catalogue setTitle={setTitle} setTitleColorRed={setTitleColorRed} setTitleColorBlue={setTitleColorBlue}/>} />
+        <Route path='/catalogue' element={<Catalogue />} />
         <Route path='/cards' element={<Cards />} />
-        <Route path='/news-game' element={<NewsAndGame setTitle={setTitle} setTitleColorRed={setTitleColorRed} setTitleColorBlue={setTitleColorBlue}/>} />
+        <Route path='/news-game' element={<NewsAndGame />} />
         <Route path='/Test' element={<Test/>} />
         <Route path='/inscription' element={<InscriptionSuperVilain />} />
-        <Route path='/Contact' element={<Contact setTitle={setTitle} setTitleColorRed={setTitleColorRed} setTitleColorBlue={setTitleColorBlue} />} />
+        <Route path='/Contact' element={<Contact />} />
         <Route path='/modalPaiement' element={<ModalPaiement />} />
       </Routes>
       <Footer />

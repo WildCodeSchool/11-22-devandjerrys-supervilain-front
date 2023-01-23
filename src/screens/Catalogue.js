@@ -4,11 +4,8 @@ import Panier from '../components/Panier'
 import ResultatCatalogue from '../components/ResultatCatalogue'
 import Miniatures from '../components/Miniatures'
 
-const Catalogue = (props) => {
+const Catalogue = () => {
 
-  props.setTitle('THE DEAD AGENCY -')
-  props.setTitleColorRed('CATALOGUE')
-  props.setTitleColorBlue('')
   
   const [filterCatalogueResult, setFilterCatalogueResult] = useState([])
   const [vilains, setVilains] = useState([])

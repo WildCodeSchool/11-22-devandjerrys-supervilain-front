@@ -7,7 +7,6 @@ const Header = (props) => {
   const handleShowLinks = () => {
     setShowLinks(!showLinks)
   }
-  props.setTitle('THE')
   props.setTitleColorRed('DEAD')
   props.setTitleColorBlue('AGENCY')
   return (

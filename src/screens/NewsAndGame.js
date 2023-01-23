@@ -1,8 +1,5 @@
-const NewsAndGame = (props) => {
+const NewsAndGame = () => {
 
-    props.setTitle('THE DEAD AGENCY -')
-    props.setTitleColorRed('NEWS / ')
-    props.setTitleColorBlue('JEUX')
 
     return (
         <>

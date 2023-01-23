@@ -1,7 +1,5 @@
-const Contact = (props) => {
-  props.setTitle('THE DEAD AGENCY -')
-  props.setTitleColorRed('CON')
-  props.setTitleColorBlue('TACT')
+const Contact = () => {
+  
 
   return (
     <div>
