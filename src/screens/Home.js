@@ -18,8 +18,8 @@ const Home = () => {
         <img src={supervilain} alt="supervilain" className='image-supervilain'></img>
       </div>
       <div className="btn-container">
-      <Link to="/catalogue"><button type='button' className='btn-superheros'>Vous etes un super-heros</button></Link>
-      <Link to="/Connectezvous"><button type='button' className='btn-supervilain'>Vous etes un super-vilain</button></Link>
+      <Link to="/inscription"><button type='button' className='btn-superheros'>Vous etes un super-heros</button></Link>
+      <Link to="/test"><button type='button' className='btn-supervilain'>Vous etes un super-vilain</button></Link>
       </div>
       <div className="smoke-container">
         <img src={bluesmoke} alt="blue smoke" className="bluesmoke"></img>

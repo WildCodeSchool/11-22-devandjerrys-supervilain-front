@@ -51,7 +51,7 @@ function App() {
             />
           }
         />
-        <Route path='/Test' element={<Test />} />
+        <Route path='/test' element={<Test />} />
         <Route path='/inscription' element={<InscriptionSuperVilain />} />
         <Route
           path='/Contact'
