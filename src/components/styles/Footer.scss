@@ -3,43 +3,52 @@
     justify-content: space-between;
     padding: 40px;
     width: 100vw;
-    height: 20vh;
-    position: relative;
-}
-
-.logo-container {   
-    ul {
-        @include flex
-    }
-    li {
-        list-style-type: none;
-        margin-right: 20px;
-    }
-    a {
-        text-decoration: none;
-        
-    }
-    img {
-        width : 60px;
-        height: auto;
-
-        &:hover {
-            transform: scale(1.1);
+    height: 15vh;
+    position: absolute;
+    bottom: 0;
+    
+    .logo-container {   
+        ul {
+            @include flex
+        }
+        li {
+            list-style-type: none;
+            margin-right: 20px;
+        }
+        a {
+            text-decoration: none;
+            
+        }
+        img {
+            width : 40px;
+            height: auto;
+            
+            &:hover {
+                transform: scale(1.1);
+            }
         }
     }
-}
-.contact {
-
-    a {
+    .contact {
+        
+        a {
         position: absolute;
         right: 50px;
         bottom: 60px;
         color: $white;
         font-family: $fontTexte;
         font-size: 1.8em;
-
-        &:hover {
-            transform: scale(1.1);
-        }
+        display: inline-block;
+        
+        &:after {
+            display:block;
+            content: '';
+            border-bottom: solid 2px $red;  
+            transform: scaleX(0);  
+            transition: transform 300ms ease-in-out;
+         }
+         &:hover:after{
+         transform: scaleX(1);
+         }
     }
+}
 }

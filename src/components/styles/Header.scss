@@ -1,20 +1,18 @@
 .header-container {
+   position: absolute;
+   top: 0;
    @include flex;
-   position: relative;
+   justify-content: space-between;
    width: 100vw;
-   height: 20vh;
-}
+   height: 15vh;
+   z-index: 4;
 
-/* style title */
-.title-others {
-   @include flex;
-   width: 100vw;
-   height: 20vh;
    .title {
-      color: $white;
-      font-family: $fontTitre;
-      font-size: 5rem;
-      font-weight: 1;
+      width: 40%;
+      font-size: 2.5rem;
+      margin-left: 50px;
+      cursor: pointer;
+
       .red {
          color: $red;
          font-family: $fontTitre;
@@ -23,132 +21,76 @@
          color: $blue;
          font-family: $fontTitre;
       }
+
    }
-}
-   /* end style title */
 
-/* style burger */
-.menu__burger{
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   align-items: center;
-   position: fixed;
-   width: 100vw;
-   min-height: 75px;
-   padding: 1rem;
-   background-color: transparent;
-   color: $white;
-   z-index: 999;
-}
-.menu__links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    left: -100vw;
-    top: 80px;
-    height: 40vh;
-    width: 230px;
-    padding: 0.3em;
-    border: 2px solid $white;
-    border-radius: 10px;
-    visibility: hidden;
-    transition: all .8s ease-out;
- }
- .menu__link {
-   @include flex;
-    padding: 20px;
-    color: inherit;
-    font-size: 1rem;
-    &:hover {
-      font-size: 1.1rem;
-    }
- }
- .menu__item {
-    background-color: $grey;
-    width: 210px;
-    height: 100%;
-    border-radius: 5px;
-    margin: 4px;
-    padding: 5px;
-    border: 1px solid $white;
-    transform: translateX(-100vw);
-
-    &:hover {
-      color: $grey;
-      background-color: $white;
-    }
- }
-
- .show-burger .menu__item {
-    transform: translateX(0);
- }
- .show-burger .slideInLeft-1 {
-    transition: all 1s ease-out;
- }
- .show-burger .slideInLeft-2 {
-    transition: all 1.1s ease-out;
- }
- .show-burger .slideInLeft-3 {
-    transition: all 1.2s ease-out;
- }
- .show-burger .slideInLeft-4 {
-    transition: all 1.3s ease-out;
- }
- .burger {
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: transparent;
-    color: transparent;
-    display: block;
-    position: fixed;
-    top: 2rem;
-    left: 3rem;
-
-    &:hover {
-        cursor: pointer;   
-    }
- }
- 
- .burger-bar,
- .burger-bar::before,
- .burger-bar::after {
-    display: block;
-    width: 30px;
-    height: 2px;
-    position: relative;
-    border-radius: 3px;
-    background: $white;
-    transition: all .5s ease-in-out;
- }
- .burger-bar::before,
- .burger-bar::after {
-    content: "";
-    position: absolute;
-    left: 0;
- }
- .burger-bar::before {
-    transform: translateY(-10px);
- }
- .burger-bar::after {
-    transform: translateY(10px);
- }
- .show-burger .menu__links{
-    left: 45px;
-    visibility: visible;
- }
- .show-burger .burger-bar::before {
-    transform: rotate(45deg);
- }
- .show-burger .burger-bar::after {
-    transform: rotate(-45deg);
- }
- .show-burger .burger-bar {
-    width: 0;
-    background: transparent;
+   .nav__links{ 
+      width: 60%;
+      ul {
+         @include flex;
+      }
    }
    
-   /* end style burger */
+   .nav__link {
+      @include flex;
+      color: $white;
+      font-family: $fontTitre;
+      font-size: 1.2em;
+      display:inline-block;
+      padding: 10px;
+      &:after {
+         display:block;
+         content: '';
+         border-bottom: solid 2px $blue;  
+         transform: scaleX(0);  
+         transition: transform 300ms ease-in-out;
+      }
+      &:hover:after{
+      transform: scaleX(1);
+      }
+   }
+}
+
+
+@media screen and (max-width: 800px) {
+   .header-container{
+      padding: 0;
+      .title {
+         position: absolute;
+         top: 50px;
+         left: 50px;
+      }
+      .nav__links {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100vh;
+         @include flex;
+         z-index: 3;
+         background-color: rgba(255, 255, 255, 0.20);
+         backdrop-filter: blur(4px);
+         display: none;
+         
+         ul {
+            @include flex;
+            flex-direction: column;
+            
+            .border {
+               border: 2px solid $blue;
+               width: 200px;
+            }
+            
+            li {
+               margin: 50px;
+            }
+         }
+         .nav__link {
+            &:hover {
+               font-size: 2em;
+               border: none;
+            }
+         }
+      }
+   }
+}

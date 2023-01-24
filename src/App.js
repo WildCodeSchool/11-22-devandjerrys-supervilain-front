@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import InscriptionSuperVilain from './screens/inscriptionSuperVilain'
 import Home from './screens/Home'
@@ -13,23 +12,19 @@ import Contact from './screens/Contact'
 import ModalPaiement from './components/ModalPaiement'
 
 function App() {
-  const [titleColorRed, setTitleColorRed] = useState('')
-  const [titleColorBlue, setTitleColorBlue] = useState('')
-
   
   return (
     <div className='App'>
-      <Header  titleColorRed={titleColorRed} titleColorBlue={titleColorBlue} setTitleColorRed={setTitleColorRed} setTitleColorBlue={setTitleColorBlue}/>
+      <Header  />
       <Routes>
-        
         <Route path='/' element={<Home />}/>
         <Route path='/Connectezvous' element={<Connect />} />
         <Route path='/catalogue' element={<Catalogue />} />
         <Route path='/cards' element={<Cards />} />
-        <Route path='/news-game' element={<NewsAndGame />} />
+        <Route path='/news-jeux' element={<NewsAndGame />} />
         <Route path='/Test' element={<Test/>} />
         <Route path='/inscription' element={<InscriptionSuperVilain />} />
-        <Route path='/Contact' element={<Contact />} />
+        <Route path='/contact' element={<Contact />} />
         <Route path='/modalPaiement' element={<ModalPaiement />} />
       </Routes>
       <Footer />
