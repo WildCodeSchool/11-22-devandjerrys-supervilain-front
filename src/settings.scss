@@ -14,6 +14,7 @@ $bg: url(./assets/images/Background.png);
 
 /* mixins */$fontTitre: myFirstFont;
 $fontTexte: myFirstText;
+$fontTitle: FELL-French;
 
 @font-face {
     font-family: myFirstFont;
@@ -25,6 +26,13 @@ $fontTexte: myFirstText;
     src: url('./assets/fonts/BarlowCondensed-Regular.ttf');
     font-weight: bold;
     }
+
+@font-face {
+    font-family: FELL-French;
+    src: url('./assets/fonts/FELL-French.ttf');
+    font-weight: 300;
+    
+}  
 
 @mixin flex {
     display: flex;

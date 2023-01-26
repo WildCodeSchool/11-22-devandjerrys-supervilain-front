@@ -1,41 +1,57 @@
-*{
-    $fontTitre:'Barlow'
+.test-layout{
+    background: url(../../assets/images/background-vague-red.svg) no-repeat center/cover;
+    background-color: $black;
 }
 
+.title-page-test{
+    font-family: $fontTitle;
+    font-weight: 300;
+    color: $white;
+    font-style: none;
+    margin-left: 80px ;
+    padding-top: 80px;
+}
+
+.Image{
+    width:100%;
+    background-repeat: no-repeat;
+    height: 14px;
+    background-image: url('../../assets/images/Ligne-test.png');
+    padding-bottom: 50px;
+    margin-left: 50px;
+}
+
+.title-inscription{
+    font-family: $fontTitle;
+    font-weight: 300;
+    font-size: 45px;
+    color: $white;
+    margin-left: 100px;
+    padding-bottom: 50px;
+}
+                           // &&&&&&&&&&&&&&&&&&&&&&&&&&&   CARD INSCRIPTION   &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 .Card-Test{
-    background-color: white;
-    width: 450px;
+    background: rgba(14, 27, 46, 0.51);
+    box-shadow: 4px 4px 108px rgba(255, 0, 0, 0.33);
+    border-radius: 8px;
+    width: 900px;
     height: 500px;
-    border: solid 8px black;
-    border-style: double;
-    border-radius: 20px;
-    margin: 15px;
+    border: solid 2px black;
+    margin-left: 80px;
 }
 
-
-
-.Test-hover:hover{
-    background-color: $grey;
-    width: 450px;
-    box-shadow: 10px 5px 5px 10px $grey;
+.cadre-question {
+    display: flex;
+    margin: 20px;
+    background-color: $white;
+    border-radius: 10px;
 }
-
-
-.Card-Test h1 {
-    text-align: center;
-    font-family : $fontTexte;
-    padding-top: 20px;
-}
-
-
-
 
 .Container{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: initial;
     flex-direction: column;
-    padding: 20px 25px 0px 25px;
+    padding: 20px 25px 15px 25px;
 }
 
 li {
@@ -45,15 +61,29 @@ li {
 }
 
 .Question {
+    color: $black;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+    font-family: $fontTitle;
 }
+
+.reponse-select{
+    border-radius: 10px;
+    border: none;
+    transition: transform 0.5s ease-in-out;
+    background-color: $white;
+}
+select:hover {
+    transform: translateY(-10px);
+  }
+
 
 .bloc-bouton {
     display: flex;
-    gap:50px;
+    gap:25px;
+    margin-right: 10px;
+    align-items: center;
 }
 
 .Container button {
@@ -66,15 +96,11 @@ li {
 }
 
 .True, .False{
-    background-color: gray;
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.419);
-    color: $white;
 }
 
 .Container-Valid {
 text-align: center;
-
-padding-top: 70px;  
 
 
 }
@@ -86,5 +112,25 @@ padding-top: 70px;
     color: $white;
     border: solid 2px;
     border-radius: 20px;
+    font-family: "fontTitle" ;
 }
 
+
+
+
+.score {
+    position: absolute;
+    left: 1400px;
+    bottom: 250px;
+    font-size: 50px;
+    font-family: $fontTitle;
+    font-weight: 300;
+    width: 400px;
+    color: $white;
+    width: auto;
+    padding: 20px;
+    background: rgba(14, 27, 46, 0.51);
+    box-shadow: 4px 4px 108px rgba(255, 0, 0, 0.33);
+    border-radius: 8px;
+    border: solid 2px black;
+}
