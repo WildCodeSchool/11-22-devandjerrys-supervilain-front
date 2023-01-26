@@ -7,20 +7,20 @@
 .isv-page{
     width:100vw;
     height:140vh;
-   .red{
+    .red{
         color:red;
         }
-.isv-container h2 {
-    font-size: 22px;
-    color: $white;
-    padding: 50px 0 42px 0;
-    font-family: $fontTitre;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: auto;
-    position: relative;
-}
+// .isv-container h2 {
+//     font-size: 22px;
+//     color: $white;
+//     padding: 50px 0 42px 0;
+//     font-family: $fontTitre;
+//     display: flex;
+//     justify-content: center;
+//     text-align: center;
+//     margin: auto;
+//     position: relative;
+// }
 .Inscription {
     position: absolute;
     width: 421px;
@@ -46,7 +46,7 @@ flex-direction: column;
 }
 }
 
-@media screen and (min-width: 350px) and (max-width:1028px) {
+@media screen and (min-width: 500px) and (max-width:1028px) {
     
     .isv-page{
         display:flex;

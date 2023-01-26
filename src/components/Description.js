@@ -17,7 +17,7 @@ const Description = ({ panier, setPanier, total }) => {
       <div className='blockDescription'>
         {console.log(panier)}
         <div className='modalDescription'>
-          <h2 className='title'> VOTRE PANIER</h2>
+          <h2 className='title-desc'> VOTRE PANIER</h2>
           <img className='logo' src={logo} alt='logo' />
           <div className='globalPanier'>
             <ul className='listPanier'>
