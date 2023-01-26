@@ -1,10 +1,8 @@
-import catwomen from '../components/styles/Ellipse 20.png'
-
-const PanierSelectionMiniature = () => {
+const PanierSelectionMiniature = ({ vilain }) => {
   return (
     <li className='selectionMiniature'>
-      <img src={catwomen} alt='catWomen' />
-      <h3 className='titleH3'>catWomen</h3>
+      <img src={vilain.images.miniature} alt={vilain.pseudo} />
+      <h3 className='titleH3'>{vilain.pseudo}</h3>
     </li>
   )
 }

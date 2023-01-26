@@ -1,9 +1,11 @@
 import PanierSelectionMiniature from '../components/PanierSelectionMiniature'
-const Selection = () => {
+
+const Selection = ({ panier }) => {
   return (
     <ul className='blockSelection'>
-      <PanierSelectionMiniature />
-      <PanierSelectionMiniature />
+      {panier.map((vilain, i) => (
+        <PanierSelectionMiniature vilain={vilain} key={i} />
+      ))}
     </ul>
   )
 }

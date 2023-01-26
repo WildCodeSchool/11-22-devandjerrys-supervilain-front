@@ -69,7 +69,7 @@ const Catalogue = () => {
           />
         </div>
         <div className='blockLogoPanierTotal'>
-          <Link to='/panierTest'>
+          <Link to='/panier'>
             <img
               className='logoPanierTotal'
               src={logoPanierTotal}
