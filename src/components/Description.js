@@ -24,7 +24,7 @@ const Description = ({ panier, setPanier, total }) => {
               {panier.map((vilain, i) => (
                 <li key={i}>
                   {vilain.pseudo}
-                  .....................................................
+                  .............................................
                   {vilain.price} €
                   <button
                     className='buttonDelete'
@@ -35,7 +35,7 @@ const Description = ({ panier, setPanier, total }) => {
                 </li>
               ))}
             </ul>
-            <p>TOTAL ...................................... {total}€</p>
+            <p>TOTAL ................................ {total}€</p>
           </div>
           <div className='buttonG'>
             <button

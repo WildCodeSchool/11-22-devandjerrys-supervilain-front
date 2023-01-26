@@ -29,7 +29,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/test' element={<Test />} />
         <Route path='/modalPaiement' element={<ModalPaiement />} />
-        <Route path='/profilvilain' element={<Profilvilain/>} />
+        <Route path='/profilvilain' element={<Profilvilain />} />
         <Route path='/InscriptionHero' element={<InscriptionHeros />} />
         <Route path='/panier' element={<Panier />} />
       </Routes>
