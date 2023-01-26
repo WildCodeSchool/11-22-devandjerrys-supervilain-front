@@ -1,8 +1,8 @@
+import { Link } from 'react-router-dom'
 import superheros from '../assets/images/SuperHeros.png'
 import supervilain from '../assets/images/SuperVilain.png'
 import redsmoke from '../assets/images/RedSmoke.svg'
 import bluesmoke from '../assets/images/BlueSmoke.svg'
-import { Link } from 'react-router-dom'
 
 const Home = props => {
   props.setTitre('THE DEAD AGENCY')

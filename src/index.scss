@@ -1,8 +1,8 @@
 /* Styles */
 @import "./settings.scss";
 @import "./App.scss";
-@import "./screens/InscriptionSuperVilain.scss";
-@import "./components/Inscription.scss";
+@import "./screens/styles/InscriptionSuperVilain.scss";
+@import "./components/styles/Inscription.scss";
 @import "../src/screens/Miniatures.scss";
 @import "./components/styles/Header.scss";
 @import "./screens/styles/Home.scss";
@@ -15,7 +15,8 @@
 @import "./components/styles/ModalPaiement.scss";
 @import "../src/screens/Catalogue.scss";
 @import "./components/styles/ResultatCatalogue.scss";
-
+@import "./components/styles/Connexion.scss";
+@import "./screens/styles/InscriptionHeros.scss";
 
 
 
@@ -29,7 +30,7 @@
 }
 
 body {
-  background: $bg no-repeat center / cover;
+  // background: $bg no-repeat center / cover;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

@@ -1,0 +1,107 @@
+.Allc{
+    display: flex;
+    justify-content: center; 
+}
+.connexion {
+    position: absolute;
+    width: 342px;
+    height: 52px;
+    left: 239px;
+    top: 440px;
+    font-family: 'IM FELL French Canon SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 52px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.connect-pseudo  {
+    font-size: 20px;
+    position: absolute;
+    padding: 20px;
+    width: 288px;
+    height: 40px;
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), rgba(14, 27, 46, 0.74);
+    border-radius: 21px;
+    display: flex;
+    align-items: center;
+    left: 65px;
+    top: 40px;
+}
+
+.connect-mdp  {
+    padding: 20px;
+    font-size: 20px;
+    position: absolute;
+    width: 288px;
+    height: 40px;
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), rgba(14, 27, 46, 0.74);
+    border-radius: 21px;
+    display: flex;
+    align-items: center;
+    left: 65px;
+    top: 55%;
+
+}
+
+.connect {
+    font-size: 20px;
+    font-family:'IM FELL French Canon SC';
+    box-sizing: border-box;
+    position: absolute;
+    width: 140px;
+    height: 50px;
+    left: 138px;
+    top: 302px;
+    background: #F7F7F7;
+    border: 2px solid #F7F7F7;
+    box-shadow: 4px 4px 2px black;
+    border-radius: 53px;
+}
+
+.connect:hover {
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), rgba(14, 27, 46, 0.74);
+}
+
+.connect:active {
+
+    box-shadow: 0 5px #668;
+    transform: translateY(5px);
+}
+
+input.check {
+    position: absolute;
+    top: 154px;
+    left: 316px;
+}
+
+.message {
+    background: rgba(14, 27, 46, 0.51);
+    // box-shadow: 4px 4px 108px rgba(255, 0, 0, 0.33);
+    border-radius: 8px;
+    display: flex;
+    position: absolute;
+    z-index: 5;
+    font-size: 30px;
+    top: 32px;
+    left: 24px;
+    border: 10px;
+    border-radius: 10px;
+    height: 200px;
+    width: 370px;
+    padding: 25px;
+    color: $white;
+    box-shadow: 3px 5px 9px $white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow: 3px 2px 5px $white;
+}
+@media screen and (min-width: 350px)and (max-width:1028px)  {
+    .connexion{
+        left:148px;
+        font-size:35px;
+    }
+}
