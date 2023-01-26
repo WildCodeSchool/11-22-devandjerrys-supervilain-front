@@ -1,4 +1,69 @@
 .blockFilterCatalogue{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: $red solid 2px;
+    width: 70%;
+    height: 100%;
+    min-height: 150px;
+    padding: 30px;
+    gap: 20px;
+    .blockButtonFilterCatalogue{
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-around;
+        width: 100%;
+      
+        button{
+            background-color: #FFF;
+            width: 45%;
+            max-width: 400px;
+            min-width: 250px;
+            min-height: 50px;
+            border-radius: 0px;
+            border: 0;
+            font-family: "IMFell";
+            font-size: 1.8em;
+        }
+        .addFilter{
+            box-shadow: 0px 4px 17px rgba(0, 175, 255, 0.93);
+            
+        }
+        .search{
+            box-shadow: 0px 4px 28px #9D0000;
+        }
+    }
+}
+
+@media screen and (max-width:1300px) {
+    .blockFilterCatalogue{
+        width: 90%;
+  }
+}
+@media screen and (max-width:1000px) {
+    .blockFilterCatalogue {
+        .filterRow{
+            width: 40%;
+            .delete{
+                width: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:800px) {
+    .blockFilterCatalogue {
+       .blockButtonFilterCatalogue{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+            button{
+                min-width: 80%;
+            }
+        }
+    }
+}
+/* .blockFilterCatalogue{
     width: 50%;
     height: 100%;
     @include flex;
@@ -31,4 +96,4 @@
             box-shadow: 0px 0px 2px 1px $blue;
         }
     }
-}
+} */

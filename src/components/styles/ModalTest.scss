@@ -1,16 +1,80 @@
+.buttonModalContainer{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
 
+.buttonModal{
+    width: 15px;
+    height: 20px;
+    
+}
 
 .modalbackground{
     
     display: flex;
-    justify-content: center;
     z-index: 1000;
+    position: absolute;
+    bottom: -20px;
+    left: 1200px;
 
 }
 
 .modalcontainer{
     border-style: solid;
-    background-image: url('../../assets/images/backgroundModalTest.png');
-    width: 450px;
+    background-image: url('../../assets/images/background-modal-red.png' );
+    width: 500px;
     height: 500px;
+    border: solid 2px black;
+    border-radius: 8px;
+    
+}
+
+.TitleModal{
+    font-family: $fontTitre;
+    color: $white;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.texteModal{
+    padding-top: 60px;
+}
+
+.texteModal{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+.inscript1 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 95px;
+    height: 30px;
+    background-color: green;
+    color: $white;
+    border: solid 2px;
+    border-radius: 20px;
+    font-family: $fontTitre ;
+}
+
+@media screen and (max-width: 1500px) {
+    .modalbackground{
+        margin-left: 270px;
+        margin-top: 38px;
+        display: block;
+        z-index: 1000;
+        position: initial;
+        bottom: -20px;
+        left: 1200px;
+    
+    }
+    
 }

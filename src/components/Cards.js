@@ -55,9 +55,7 @@ function Cards({ closeModal, vilain }) {
         </div>
         <footer className='footer'>
           <div className='descriptions'>
-            <p>
-              {vilain.description}
-            </p>
+            <p>{vilain.description}</p>
           </div>
           <div className='highFooter'>
             <h3>DO NOT APPROACH</h3>

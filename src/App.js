@@ -11,6 +11,9 @@ import NewsAndGame from './screens/NewsAndGame'
 import Test from './components/Test'
 import Contact from './screens/Contact'
 import ModalPaiement from './components/ModalPaiement'
+import Profilvilain from './components/profilVilain'
+import InscriptionHeros from './screens/InscriptionHeros'
+import Panier from './screens/Panier'
 
 function App() {
   const [title, setTitle] = useState('')
@@ -64,8 +67,11 @@ function App() {
           }
         />
         <Route path='/modalPaiement' element={<ModalPaiement />} />
+        <Route path='/profilvilain' element={<Profilvilain/>} />
+        <Route path='/InscriptionHero' element={<InscriptionHeros />} />
+        {/* <Footer /> */}
+        <Route path='/panier' element={<Panier />} />
       </Routes>
-      <Footer />
     </div>
   )
 }
