@@ -117,17 +117,24 @@ return (
                 </div>
                 
             </ul>
-            <div className="Container-Valid">
-            <button onClick={()=>{setOpenModal(true)}} className="Valid">VALIDER</button>
+            <div className='Container-Valid'>
+              <button
+                onClick={() => {
+                  setOpenModal(true)
+                }}
+                className='Valid'
+              >
+                VALIDER
+              </button>
             </div>
-            </form>
+          </form>
         </div>
         
     </div>
     
     {openModal && <Testmodal closeModal={setOpenModal} result={result}/>}
     </>
-    )
+  )
 }
 
 

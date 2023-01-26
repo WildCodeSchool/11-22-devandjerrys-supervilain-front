@@ -1,0 +1,37 @@
+.selectionMiniature img{
+    width: 210px;
+    
+}
+.selectionMiniature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.selectionMiniature h3{
+    text-align: center;
+    color: black;
+    background-color: white;
+    border:none;
+    width: 7em;
+    height: 50px;
+    line-height: 50px;
+    margin-top: -50px;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 1200px)
+ {
+    .selectionMiniature img {
+        width: 150px;
+      }
+      .selectionMiniature h3{
+        width: 5.5em;
+      }
+      .blockSelection {
+        gap: 70px;
+      }
+    
+
+}

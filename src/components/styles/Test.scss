@@ -4,7 +4,7 @@
 }
 
 .title-page-test{
-    font-family: $fontTitle;
+    font-family: $fontTitre;
     font-weight: 300;
     color: $white;
     font-style: none;
@@ -22,7 +22,7 @@
 }
 
 .title-inscription{
-    font-family: $fontTitle;
+    font-family: $fontTitre;
     font-weight: 300;
     font-size: 45px;
     color: $white;
@@ -65,7 +65,7 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-family: $fontTitle;
+    font-family: $fontTitre;
 }
 
 .reponse-select{
@@ -112,7 +112,7 @@ text-align: center;
     color: $white;
     border: solid 2px;
     border-radius: 20px;
-    font-family: "fontTitle" ;
+    font-family: $fontTitre ;
 }
 
 
@@ -123,7 +123,7 @@ text-align: center;
     left: 1400px;
     bottom: 250px;
     font-size: 50px;
-    font-family: $fontTitle;
+    font-family: $fontTitre;
     font-weight: 300;
     width: 400px;
     color: $white;

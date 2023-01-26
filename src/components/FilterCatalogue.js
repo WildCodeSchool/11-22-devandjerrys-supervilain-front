@@ -35,8 +35,7 @@ const FilterCatalogue = () => {
   const [listFilterCategory, setlistFilterCategory] = useState()
   const [listChoice, setListChoice] = useState()
   const [inputChoice, setInputChoice] = useState()
-  const [deletable, setDeletable] = useState(false)
-
+  const [widthWindows, setWidthWindows] = useState('1900')
   const showListChoise = e => {
     // Se lance lors de la selection de la catégorie de filtre
     if (e.firstChild.value === 'default') {
@@ -76,7 +75,6 @@ const FilterCatalogue = () => {
     // Se lance après qu'une catégorie de filtre qui doit afficher une liste a été sélectionné
     setInputChoice() // Supprime les inputs
     setListChoice(nameList.map(e => <option key={e}>{e}</option>)) // Affiche les éléments corespondant à la liste choisie
-    setDeletable(true) //Affiche le bouton delete
   }
   const addInputChoice = nameInput => {
     // Se lance après qu'une catégorie de filtre qui doit afficher un input a été sélectionné
@@ -88,7 +86,6 @@ const FilterCatalogue = () => {
         <input placeholder='Max' />
       </div>
     )
-    setDeletable(true) //Affiche le bouton delete
   }
 
   const addListFilterCategory = () => {
@@ -109,24 +106,31 @@ const FilterCatalogue = () => {
     e.preventDefault()
     e.target.parentElement.remove()
   }
+  useEffect(() => {
+    const handleResize = () => {
+      setWidthWindows(window.innerWidth)
+    }
+    window.addEventListener('resize', handleResize)
+    return window.addEventListener('resize', handleResize)
+  }, [])
 
   return (
     <div className='filterRow'>
-      <select
-        name='filtercategory'
-        className='filterListcategory filter'
-        onChange={e => showListChoise(e.target)}
-      >
-        <option value='default'>Choisissez un filtre</option>
-        {listFilterCategory}
-      </select>
-      {listChoice ? <select className='filter'>{listChoice}</select> : null}
-      {inputChoice ? <>{inputChoice}</> : null}
-      {deletable ? (
-        <button onClick={e => deleteFilter(e)} className='delete'>
-          Delete
-        </button>
-      ) : null}
+      <div className='blockFilterChoise'>
+        <select
+          name='filtercategory'
+          className='filterListcategory filter'
+          onChange={e => showListChoise(e.target)}
+        >
+          <option value='default'>Choisissez un filtre</option>
+          {listFilterCategory}
+        </select>
+        {listChoice ? <select className='filter'>{listChoice}</select> : null}
+        {inputChoice ? <>{inputChoice}</> : null}
+      </div>
+      <button onClick={e => deleteFilter(e)} className='delete'>
+        {widthWindows > 1000 ? 'Delete' : '✖'}
+      </button>
     </div>
   )
 }

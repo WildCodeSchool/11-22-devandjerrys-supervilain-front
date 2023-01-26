@@ -2,30 +2,19 @@
 
 $red: #9D0000;
 $blue: #0012B0;
-$black: #0f0f0f;
+$black: #12181F;
 $grey: #2a2a2a;
 $white: #f7f7f7;
+$whiteOpacity: #f7f7f710;
 
 
 /* images */
 
 $bg: url(./assets/images/Background.png);
+$bghome: url(./assets/images/BgHome.png);
 
 
-/* mixins */$fontTitre: myFirstFont;
-$fontTexte: myFirstText;
-$fontTitle: FELL-French;
-
-@font-face {
-    font-family: myFirstFont;
-    src: url('./assets/fonts/GUERRILLA.ttf');
-    font-weight: bold;
-}
-@font-face {
-    font-family: myFirstText;
-    src: url('./assets/fonts/BarlowCondensed-Regular.ttf');
-    font-weight: bold;
-    }
+/* mixins */
 
 @font-face {
     font-family: FELL-French;
@@ -43,11 +32,12 @@ $fontTitle: FELL-French;
 
 /* fonts */
 
-$fontTitre : 'Guerrilla';
+$fontTitre : 'IMFell';
 $fontTexte : 'Barlow';
+
 @font-face {
     font-family: $fontTitre;
-    src: url(./assets/fonts/GUERRILLA.ttf)
+    src: url(./assets/fonts/IMFellFrenchCanon-Regular.ttf)
 }
 @font-face {
     font-family: $fontTexte;
