@@ -1,5 +1,3 @@
-
-
 function Connect({ closeModal }) {
   return (
     <div className='Card'>

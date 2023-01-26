@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
-const Header = (props) => {
+const Header = props => {
   const [showLinks, setShowLinks] = useState(false)
 
   const handleShowLinks = () => {
@@ -42,8 +42,11 @@ const Header = (props) => {
             <span className='burger-bar'></span>
           </button>
         </div>
-        <div className="title-others">
-        <h1 className="title">{props.title} <span className='red'>{props.titleColorRed}</span> <span className='blue'>{props.titleColorBlue}</span></h1>
+        <div className='title-others'>
+          <h1 className='title'>
+            {props.title} <span className='red'>{props.titleColorRed}</span>{' '}
+            <span className='blue'>{props.titleColorBlue}</span>
+          </h1>
         </div>
       </div>
     </>

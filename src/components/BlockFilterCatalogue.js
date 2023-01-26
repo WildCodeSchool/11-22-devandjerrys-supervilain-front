@@ -4,7 +4,7 @@ import FilterCatalogue from './FilterCatalogue.js'
 
 const BlockFiltreCatalogue = props => {
   const [filterCatalogueArray, setFilterCatalogueArray] = useState([])
-  console.log(props.test)
+  // console.log(props.test)
   useEffect(() => {
     axios
       .get('http://localhost:4242/catalogue/vilain')
@@ -25,14 +25,13 @@ const BlockFiltreCatalogue = props => {
     ]) // Met à jour l'affichage
   }
   const filterCatalogue = () => {
-    props.setVilains(props.test)
-    // console.log('filterCatalogue1', vilains)
-    const filter = document.querySelectorAll('.filterRow')
+    // props.setVilains(props.test)
+    const filter = document.querySelectorAll('.blockFilterChoise')
     const result = []
 
     for (let i = 0; i < filter.length; i++) {
       const filterTemp = []
-      for (let j = 1; j < filter[i].children.length - 1; j++) {
+      for (let j = 1; j < filter[i].children.length; j++) {
         if (filter[i].children[1].classList.contains('filterChoice')) {
           const inputFilterTemp = []
           inputFilterTemp.push(
@@ -59,19 +58,13 @@ const BlockFiltreCatalogue = props => {
         <form className='filterCatalogue'>{filterCatalogueArray}</form>
         <div className='blockButtonFilterCatalogue'>
           <button className='addFilter' onClick={() => addFilter()}>
-            <span>+</span> ajoutez un filtre
+            AJOUTEZ UN FILTRE
           </button>
           <button onClick={() => filterCatalogue()} className='search'>
             RECHERCHER
           </button>
         </div>
       </div>
-      {/*     <ResultatCatalogue
-        filterCatalogueResult={filterCatalogueResult}
-        vilains={vilains}
-        setVilains={setVilains}
-        test={test}
-      /> */}
     </>
   )
 }
