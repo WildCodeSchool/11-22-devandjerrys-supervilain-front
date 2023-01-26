@@ -1,0 +1,95 @@
+.catalogue-layout{
+    background: url("../../assets/images/BGcatalogue.png") no-repeat;
+    background-color: $black;
+}
+
+.blocCatalogue{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 80px;
+    margin-top: 50px;
+    h1{
+        color: $white;
+        font-size: 3.2em;
+        font-family: $fontCatalogue;
+        text-align: center;
+        width: 65%;
+    }
+    h1:after{
+        content:"";
+        display: block;
+        background-image: url(../../assets/images/lineRed.png);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: contain;
+        height: 50px;
+    }
+    .blockLogoPanierTotal{
+        position: sticky;
+        bottom: 0;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -280px;
+        img, a{
+            margin-right: -18%;
+            width: 140px;
+        }
+    }
+}
+@media screen and (max-width: 1000px){
+    .logoPanierTotal{
+        width: 150px;
+    }
+}
+@media screen and (max-width: 800px){
+    .blocCatalogue h1{
+        width: 95%;
+    }
+    .blocCatalogue .blockLogoPanierTotal{
+    position: fixed;
+    z-index: 2;
+    right: 20px;
+    }
+    .logoPanierAnim {
+    
+        left: 100px;
+    }
+}
+@media screen and (max-width: 550px){
+
+    .vilainMignature .vilainPolygon{
+        height: 800px;
+        width: 400px;
+    }
+    .vilainMignature .vilainPolygon p{
+        width: 80%;
+        height: 260px;
+    }
+}
+
+/* .globalcontainer {
+    display: flex;
+}
+.container {
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+
+}
+
+@media screen and (min-width: 958px) and (max-width:2048px) {
+    .container {
+        max-height: 90vh;
+        width: 100vw;
+        overflow: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 50px;
+
+
+    }
+} */

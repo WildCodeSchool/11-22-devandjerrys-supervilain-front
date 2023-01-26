@@ -1,17 +1,20 @@
 import { useState, useEffect } from 'react'
 import Miniatures from '../components/Miniatures'
+
 const ResultatCatalogue = ({
   vilains,
   setVilains,
   filterCatalogueResult,
-  test
+  test,
+  cart,
+  setCart,
+  setRemoveOnCart
 }) => {
   const [vilainsResult, setVilainsResult] = useState([])
 
   useEffect(() => {
+    setVilains(test)
     filterCatalogueResult.map(itemFiltre => {
-      // setVilains(test)
-      console.log('vilains', vilains)
       switch (Object.keys(itemFiltre)[0]) {
         case 'power': {
           const result = vilains.filter(vilain =>
@@ -82,7 +85,6 @@ const ResultatCatalogue = ({
   useEffect(() => {
     setVilainsResult('')
 
-    console.log(vilains)
     vilains
       ? vilains.map(vilain => {
           setVilainsResult(prevState => [
@@ -90,9 +92,13 @@ const ResultatCatalogue = ({
             <Miniatures
               key={vilain.pseudo}
               pseudo={vilain.pseudo}
-              power={vilain.powerAndStats.power[0]}
+              description={vilain.description}
               price={vilain.price}
               miniatures={vilain.images.miniature}
+              vilain={vilain}
+              cart={cart}
+              setCart={setCart}
+              setRemoveOnCart={setRemoveOnCart}
             />
           ])
         })

@@ -3,21 +3,29 @@
 @import "./App.scss";
 @import "./screens/styles/InscriptionSuperVilain.scss";
 @import "./components/styles/Inscription.scss";
-@import "../src/screens/Miniatures.scss";
 @import "./components/styles/Header.scss";
 @import "./screens/styles/Home.scss";
-@import "./components/styles/Footer.scss";
+@import "./components/styles/Miniatures.scss";
 @import "./components/styles/BlockFilterCatalogue.scss";
 @import "./components/styles/FilterCatalogue.scss";
-@import "./components/styles/Connectez-vous.scss";
+@import "./screens/styles/Connectez-vous.scss";
 @import "./components/styles/Cards.scss";
-@import "./components/styles/Panier.scss";
+@import "./screens/styles/Panier.scss";
+@import "./components/styles/Description.scss";
+@import "./components/styles/Selection.scss";
 @import "./components/styles/ModalPaiement.scss";
-@import "../src/screens/Catalogue.scss";
+@import "./screens/styles/Catalogue.scss";
+@import "./screens/styles/NewsAndGame.scss";
 @import "./components/styles/ResultatCatalogue.scss";
 @import "./components/styles/Connexion.scss";
 @import "./screens/styles/InscriptionHeros.scss";
 
+@import "./components/styles/panierSelectionMiniature.scss";
+
+@import "./components/styles/Footer.scss";
+@import "./components/styles/Test.scss";
+@import "./components/styles/ModalTest.scss";
+@import "./screens/Contact.scss";
 
 
 /* Settings Global */
@@ -25,12 +33,10 @@
 * {
   margin: 0;
   padding: 0px;
-  outline: none;
   box-sizing: border-box;
 }
 
 body {
-  // background: $bg no-repeat center / cover;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

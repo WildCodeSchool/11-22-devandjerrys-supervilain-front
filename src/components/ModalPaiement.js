@@ -1,9 +1,4 @@
-import Carte from '../assets/images/cb_visa.png'
-
-const ModalPaiement = () => {
-  function handleClick(e) {
-    e.preventDefault()
-  }
+const ModalPaiement = ({ closeModal }) => {
   return (
     <div className='background'>
       <div className='modalPaiement'>
@@ -11,9 +6,8 @@ const ModalPaiement = () => {
           <div className='label1'>
             <input type='text' name='name' placeholder=' Nom sur la carte' />
           </div>
-
+          <br />
           <div className='label'>
-            <img className='visaCarte' src={Carte} alt='logo' />
             <input type='text' name='name' placeholder=' N° de carte' />
           </div>
           <br />
@@ -25,7 +19,11 @@ const ModalPaiement = () => {
             <input type='text' name='name' placeholder=' Cryptogramme visuel' />
           </div>
           <br />
-          <button href='#' className='button-paiement' onClick={handleClick}>
+          <button
+            href='#'
+            className='button-paiement'
+            onClick={() => closeModal(false)}
+          >
             &#128274; PAYEZ
           </button>
         </form>
