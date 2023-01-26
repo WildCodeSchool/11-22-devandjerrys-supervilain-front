@@ -4,7 +4,7 @@
     height: 52px;
     left: 1090px;
     top: 320px;
-    font-family: 'IM FELL French Canon SC';
+    font-family: $fontTitre;
     font-style: normal;
     font-weight: 400;
     font-size: 44px;
@@ -46,13 +46,13 @@
 
 
 .mess {
-    font-family: 'IM FELL French Canon SC';
+    font-family: $fontTitre;
     text-transform: uppercase;
 }
 
 .I-button {
     position: absolute;
-    font-family: 'IM FELL French Canon SC';
+    font-family: $fontTitre;
     font-size: 20px;
     box-sizing: border-box;
     width: 140px;
@@ -114,12 +114,9 @@
 
 input[type=checkbox] {
     accent-color: grey;
-
-}
-
-input[type=checkbox] {
     width: 20px;
     height: 20px;
+
 }
 
 @media screen and (min-width: 350px)and (max-width:1028px)  {

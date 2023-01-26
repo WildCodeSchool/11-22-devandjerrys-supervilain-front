@@ -12,11 +12,11 @@
 }
 .ih-title{
     position: absolute;
-width: 814px;
+    width: 100%;
 // height: 8vh;
 left: 102px;
 top: 210px;
-font-family: 'IM FELL French Canon SC';
+font-family: $fontTitre;
 font-style: normal;
 // font-weight: 400;
 font-size: 34px;
@@ -55,7 +55,6 @@ width: 421px;
 height: 258px;
 left: 199px;
 top: 560px;
-background: rgba(14, 27, 46, 0.39);
 flex-direction: column;
 background: rgba(247, 247, 247, 0.3);
 box-shadow: 4px 4px 108px rgba(0, 175, 255, 0.29);
@@ -67,7 +66,7 @@ border-radius: 8px;
 
 
 
-@media screen and (min-width: 350px)and (max-width:1028px) {
+@media screen and (min-width: 500px)and (max-width:1028px) {
     .ih-page{
         
         height: 181vh;

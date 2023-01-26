@@ -2,7 +2,6 @@ import Selection from '../components/Selection'
 import Description from '../components/Description'
 import { useState, useEffect } from 'react'
 const Panier = () => {
-  const [openModal, setOpenModal] = useState(false)
   const [panierStorage, setPanierStorage] = useState([])
   const [panierTotal, setPanierTotal] = useState(0)
 

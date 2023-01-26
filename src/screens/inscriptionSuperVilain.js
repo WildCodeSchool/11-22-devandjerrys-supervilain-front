@@ -2,12 +2,6 @@ import { useEffect } from 'react'
 import Inscription from '../components/Inscription'
 import Connexion from '../components/Connexion'
 
-// useEffect(() => {
-//   document.body.classList.add('isv-layout')
-//   return () => {
-//     document.body.classList.remove('isv-layout')
-//   }
-// }, [])
 
 const SuperVilain = () => {
   useEffect(() => {

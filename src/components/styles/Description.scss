@@ -1,5 +1,7 @@
 .blockDescription{
     display: flex;
+    position: relative;
+    top: 70px;
 }
 .blockDescription::before{
     content: "";
@@ -7,6 +9,8 @@
     background-repeat: no-repeat;
     width: 25px;
     background-size: contain;
+    position: relative;
+    top: 50px;
 }
 .modalDescription {
     display: flex;
@@ -15,7 +19,7 @@
     color:white;
     height: 80%;
     width: 500px;
-    .title {
+    .title-desc {
         font-size: xxx-large;
         display: flex;
     }
@@ -59,7 +63,6 @@
     margin: 22px;  
 }
 .buttonP {
-    width: 100px;
     color: black;
     background-color: white;
     border-radius: 30px;
@@ -69,7 +72,6 @@
     height:25px
 }
 .buttonA {
-    width: 100px;
     color: black;
     background-color: white;
     border-radius: 30px;
