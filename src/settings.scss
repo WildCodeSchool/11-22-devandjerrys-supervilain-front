@@ -26,12 +26,12 @@ $bghome: url(./assets/images/BgHome.png);
 /* fonts */
 
 $fontTitre : 'Guerrilla';
-$fontTexte : 'Barlow';
+$fontTexte : 'frenchCanon';
 @font-face {
     font-family: $fontTitre;
     src: url(./assets/fonts/GUERRILLA.ttf)
 }
 @font-face {
     font-family: $fontTexte;
-    src: url(./assets/fonts/BarlowCondensed-Regular.ttf)
+    src: url(./assets/fonts/IMFellFrenchCanon-Regular.ttf)
 }

@@ -11,6 +11,7 @@ import NewsAndGame from './screens/NewsAndGame'
 import Test from './components/Test'
 import Contact from './screens/Contact'
 import ModalPaiement from './components/ModalPaiement'
+import Profilvilain from './components/profilVilain'
 
 function App() {
   const [title, setTitle] = useState('')
@@ -32,6 +33,7 @@ function App() {
         <Route path='/inscription' element={<InscriptionSuperVilain />} />
         <Route path='/Contact' element={<Contact setTitle={setTitle} setTitleColorRed={setTitleColorRed} setTitleColorBlue={setTitleColorBlue} />} />
         <Route path='/modalPaiement' element={<ModalPaiement />} />
+        <Route path='/profilvilain' element={<Profilvilain/>} />
       </Routes>
       <Footer />
     </div>
