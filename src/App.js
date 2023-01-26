@@ -11,6 +11,7 @@ import NewsAndGame from './screens/NewsAndGame'
 import Test from './components/Test'
 import Contact from './screens/Contact'
 import ModalPaiement from './components/ModalPaiement'
+import Panier from './screens/Panier'
 import PanierTest from './screens/PanierTest.js'
 
 function App() {
@@ -65,9 +66,8 @@ function App() {
           }
         />
         <Route path='/modalPaiement' element={<ModalPaiement />} />
-        <Route path='/panierTest' element={<PanierTest />} />
+        <Route path='/panier' element={<Panier />} />
       </Routes>
-      <Footer />
     </div>
   )
 }
