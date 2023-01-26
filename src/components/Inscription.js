@@ -28,9 +28,6 @@ const Inscription = () => {
       .then(data => {
         setVilain(data.map(element => element.pseudo))
       })
-      .then(data => {
-        setVilain(data.map(element => element.password))
-      })
   }, [])
   function myFunctionInsc() {
     const x = document.getElementById('MDPI')

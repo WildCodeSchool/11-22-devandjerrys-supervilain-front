@@ -67,7 +67,7 @@ function App() {
           }
         />
         <Route path='/modalPaiement' element={<ModalPaiement />} />
-        <Route path='/profilvilain' element={<Profilvilain/>} />
+        <Route path='/profilvilain' element={<Profilvilain />} />
         <Route path='/InscriptionHero' element={<InscriptionHeros />} />
         {/* <Footer /> */}
         <Route path='/panier' element={<Panier />} />
