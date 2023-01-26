@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Miniatures from '../components/Miniatures'
+
 const ResultatCatalogue = ({
   vilains,
   setVilains,
@@ -9,8 +10,8 @@ const ResultatCatalogue = ({
   const [vilainsResult, setVilainsResult] = useState([])
 
   useEffect(() => {
+    setVilains(test)
     filterCatalogueResult.map(itemFiltre => {
-      // setVilains(test)
       console.log('vilains', vilains)
       switch (Object.keys(itemFiltre)[0]) {
         case 'power': {
@@ -93,6 +94,7 @@ const ResultatCatalogue = ({
               power={vilain.powerAndStats.power[0]}
               price={vilain.price}
               miniatures={vilain.images.miniature}
+              vilain={vilain}
             />
           ])
         })

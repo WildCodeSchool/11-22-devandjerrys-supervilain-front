@@ -1,0 +1,53 @@
+
+.globalcontainer {
+    display: flex;
+}
+.container {
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+
+    .choose {
+        padding: 20px;
+        height: 90px;
+        color: $white;
+        font-family: $fontTitre;
+        text-align: center;
+        z-index: 6;
+        position: sticky;
+        top: 0px;
+        width: 100%;
+        background: $grey;
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 958px) and (max-width:2048px) {
+    .container {
+        max-height: 90vh;
+        width: 100vw;
+        overflow: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 50px;
+
+
+        .choose {
+            padding: 20px;
+            height: 120px;
+            color: $white;
+            font-family: $fontTitre;
+            text-align: center;
+            z-index: 6;
+            position: sticky;
+            top: 0px;
+            max-width: 52vw;
+            width: 100%;
+            background: $grey;
+            padding-bottom: 0;
+        }
+    }
+}

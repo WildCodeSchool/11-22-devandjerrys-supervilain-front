@@ -2,9 +2,7 @@
 display: flex;
 justify-content: center;
 align-items: center;
-height:100vh;
-background-color: grey;
-
+height: 48vh;
 }
 
 .modalPaiement{
@@ -16,23 +14,24 @@ background-color: grey;
     background-color: $white;
     border-radius: 30px;
     
-}
-
-.description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.label {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-family: $fontTexte;
+    
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .label {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: $fontTexte;
+        
+    }
     
 }
 
-input {
+.modalPaiement input {
     box-sizing: border-box;
     width: 100%;
     padding: 0.5rem 0.7rem;

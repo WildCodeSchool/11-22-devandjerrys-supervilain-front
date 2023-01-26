@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Cards from './Cards'
 
-const Miniatures = ({ pseudo, power, price, miniatures }) => {
+const Miniatures = ({ pseudo, power, price, miniatures, vilain }) => {
   const [openModal, setOpenModal] = useState(false)
   return (
     <>
@@ -28,7 +28,7 @@ const Miniatures = ({ pseudo, power, price, miniatures }) => {
           </div>
         </div>
       </div>
-      {openModal && <Cards closeModal={setOpenModal} />}
+      {openModal && <Cards closeModal={setOpenModal} vilain={vilain} />}
     </>
   )
 }

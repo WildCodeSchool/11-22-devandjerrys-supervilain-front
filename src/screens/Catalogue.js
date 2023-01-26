@@ -1,10 +1,17 @@
 import { useState } from 'react'
 import BlockFiltreCatalogue from '../components/BlockFilterCatalogue'
-import ResultatCatalogue from '../components/ResultatCatalogue.js'
-const Catalogue = () => {
+import Panier from '../components/Panier'
+import ResultatCatalogue from '../components/ResultatCatalogue'
+
+const Catalogue = props => {
+  props.setTitle('THE DEAD AGENCY -')
+  props.setTitleColorRed('CATALOGUE')
+  props.setTitleColorBlue('')
+
   const [filterCatalogueResult, setFilterCatalogueResult] = useState([])
   const [vilains, setVilains] = useState([])
   const [test, setTest] = useState([])
+
   return (
     <>
       <BlockFiltreCatalogue
@@ -28,13 +35,10 @@ const Catalogue = () => {
             setVilains={setVilains}
             test={test}
           />
-          {/*  <Miniatures />
-        <Miniatures />
-        <Miniatures />
-        <Miniatures /> */}
         </div>
       </div>
     </>
   )
 }
+
 export default Catalogue

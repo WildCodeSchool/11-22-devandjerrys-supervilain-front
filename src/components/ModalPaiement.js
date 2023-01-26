@@ -1,7 +1,4 @@
-const ModalPaiement = () => {
-  function handleClick(e) {
-    e.preventDefault()
-  }
+const ModalPaiement = ({ closeModal }) => {
   return (
     <div className='background'>
       <div className='modalPaiement'>
@@ -22,7 +19,11 @@ const ModalPaiement = () => {
             <input type='text' name='name' placeholder=' Cryptogramme visuel' />
           </div>
           <br />
-          <button href='#' className='button-paiement' onClick={handleClick}>
+          <button
+            href='#'
+            className='button-paiement'
+            onClick={() => closeModal(false)}
+          >
             &#128274; PAYEZ
           </button>
         </form>

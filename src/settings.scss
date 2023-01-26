@@ -5,20 +5,16 @@ $blue: #0012B0;
 $black: #0f0f0f;
 $grey: #2a2a2a;
 $white: #f7f7f7;
+$whiteOpacity: #f7f7f710;
 
-/* mixins */$fontTitre: myFirstFont;
-$fontTexte: myFirstText;
 
-@font-face {
-    font-family: myFirstFont;
-    src: url('./assets/fonts/GUERRILLA.ttf');
-    font-weight: bold;
-}
-@font-face {
-    font-family: myFirstText;
-    src: url('./assets/fonts/BarlowCondensed-Regular.ttf');
-    font-weight: bold;
-    }
+/* images */
+
+$bg: url(./assets/images/Background.png);
+$bghome: url(./assets/images/BgHome.png);
+
+
+/* mixins */
 
 @mixin flex {
     display: flex;
