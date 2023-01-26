@@ -24,7 +24,7 @@ const Home = () => {
         </div>
         <div className='text-container'>
           <div className='text-super-vilain'>
-            <Link to="/catalogue"><h2>Inscrivez-vous et passez le test !</h2></Link>
+            <Link to="/catalogue"><h2>Passez le test et inscrivez-vous !</h2></Link>
             <p>" Vous souhaitez intégrer notre catalogue de super-vilain ? "</p>
           </div>
           <div className='text-super-heros'>
