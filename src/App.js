@@ -12,7 +12,6 @@ import Test from './components/Test'
 import Contact from './screens/Contact'
 import ModalPaiement from './components/ModalPaiement'
 import Panier from './screens/Panier'
-import PanierTest from './screens/PanierTest.js'
 
 function App() {
   const [title, setTitle] = useState('')
