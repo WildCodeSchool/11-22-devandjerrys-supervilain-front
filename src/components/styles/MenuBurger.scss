@@ -1,3 +1,4 @@
+
 @media screen and (max-width: 500px) {
 /* style burger */
 .menu__burger{
@@ -18,7 +19,6 @@
      height: 100%;
      top: 0;
      padding: 4em 7em;
-     border: 2px solid $white;
      right:-1000px;
      transition: all .8s ease-out;
      background-color: rgba(255, 0, 0, 0.185);
@@ -27,7 +27,8 @@
   }
   .menu__link {
       display: inline-block;
-      color: inherit;
+      color: $white;
+      text-shadow: 2px 2px 2px $black;
       font-size: 2rem;
     
      &:after {

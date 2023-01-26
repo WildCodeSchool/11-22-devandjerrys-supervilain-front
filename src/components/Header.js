@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
 import MenuBurger from './MenuBurger'
 
 
@@ -19,10 +18,10 @@ const Header = () => {
               <Link to='/news' className='nav__link'>News</Link>
             </li>
             <span className='border'></span>
-            <li>
+            {/* <li>
               <Link to='/about' className='nav__link'>A Propos</Link>
             </li>
-            <span className='border'></span>
+            <span className='border'></span> */}
             <li>
               <Link to='/contact' className='nav__link'>Contact</Link>
             </li>

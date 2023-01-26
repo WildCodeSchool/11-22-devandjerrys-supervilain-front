@@ -18,9 +18,9 @@ const handleShowLinks = () => {
                     <li className='menu__item slideInLeft-2' onClick={handleShowLinks}>
                         <Link to='/news' className='menu__link'>News</Link>
                     </li>
-                    <li className='menu__item slideInLeft-3' onClick={handleShowLinks}>
+                    {/* <li className='menu__item slideInLeft-3' onClick={handleShowLinks}>
                         <Link to='/qui-sommme-nous?' className='menu__link'>A Propos</Link>
-                    </li>
+                    </li> */}
                     <li className='menu__item slideInLeft-4' onClick={handleShowLinks}>
                         <Link to='/contact' className='menu__link'>Contact</Link>
                     </li>

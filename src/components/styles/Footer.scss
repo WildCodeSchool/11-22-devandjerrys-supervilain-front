@@ -22,6 +22,7 @@
         img {
             width : 40px;
             height: auto;
+            box-shadow: 2px 2px 2px $black;
             
             &:hover {
                 transform: scale(1.1);
@@ -38,6 +39,7 @@
         font-family: $fontTexte;
         font-size: 1.8em;
         display: inline-block;
+        text-shadow: 2px 2px 2px $black;
         
         &:after {
             display:block;
