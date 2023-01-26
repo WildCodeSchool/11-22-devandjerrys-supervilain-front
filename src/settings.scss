@@ -16,6 +16,13 @@ $bghome: url(./assets/images/BgHome.png);
 
 /* mixins */
 
+@font-face {
+    font-family: FELL-French;
+    src: url('./assets/fonts/FELL-French.ttf');
+    font-weight: 300;
+    
+}  
+
 @mixin flex {
     display: flex;
     justify-content: center;
@@ -25,18 +32,14 @@ $bghome: url(./assets/images/BgHome.png);
 
 /* fonts */
 
-$fontTitre : 'Guerrilla';
+$fontTitre : 'IMFell';
 $fontTexte : 'Barlow';
-$fontCatalogue : 'IMFell';
+
 @font-face {
     font-family: $fontTitre;
-    src: url(./assets/fonts/GUERRILLA.ttf)
+    src: url(./assets/fonts/IMFellFrenchCanon-Regular.ttf)
 }
 @font-face {
     font-family: $fontTexte;
     src: url(./assets/fonts/BarlowCondensed-Regular.ttf)
-}
-@font-face {
-    font-family: $fontCatalogue;
-    src: url(./assets/fonts/IMFellFrenchCanon-Regular.ttf)
 }
