@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import InscriptionSuperVilain from './screens/InscriptionSuperVilain'
+import InscriptionSuperVilain from './screens/inscriptionSuperVilain'
 import Home from './screens/Home'
 import Connect from './screens/Connectez-vous'
 import Header from './components/Header'
@@ -11,6 +11,7 @@ import NewsAndGame from './screens/NewsAndGame'
 import Test from './components/Test'
 import Contact from './screens/Contact'
 import ModalPaiement from './components/ModalPaiement'
+import Profilvilain from './components/profilVilain'
 import InscriptionHeros from './screens/InscriptionHeros'
 import Panier from './screens/Panier'
 
@@ -66,6 +67,7 @@ function App() {
           }
         />
         <Route path='/modalPaiement' element={<ModalPaiement />} />
+        <Route path='/profilvilain' element={<Profilvilain/>} />
         <Route path='/InscriptionHero' element={<InscriptionHeros />} />
         {/* <Footer /> */}
         <Route path='/panier' element={<Panier />} />
