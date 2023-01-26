@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom'
 import smoke from '../assets/images/smokesvg.svg'
 import superhome from '../assets/images/superhomesvg.svg'
 import line from '../assets/images/Line.svg'
+
 const Home = () => {
   useEffect(() => {
     document.body.classList.add('home-layout')
     return () => {
-      document.body.classList.remove('home-layout')
+    document.body.classList.remove('home-layout')
     }
   }, [])
 
@@ -17,11 +18,9 @@ const Home = () => {
         <div className="welcome-container">
           <h1>Bienvenue à la DEAD AGENCY</h1>
           <img className='line' src={line} alt='a line'></img>
-          <div className='paraph'>
             <p>Vous êtes un super-héros en manque de popularité ?</p>
             <p>ou</p>
             <p>Vous êtes un super-vilain et vous souhaitez financer votre projet qui est de régner sur le monde ?</p>
-          </div>
         </div>
         <div className='text-container'>
           <div className='text-super-vilain'>

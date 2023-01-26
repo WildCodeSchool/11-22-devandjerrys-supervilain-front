@@ -21,7 +21,7 @@ function App() {
         <Route path='/Connectezvous' element={<Connect />} />
         <Route path='/catalogue' element={<Catalogue />} />
         <Route path='/cards' element={<Cards />} />
-        <Route path='/news-jeux' element={<NewsAndGame />} />
+        <Route path='/news' element={<NewsAndGame />} />
         <Route path='/Test' element={<Test/>} />
         <Route path='/inscription' element={<InscriptionSuperVilain />} />
         <Route path='/contact' element={<Contact />} />

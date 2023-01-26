@@ -1,6 +1,5 @@
 .home-layout {
     background: url(../../assets/images/bghomesvg.svg) no-repeat;
-    backdrop-filter: brightness(70%);
     background-size: contain;
     background-color: $black;
 }
@@ -15,15 +14,14 @@
         position: relative;
         top: 400px;
         left: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex;
         flex-direction: column;
         
 
         h1, p {
             color: $white;
             font-family: $fontTitre;
+            z-index: 1;
         }
         h1 {
             font-size: 2.8rem;
@@ -62,7 +60,7 @@
     .text-super-heros {
         position: absolute;
         right: 50px;
-        // animation: float 3s ease-in-out infinite;
+
         h2 {
             color: $blue;
             margin-bottom: 30px;
@@ -84,7 +82,6 @@
     .text-super-vilain {
         position: absolute;
         left: 50px;
-        // animation: float 3s ease-in-out infinite;
         h2 {
             color: $red;
             margin-bottom: 30px;
@@ -153,3 +150,70 @@
             transform: translatex(0px);
             }
         }
+
+        /* MEDIA QUERIES */
+
+
+@media screen and (max-width: 500px) {
+
+    .home-container {
+
+        .welcome-container {
+            width: 100%;
+            top: 250px;
+            left: 0;
+            padding: 10px;            
+
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 1em;
+                margin-top: 20px;
+            }
+            img {
+                width: 300px;
+            }
+        }
+
+        .text-container {
+            top: 430px;
+            
+            h2 {
+                font-size: 1em;
+                width: 100px;
+            }
+            p {
+                display: none;
+            }
+        
+        .text-super-heros {
+            right: 10px;
+
+            h2 {
+                margin-bottom: 0px;
+            }
+        }
+    
+        .text-super-vilain {
+            left: 10px;
+
+            h2 {
+                margin-bottom: 0px;
+            }
+        }
+    }
+        .img-container {
+    
+            .smoke {
+                top: 175px;
+                left: 8px;
+            }
+            .superhome {
+                bottom: 20px;
+                left: 24%;
+            }
+        }
+    }
+}

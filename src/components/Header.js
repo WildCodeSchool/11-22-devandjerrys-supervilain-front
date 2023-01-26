@@ -1,13 +1,9 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import MenuBurger from './MenuBurger'
 
 
-const Header = (props) => {
-  const [showLinks, setShowLinks] = useState(false)
-
-  const handleShowLinks = () => {
-    setShowLinks(!showLinks)
-  }
+const Header = () => {
 
   return (
     <>
@@ -15,26 +11,24 @@ const Header = (props) => {
         <h1 className='title'><Link to='/'><span className='red'>DEAD</span> <span className='blue'>AGENCY</span></Link></h1>
         <div className='nav__links'>
           <ul>
-            <li onClick={handleShowLinks}>
+            <li>
               <Link to='/' className='nav__link'>Home</Link>
             </li>
             <span className='border'></span>
-            <li onClick={handleShowLinks}>
-              <Link to='/news-jeux' className='nav__link'>News | Jeux</Link>
+            <li>
+              <Link to='/news' className='nav__link'>News</Link>
             </li>
             <span className='border'></span>
-            <li onClick={handleShowLinks}>
+            <li>
               <Link to='/about' className='nav__link'>A Propos</Link>
             </li>
             <span className='border'></span>
-            <li onClick={handleShowLinks}>
+            <li>
               <Link to='/contact' className='nav__link'>Contact</Link>
             </li>
           </ul>
         </div>
-          <button className='burger' onClick={handleShowLinks}>
-            <span className='burger-bar'></span>
-          </button>
+          <MenuBurger/>
       </nav>
     </>
   )
