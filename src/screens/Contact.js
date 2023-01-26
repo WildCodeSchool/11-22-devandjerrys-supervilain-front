@@ -22,7 +22,7 @@ const Contact = () => {
           <input className='texte' type='text' placeholder='Mail' />
           <br />
           <textarea
-            className='message'
+            className='messages'
             type='text'
             rows='5'
             placeholder=' Votre message...'

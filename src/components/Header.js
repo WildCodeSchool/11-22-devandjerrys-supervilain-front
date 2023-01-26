@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom'
 import MenuBurger from './MenuBurger'
 
-
 const Header = () => {
+
 
   return (
     <>
       <nav className='header-container'>
-        <h1 className='title'><Link to='/'><span className='red'>DEAD</span> <span className='blue'>AGENCY</span></Link></h1>
+        <h1 className='title-header'><Link to='/'><span className='red'>DEAD</span> <span className='blue'>AGENCY</span></Link></h1>
         <div className='nav__links'>
           <ul>
             <li>

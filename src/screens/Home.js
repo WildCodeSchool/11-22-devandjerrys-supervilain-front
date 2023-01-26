@@ -24,11 +24,11 @@ const Home = () => {
         </div>
         <div className='text-container'>
           <div className='text-super-vilain'>
-            <Link to="/catalogue"><h2>Passez le test et inscrivez-vous !</h2></Link>
+            <Link to="/test"><h2>Passez le test et inscrivez-vous !</h2></Link>
             <p>" Vous souhaitez intégrer notre catalogue de super-vilain ? "</p>
           </div>
           <div className='text-super-heros'>
-            <Link to="/Connectezvous"><h2>Inscrivez-vous et faites votre choix !</h2></Link>
+            <Link to="/InscriptionHero"><h2>Inscrivez-vous et faites votre choix !</h2></Link>
             <p>" Vous souhaitez recruter des super-vilain ? "</p>
           </div>
         </div>  

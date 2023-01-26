@@ -1,0 +1,23 @@
+.panier-layout {
+    background: url("http://localhost:3000/static/media/cool-background%202.128c68d4fbb7d709f65e.png") no-repeat bottom left;
+    background-color: $black;
+    background-position-x: -150px;
+}
+.globalScreen {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     width: 90vw;
+    margin: auto;
+}
+
+.ligneR {
+    transform: rotate(180deg);
+
+}
+@media screen and (max-width: 820px){
+    .globalScreen{
+        flex-direction: column;
+    }
+}

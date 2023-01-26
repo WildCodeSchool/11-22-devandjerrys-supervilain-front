@@ -11,24 +11,27 @@
 @import "./components/styles/FilterCatalogue.scss";
 @import "./screens/styles/Connectez-vous.scss";
 @import "./components/styles/Cards.scss";
-@import "./components/styles/Panier.scss";
+@import "./screens/styles/Panier.scss";
+@import "./components/styles/Description.scss";
+@import "./components/styles/Selection.scss";
 @import "./components/styles/ModalPaiement.scss";
 @import "./screens/styles/Catalogue.scss";
 @import "./screens/styles/NewsAndGame.scss";
 @import "./components/styles/ResultatCatalogue.scss";
+@import "./components/styles/Connexion.scss";
+@import "./screens/styles/InscriptionHeros.scss";
+@import "./components/styles/panierSelectionMiniature.scss";
 @import "./components/styles/Footer.scss";
 @import "./components/styles/Test.scss";
 @import "./components/styles/ModalTest.scss";
 @import "./screens/styles/Contact.scss";
-
-
+@import "./components/styles/profilVilain.scss";
 
 /* Settings Global */
 
 * {
   margin: 0;
   padding: 0px;
-  outline: none;
   box-sizing: border-box;
 }
 
