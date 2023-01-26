@@ -12,6 +12,7 @@ import Test from './components/Test'
 import Contact from './screens/Contact'
 import ModalPaiement from './components/ModalPaiement'
 import Panier from './screens/Panier'
+import PanierTest from './screens/PanierTest.js'
 
 function App() {
   const [title, setTitle] = useState('')
@@ -20,8 +21,6 @@ function App() {
 
   return (
     <div className='App'>
-<<<<<<< HEAD
-=======
       <Header
         title={title}
         titleColorRed={titleColorRed}
@@ -30,7 +29,6 @@ function App() {
         setTitleColorRed={setTitleColorRed}
         setTitleColorBlue={setTitleColorBlue}
       />
->>>>>>> dev
       <Routes>
         <Route path='/' element={<Home title={title} setTitle={setTitle} />} />
         <Route path='/Connectezvous' element={<Connect />} />
