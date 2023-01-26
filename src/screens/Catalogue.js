@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import BlockFiltreCatalogue from '../components/BlockFilterCatalogue'
-import Panier from '../components/Panier'
 import ResultatCatalogue from '../components/ResultatCatalogue.js'
 const Catalogue = () => {
   const [filterCatalogueResult, setFilterCatalogueResult] = useState([])
@@ -34,7 +33,6 @@ const Catalogue = () => {
         <Miniatures />
         <Miniatures /> */}
         </div>
-        <Panier />
       </div>
     </>
   )
