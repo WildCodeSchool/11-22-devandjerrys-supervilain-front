@@ -1,4 +1,3 @@
-import Carte from '../assets/images/cb_visa.png'
 import React from 'react'
 
 const ModalPaiement = ({ closeModal }) => {
@@ -11,7 +10,6 @@ const ModalPaiement = ({ closeModal }) => {
           </div>
 
           <div className='label'>
-            <img className='visaCarte' src={Carte} alt='logo' />
             <input type='text' name='name' placeholder=' N° de carte' />
           </div>
           <br />
