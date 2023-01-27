@@ -3,22 +3,27 @@
     background-color: $black;
 }
 
+.test-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 100px;
+}
 .title-page-test{
     font-family: $fontTitre;
-    font-weight: 300;
+    font-size: 2em;
     color: $white;
     font-style: none;
     margin-left: 80px ;
-    padding-top: 80px;
+    margin-top: 80px;
+
+    .red {
+        color: $red;
+    }
 }
 
-.Image{
-    width:100%;
-    background-repeat: no-repeat;
-    height: 14px;
-    background-image: url('../../assets/images/Ligne-test.png');
-    padding-bottom: 50px;
-    margin-left: 50px;
+.line-test{
+    margin: 10px 50px;
 }
 
 .title-inscription{
@@ -27,7 +32,7 @@
     font-size: 45px;
     color: $white;
     margin-left: 100px;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
                            // &&&&&&&&&&&&&&&&&&&&&&&&&&&   CARD INSCRIPTION   &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 .Card-Test{
@@ -106,8 +111,8 @@ text-align: center;
 .Valid {
     width: 80px;
     height: 30px;
-    background-color: green;
-    color: $white;
+    background-color: $white;
+    color: $black;
     border: solid 2px;
     border-radius: 20px;
     font-family: $fontTitre ;
@@ -123,7 +128,6 @@ text-align: center;
     font-size: 50px;
     font-family: $fontTitre;
     font-weight: 300;
-    width: 400px;
     color: $white;
     width: auto;
     padding: 20px;
@@ -131,4 +135,77 @@ text-align: center;
     box-shadow: 4px 4px 108px rgba(255, 0, 0, 0.33);
     border-radius: 8px;
     border: solid 2px black;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 500px) {
+    .test-container {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        top: 60px;
+
+        .title-page-test{
+            font-size: 1.2em;
+            margin-left: 20px ;
+            
+            .red {
+            color: $red;
+        }
+    }
+    
+    .line-test{
+        width: 330px;
+        margin: 10px 10px;
+    }
+    
+    .title-inscription{
+        font-size: 2em;
+        margin-left: 40px;
+    }
+    // &&&&&&&&&&&&&&&&&&&&&&&&&&&   CARD INSCRIPTION   &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+    
+    .Card-Test{
+        width: 370px;
+        height: 400px;
+        margin-left: 10px;
+    }
+    
+    .cadre-question {
+        margin: 5px;
+    }
+    
+    .Container{
+        padding: 10px 15px 10px 15px;
+    }
+    
+    
+    
+    .Question {    
+        padding: 5px;
+    }
+    
+    .reponse-select{
+        transition: transform 0.5s ease-in-out;
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+    .score {
+        position: absolute;
+        left: 10px;
+        bottom: 200px;
+        font-size: 50px;
+        font-family: $fontTitre;
+        color: $white;
+        width: auto;
+        padding: 20px;
+        background: rgba(14, 27, 46, 0.51);
+        box-shadow: 4px 4px 108px rgba(255, 0, 0, 0.33);
+        border-radius: 8px;
+        border: solid 2px black;
+    }
+}
 }

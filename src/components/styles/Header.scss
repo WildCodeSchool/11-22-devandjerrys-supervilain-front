@@ -33,6 +33,7 @@
       width: 60%;
       ul {
          @include flex;
+         justify-content: space-around;
       }
    }
    
@@ -68,7 +69,7 @@
       .menu__burger {
          display: block;
       }
-      .title {
+      .title-header {
          width: 60%;
          font-size: 2rem;
          margin-left: 0px;   

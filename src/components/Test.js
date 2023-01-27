@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Testmodal from './ModalTest'
+import lineTest from '../assets/images/Line.png'
 
 const Test = () => {
   const [question1, setQuestion1] = useState('')
@@ -54,15 +55,14 @@ const Test = () => {
 
   return (
     <>
-      <div>
-        <h1 className='title-page-test'>
-          The Dead Agency - Inscritpion / Connexion
-        </h1>
+      <div className='test-container'>
+        <div className='title-page-test'>The Dead Agency -{' '}
+          <span className='red blue'> Test / Inscription</span>
+        </div>
         <div className='Image'>
-          <image></image>
+          <img className='line-test' src={lineTest} alt="line"></img>
         </div>
         <h2 className='title-inscription'> Test d'Inscritpion</h2>
-      </div>
       <div className='Card-container'>
         <div className='Card-Test'>
           {/* <form> */}
@@ -144,6 +144,7 @@ const Test = () => {
                 </div>
               </div>
             </ul>
+          </form>
             <div className='Container-Valid'>
               <button
                 onClick={() => {
@@ -154,11 +155,11 @@ const Test = () => {
                 VALIDER
               </button>
             </div>
-          </form>
         </div>
       </div>
 
       {openModal && <Testmodal closeModal={setOpenModal} result={result} />}
+      </div>
     </>
   )
 }

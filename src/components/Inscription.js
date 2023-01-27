@@ -3,6 +3,7 @@ import axios from 'axios'
 // import Blood from '../assets/images/blood.png'
 import Message from './Message'
 import Line from '../assets/images/Line.svg'
+import { Link } from 'react-router-dom'
 
 const Inscription = () => {
   const [pseudo, setPseudo] = useState('')
@@ -102,9 +103,11 @@ const Inscription = () => {
                   </div>
                 </div>
               </label>
+              <Link to="/catalogue">
               <button className='I-button' type='submit' value='submit'>
                 Validez
               </button>
+              </Link>
             </form>
             {isUserLoggedIn && <Message messageConf={messageConf} />}
           </div>
