@@ -144,7 +144,6 @@ const Test = () => {
                 </div>
               </div>
             </ul>
-          </form>
             <div className='Container-Valid'>
               <button
                 onClick={() => {
@@ -155,6 +154,7 @@ const Test = () => {
                 VALIDER
               </button>
             </div>
+          </form>
         </div>
       </div>
 
