@@ -8,11 +8,11 @@
     align-items: center;
     flex-direction: column;
     gap: 80px;
-    margin-top: 50px;
+    margin-top: 150px;
     h1{
         color: $white;
         font-size: 3.2em;
-        font-family: $fontCatalogue;
+        font-family: $fontTitre;
         text-align: center;
         width: 65%;
     }
@@ -58,6 +58,14 @@
 }
 @media screen and (max-width: 550px){
 
+    .blocCatalogue{
+    
+        h1{
+            color: $white;
+            font-size: 3em;
+        }
+        
+
     .vilainMignature .vilainPolygon{
         height: 800px;
         width: 400px;
@@ -67,7 +75,7 @@
         height: 260px;
     }
 }
-
+}
 /* .globalcontainer {
     display: flex;
 }

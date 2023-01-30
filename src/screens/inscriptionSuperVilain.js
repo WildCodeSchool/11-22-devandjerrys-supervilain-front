@@ -1,15 +1,26 @@
+import { useEffect } from 'react'
 import Inscription from '../components/Inscription'
-import Smoke from '../assets/images/RedSmoke.svg'
+import Connexion from '../components/Connexion'
 
-const inscriptionSuperVilain = () => (
-  <div>
-    <div className='isv-container'>
-      <h2>TEST REUSSI, INSCRIVEZ-VOUS POUR FAIRE PARTI DE NOTRE CATALOGUE!</h2>
-      <img className='isv-smoke' src={Smoke} alt='fumée rouge'></img>
-      {/* <div className='isv-card'></div> */}
+
+const SuperVilain = () => {
+  useEffect(() => {
+    document.body.classList.add('insVi-layout')
+    return () => {
+      document.body.classList.remove('insVi-layout')
+    }
+  }, [])
+
+  return (
+    <div className='isv-page'>
+      {/* <h2 className='isv-title'>The Dead Agency - Inscription / connexion</h2> */}
+      {/* <div className='isv-container'> */}
       <Inscription />
+      <div className='connexion-sv'>
+        <Connexion />
+      </div>
     </div>
-  </div>
-)
-
-export default inscriptionSuperVilain
+    // </div>
+  )
+}
+export default SuperVilain

@@ -23,11 +23,11 @@
             padding-top: 150px;
             width: 500px;
             height: 700px;
-            background: #F7F7F7;
+            background: $white;
             clip-path: polygon(100% 0, 100% 62%, 50% 100%, 0 62%, 0 0);
             gap: 30px;
             h2, p, h3{
-                font-family: $fontCatalogue;
+                font-family: $fontTitre;
             }
             h2{
                 font-size: 3em;

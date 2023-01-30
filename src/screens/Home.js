@@ -1,50 +1,40 @@
-import superheros from '../assets/images/SuperHeros.png'
-import supervilain from '../assets/images/SuperVilain.png'
-import redsmoke from '../assets/images/RedSmoke.svg'
-import bluesmoke from '../assets/images/BlueSmoke.svg'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import smoke from '../assets/images/smokesvg.svg'
+import superhome from '../assets/images/superhomesvg.svg'
+import line from '../assets/images/Line.svg'
 
 const Home = () => {
+  useEffect(() => {
+    document.body.classList.add('home-layout')
+    return () => {
+    document.body.classList.remove('home-layout')
+    }
+  }, [])
+
   return (
     <>
       <div className='home-container'>
+        <div className="welcome-container">
+          <h1>Bienvenue à la DEAD AGENCY</h1>
+          <img className='line' src={line} alt='a line'></img>
+            <p>Vous êtes un super-héros en manque de popularité ?</p>
+            <p>ou</p>
+            <p>Vous êtes un super-vilain et vous souhaitez financer votre projet qui est de régner sur le monde ?</p>
+        </div>
         <div className='text-container'>
-          <h3 className='text-superheros'>
-            "Vous souhaitez recruter des super-vilain ? <br />
-            Inscrivez-vous et faites votre choix !"
-          </h3>
-          <h3 className='text-supervilain'>
-            " Vous souhaitez integrer notre catalogue de super-vilain ? <br />
-            Inscrivez-vous et passez le test ! "
-          </h3>
-        </div>
-        <div className='images-container'>
-          <img
-            src={superheros}
-            alt='superheros'
-            className='image-superhéros'
-          ></img>
-          <img
-            src={supervilain}
-            alt='supervilain'
-            className='image-supervilain'
-          ></img>
-        </div>
-        <div className='btn-container'>
-          <Link to='/catalogue'>
-            <button type='button' className='btn-superheros'>
-              Vous etes un super-heros
-            </button>
-          </Link>
-          <Link to='/Connectezvous'>
-            <button type='button' className='btn-supervilain'>
-              Vous etes un super-vilain
-            </button>
-          </Link>
-        </div>
-        <div className='smoke-container'>
-          <img src={bluesmoke} alt='blue smoke' className='bluesmoke'></img>
-          <img src={redsmoke} alt='red smoke' className='redsmoke'></img>
+          <div className='text-super-vilain'>
+            <Link to="/test"><h2>Passez le test et inscrivez-vous !</h2></Link>
+            <p>" Vous souhaitez intégrer notre catalogue de super-vilain ? "</p>
+          </div>
+          <div className='text-super-heros'>
+            <Link to="/InscriptionHero"><h2>Inscrivez-vous et faites votre choix !</h2></Link>
+            <p>" Vous souhaitez recruter des super-vilain ? "</p>
+          </div>
+        </div>  
+        <div className="img-container">
+          <img src={smoke} alt="smoke" className="smoke"></img>
+          <img src={superhome} alt="super-héros" className="superhome"></img>
         </div>
       </div>
     </>

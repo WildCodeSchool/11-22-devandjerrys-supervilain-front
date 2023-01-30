@@ -17,14 +17,14 @@ const Description = ({ panier, setPanier, total }) => {
       <div className='blockDescription'>
         {console.log(panier)}
         <div className='modalDescription'>
-          <h2 className='title'> VOTRE PANIER</h2>
+          <h2 className='title-desc'> VOTRE PANIER</h2>
           <img className='logo' src={logo} alt='logo' />
           <div className='globalPanier'>
             <ul className='listPanier'>
               {panier.map((vilain, i) => (
                 <li key={i}>
                   {vilain.pseudo}
-                  .....................................................
+                  .............................................
                   {vilain.price} €
                   <button
                     className='buttonDelete'
@@ -35,7 +35,7 @@ const Description = ({ panier, setPanier, total }) => {
                 </li>
               ))}
             </ul>
-            <p>TOTAL ...................................... {total}€</p>
+            <p>TOTAL ................................ {total}€</p>
           </div>
           <div className='buttonG'>
             <button
