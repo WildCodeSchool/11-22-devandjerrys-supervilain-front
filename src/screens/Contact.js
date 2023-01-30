@@ -1,11 +1,17 @@
-const Contact = props => {
-  props.setTitle('THE DEAD AGENCY -')
-  props.setTitleColorRed('CON')
-  props.setTitleColorBlue('TACT')
+import { useEffect } from "react"
+
+const Contact = () => {
+  useEffect(() => {
+    document.body.classList.add('contact-layout')
+    return () => {
+    document.body.classList.remove('contact-layout')
+    }
+}, [])
 
   return (
     <div>
-      <h2 className='tittle'> UNE QUESTION ? ECRIVEZ-NOUS !</h2>
+      <div className="contact-container">
+      <h2 className='tittle'>" Laisser nous votre message ! "</h2>
       <br />
       <div className='formulaire'>
         <form className='cadre'>
@@ -16,7 +22,7 @@ const Contact = props => {
           <input className='texte' type='text' placeholder='Mail' />
           <br />
           <textarea
-            className='message'
+            className='messages'
             type='text'
             rows='5'
             placeholder=' Votre message...'
@@ -31,6 +37,7 @@ const Contact = props => {
         >
           ENVOYEZ
         </button>
+      </div>
       </div>
     </div>
   )

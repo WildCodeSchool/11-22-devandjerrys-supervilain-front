@@ -4,13 +4,13 @@
     height: 52px;
     left: 1090px;
     top: 320px;
-    font-family: 'IM FELL French Canon SC';
+    font-family: $fontTitre;
     font-style: normal;
     font-weight: 400;
     font-size: 44px;
     line-height: 52px;
     text-align: center;
-    color: #FFFFFF;
+    color: $white;
 }
 
 .check1 {
@@ -46,20 +46,21 @@
 
 
 .mess {
-    font-family: 'IM FELL French Canon SC';
+    font-family: $fontTitre;
     text-transform: uppercase;
 }
 
 .I-button {
     position: absolute;
-    font-family: 'IM FELL French Canon SC';
+    font-family: $fontTitre;
     font-size: 20px;
     box-sizing: border-box;
     width: 140px;
     height: 50px;
     top: 470px;
-    background: #F7F7F7;
-    border: 2px solid #F7F7F7;
+    left: 140px;
+    background: $white;
+    border: 2px solid $white;
     box-shadow: 4px 4px 2px black;
     border-radius: 53px;
 }
@@ -103,7 +104,7 @@
 }
 
 .red {
-    color: #FF0000;
+    color: $red;
 }
 
 .All {
@@ -114,30 +115,70 @@
 
 input[type=checkbox] {
     accent-color: grey;
-
-}
-
-input[type=checkbox] {
     width: 20px;
     height: 20px;
+
 }
 
-@media screen and (min-width: 350px)and (max-width:1028px)  {
-    .responsive{
+@media screen and (max-width:500px)  {
+    .All {
         display: flex;
-        flex-wrap: wrap;
+        justify-content: center;
+    .inscrip {
+        position: absolute;
+        width: 342px;
+        height: 52px;
+        left: 20px;
+        top: 300px;
     }
-    .insch-layout{
-        background-size: contain;
+    
+    .check1 {
+        position: absolute;
+        top: 186px;
+        left: 316px;
+    
     }
-    .inscrip{
-        font-size: 37px;
-        left: 147px;
-        top: 887px;
+    
+    .check2 {
+        position: absolute;
+        top: 290px;
+        left: 317px;
     }
-    .Line{
-        width:435px;
-        left:64px;
-        top:365px;
+    
+    
+    .ih-title{
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        top: 100px;
+        font-family: $fontTitre;
+        font-style: normal;
+        font-size: 1em;
+    }
+}
+    .inputForm {
+        font-size: 20px;
+        color: $black;
+        font-family: $fontTexte;
+        width: 320px;
+        height: 40px;
+        padding: 20px;
+        background: linear-gradient(0deg, #FFFFFF, #FFFFFF), rgba(14, 27, 46, 0.74);
+        border-radius: 21px;
+    }
+    
+    .I-button {
+        width: 140px;
+        height: 40px;
+        top: 420px;
+        left: 120px;
+    }
+    
+    .Line {
+        position: absolute;
+        width: 350px;
+        left: 10px;
+        top: 180px;
+        transform: rotate(-0.17deg);
     }
 }

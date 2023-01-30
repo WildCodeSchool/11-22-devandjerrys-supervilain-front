@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Message from './Message'
@@ -14,7 +15,10 @@ const Connexion = () => {
   const handleSubmit = e => {
     e.preventDefault()
     if (vilainPseudo.includes(pseudo) && vilainPassword.includes(password)) {
-      setMessageConf(`WELCOME   ${pseudo} !`)
+      localStorage.setItem('perso', JSON.stringify(pseudo))
+      setMessageConf(
+        <Link to='/profilVilain'>WELCOME {pseudo} ! Cliquez ici</Link>
+      )
     } else {
       setMessageConf(`Username or password is incorrect `)
     }

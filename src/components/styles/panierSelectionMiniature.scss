@@ -9,8 +9,8 @@
 }
 .selectionMiniature h3{
     text-align: center;
-    color: black;
-    background-color: white;
+    color: $black;
+    background-color: $white;
     border:none;
     width: 7em;
     height: 50px;
@@ -32,6 +32,4 @@
       .blockSelection {
         gap: 70px;
       }
-    
-
 }
