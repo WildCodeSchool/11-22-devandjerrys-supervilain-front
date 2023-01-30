@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import Inscription from '../components/Inscription'
 import Connexion from '../components/Connexion'
 
-
 const SuperVilain = () => {
   useEffect(() => {
     document.body.classList.add('insVi-layout')
@@ -13,12 +12,7 @@ const SuperVilain = () => {
 
   return (
     <div className='isv-page'>
-      {/* <h2 className='isv-title'>The Dead Agency - Inscription / connexion</h2> */}
-      {/* <div className='isv-container'> */}
       <Inscription />
-      <div className='connexion-sv'>
-        <Connexion />
-      </div>
     </div>
     // </div>
   )

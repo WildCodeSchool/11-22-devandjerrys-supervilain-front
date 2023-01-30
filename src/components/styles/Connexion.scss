@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
 }
-.connexion {
+.connexion-titre {
     position: absolute;
     width: 342px;
     height: 52px;
@@ -47,18 +47,21 @@
 }
 
 .connect {
-    font-size: 20px;
+    // font-size: 20px;
     font-family: $fontTitre;
     box-sizing: border-box;
     position: absolute;
-    width: 140px;
-    height: 50px;
+    width: 80px;
+    height: 30px;
     left: 138px;
     top: 302px;
     background: $white;
     border: 2px solid $white;
     box-shadow: 4px 4px 2px black;
     border-radius: 53px;
+}
+.connexion-sv .connect{
+    left:180px;
 }
 
 .connect:hover {
@@ -79,7 +82,6 @@ input.check {
 
 .Connexion-pseudo .message, .Inscription-pseudo .message{
     background: rgba(14, 27, 46, 0.51);
-    // box-shadow: 4px 4px 108px rgba(255, 0, 0, 0.33);
     border-radius: 8px;
     display: flex;
     position: absolute;
@@ -100,6 +102,21 @@ input.check {
     a{
         color: $white;
     }
+    
+}
+.connexion-sv .connexion-titre{
+    
+    left:1284px;
+    top:184px
+
+}
+.connexion-sv .Connexion{
+    left:1236px;
+    top:285px;
+    background: rgba(14, 27, 46, 0.51);
+    box-shadow: 4px 4px 108px rgba(255, 0, 0, 0.33);
+
+
 }
 @media screen and (max-width:500px)  {
     .AllC{
@@ -122,7 +139,7 @@ input.check {
     }
     
     .connect-pseudo  {
-        font-size: 20px;
+        // font-size: 20px;
         position: absolute;
         padding: 20px;
         width: 320px;
@@ -137,7 +154,6 @@ input.check {
     
     .connect-mdp  {
         padding: 20px;
-        font-size: 20px;
         position: absolute;
         width: 320px;
         height: 40px;
@@ -151,7 +167,6 @@ input.check {
     }
     
     .connect {
-        font-size: 20px;
         font-family: $fontTitre;
         box-sizing: border-box;
         position: absolute;
@@ -164,6 +179,8 @@ input.check {
         box-shadow: 4px 4px 2px black;
         border-radius: 53px;
     }
+    
+    
     
     .connect:hover {
         background: linear-gradient(0deg, #FFFFFF, #FFFFFF), rgba(14, 27, 46, 0.74);
@@ -178,6 +195,17 @@ input.check {
     input.check {
         position: absolute;
         top: 162px;
-        left: 325px;
+        left: 318px;
     }
+    .connexion-sv .Connexion{
+        left:11px;
+        top:546px;
+    }
+
+.connexion-sv .connect  {
+    width: 74px;
+    height: 25px;
+    left:151px;
+    top:213px;
+}
 }

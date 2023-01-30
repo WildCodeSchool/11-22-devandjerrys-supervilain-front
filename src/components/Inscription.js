@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 // import Blood from '../assets/images/blood.png'
+import { Link } from 'react-router-dom'
 import Message from './Message'
 import Line from '../assets/images/Line.svg'
-import { Link } from 'react-router-dom'
 
 const Inscription = () => {
   const [pseudo, setPseudo] = useState('')
@@ -72,6 +72,7 @@ const Inscription = () => {
                     onChange={e => setPseudo(e.target.value)}
                   />
                 </div>
+                <div className='confirm'></div>
                 <div className='Inscription-MDP'>
                   <input
                     className='inpForm'
@@ -103,10 +104,10 @@ const Inscription = () => {
                   </div>
                 </div>
               </label>
-              <Link to="/catalogue">
-              <button className='I-button' type='submit' value='submit'>
-                Validez
-              </button>
+              <Link to='/catalogue'>
+                <button className='I-button' type='submit' value='submit'>
+                  VALIDEZ
+                </button>
               </Link>
             </form>
             {isUserLoggedIn && <Message messageConf={messageConf} />}

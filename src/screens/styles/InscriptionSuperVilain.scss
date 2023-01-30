@@ -11,27 +11,15 @@
     .red{
         color: $red;
         }
-// .isv-container h2 {
-//     font-size: 22px;
-//     color: $white;
-//     padding: 50px 0 42px 0;
-//     font-family: $fontTitre;
-//     display: flex;
-//     justify-content: center;
-//     text-align: center;
-//     margin: auto;
-//     position: relative;
-// }
 .Inscription {
     position: absolute;
-    width: 421px;
-    height: 435px;
-    left: 1040px;
-    top: 440px;
+    width: 477px;
+    height: 455px;
+    left: 634px;
+    top: 460px;
     background: rgba(14, 27, 46, 0.51);
     box-shadow: 4px 4px 108px rgba(255, 0, 0, 0.48);
     border-radius: 8px;
-
 }
 .Connexion {
 display: flex;
@@ -82,19 +70,4 @@ flex-direction: column;
 
 
 
-//     .isv-page{
-//         display:flex;
-//         flex-wrap: wrap;
-//         height: 181vh;
-
-//     .Inscription {
-//         left: 105px;
-//         top: 979px;
-        
-//     }
-//     .Connexion{
-//         left: 100px;
-//         top: 495px;
-//     }
-// }
 }

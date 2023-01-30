@@ -14,7 +14,7 @@ const Hero = () => {
     <div className='ih-page'>
       <Inscription />
       <div className='connexion-hero'>
-        <Connexion />
+        <Connexion super='heros' />
       </div>
     </div>
   )

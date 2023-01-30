@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Testmodal from './ModalTest'
 import lineTest from '../assets/images/Line.png'
+import Connexion from './Connexion'
 
 const Test = () => {
   const [question1, setQuestion1] = useState('')
@@ -17,11 +18,11 @@ const Test = () => {
     event.preventDefault()
 
     setResult(
-      (parseInt(question1) +
-        parseInt(question2) +
-        parseInt(question3) +
-        parseInt(question4) +
-        parseInt(question5)) *
+      (parseInt(question1, 10) +
+        parseInt(question2, 10) +
+        parseInt(question3, 10) +
+        parseInt(question4, 10) +
+        parseInt(question5, 10)) *
         5
     )
     setCountActive(true)
@@ -56,109 +57,113 @@ const Test = () => {
   return (
     <>
       <div className='test-container'>
-        <div className='title-page-test'>The Dead Agency -{' '}
+        <div className='title-page-test'>
+          The Dead Agency -{' '}
           <span className='red blue'> Test / Inscription</span>
         </div>
         <div className='Image'>
-          <img className='line-test' src={lineTest} alt="line"></img>
+          <img className='line-test' src={lineTest} alt='line'></img>
         </div>
         <h2 className='title-inscription'> Test d'Inscritpion</h2>
-      <div className='Card-container'>
-        <div className='Card-Test'>
-          {/* <form> */}
-          <form onSubmit={handleSubmit}>
-            <ul className='Container'>
-              <div className='cadre-question'>
-                <li className='Question'>
-                  Question 1 : Sauverais-tu un homme suspendu dans le vide ?
-                </li>
-                <div
-                  className='bloc-bouton'
-                  onChange={e => setQuestion1(e.target.value)}
-                >
-                  <input type='radio' id='q1Y' name='q1' value='0' />
-                  <label htmlFor='q1Y'> Yes </label>
-                  <input type='radio' id='q1N' name='q1' value='4' />
-                  <label htmlFor='q1N'> No</label>
+        <div className='Card-container'>
+          <div className='Card-Test'>
+            {/* <form> */}
+            <form onSubmit={handleSubmit}>
+              <ul className='Container'>
+                <div className='cadre-question'>
+                  <li className='Question'>
+                    Question 1 : Sauverais-tu un homme suspendu dans le vide ?
+                  </li>
+                  <div
+                    className='bloc-bouton'
+                    onChange={e => setQuestion1(e.target.value)}
+                  >
+                    <input type='radio' id='q1Y' name='q1' value='0' />
+                    <label htmlFor='q1Y'> Yes </label>
+                    <input type='radio' id='q1N' name='q1' value='4' />
+                    <label htmlFor='q1N'> No</label>
+                  </div>
                 </div>
-              </div>
-              <div className='cadre-question'>
-                <li className='Question'>
-                  Question 2 : quel est ton but final ?{' '}
-                </li>
-                <select
-                  className='reponse-select'
-                  value={question2}
-                  onChange={e => setQuestion2(e.target.value)}
-                >
-                  <option value='-1'>--Choisis une réponse--</option>
-                  <option value='0'>faire peur</option>
-                  <option value='1'>être méchant</option>
-                  <option value='3'>dominer le monde</option>
-                  <option value='2'>répandre la terreur</option>
-                  <option value='4'>détruire l'humanitée</option>
-                </select>
-              </div>
-              <div className='cadre-question'>
-                <li className='Question'>
-                  Question 3 : Prenez-vous du plaisir dans vos actions ?{' '}
-                </li>
-                <div
-                  className='bloc-bouton'
-                  onChange={e => setQuestion3(e.target.value)}
-                >
-                  <input type='radio' name='q3' value='4'></input>
-                  <label htmlFor='q3Yest'>Yes</label>
-                  <input type='radio' name='q3' value='0'></input>
-                  <label htmlFor='q3No'>No</label>
+                <div className='cadre-question'>
+                  <li className='Question'>
+                    Question 2 : Quel est ton but final ?{' '}
+                  </li>
+                  <select
+                    className='reponse-select'
+                    value={question2}
+                    onChange={e => setQuestion2(e.target.value)}
+                  >
+                    <option value='-1'>--Choisis une réponse--</option>
+                    <option value='0'>faire peur</option>
+                    <option value='1'>être méchant</option>
+                    <option value='3'>dominer le monde</option>
+                    <option value='2'>répandre la terreur</option>
+                    <option value='4'>détruire l'humanitée</option>
+                  </select>
                 </div>
-              </div>
-              <div className='cadre-question'>
-                <li className='Question'>
-                  Question 4 : quel arme choisirait tu ?{' '}
-                </li>
-                <select
-                  className='reponse-select'
-                  value={question4}
-                  onChange={e => setQuestion4(e.target.value)}
-                >
-                  <option value='-1'>--Choisis une réponse--</option>
-                  <option value='2'>pistolet</option>
-                  <option value='4'>bombe atomique</option>
-                  <option value='1'>fouet</option>
-                  <option value='0'>une petite cuillere</option>
-                  <option value='3'>poisons</option>
-                </select>
-              </div>
+                <div className='cadre-question'>
+                  <li className='Question'>
+                    Question 3 : Prenez-vous du plaisir dans vos actions ?{' '}
+                  </li>
+                  <div
+                    className='bloc-bouton'
+                    onChange={e => setQuestion3(e.target.value)}
+                  >
+                    <input type='radio' name='q3' value='4'></input>
+                    <label htmlFor='q3Yest'>Yes</label>
+                    <input type='radio' name='q3' value='0'></input>
+                    <label htmlFor='q3No'>No</label>
+                  </div>
+                </div>
+                <div className='cadre-question'>
+                  <li className='Question'>
+                    Question 4 : Quelle arme choisirais-tu ?{' '}
+                  </li>
+                  <select
+                    className='reponse-select'
+                    value={question4}
+                    onChange={e => setQuestion4(e.target.value)}
+                  >
+                    <option value='-1'>--Choisis une réponse--</option>
+                    <option value='2'>pistolet</option>
+                    <option value='4'>bombe atomique</option>
+                    <option value='1'>fouet</option>
+                    <option value='0'>une petite cuillere</option>
+                    <option value='3'>poisons</option>
+                  </select>
+                </div>
 
-              <div className='cadre-question'>
-                <li className='Question'>Question 5 : As tu des alliés ? </li>
-                <div
-                  className='bloc-bouton'
-                  onChange={e => setQuestion5(e.target.value)}
-                >
-                  <input type='radio' name='q5' value='0'></input>
-                  <label htmlFor='q5Yest'>Yes</label>
-                  <input type='radio' name='q5' value='4'></input>
-                  <label htmlFor='q5No'>No</label>
+                <div className='cadre-question'>
+                  <li className='Question'>Question 5 : As-tu des alliés ? </li>
+                  <div
+                    className='bloc-bouton'
+                    onChange={e => setQuestion5(e.target.value)}
+                  >
+                    <input type='radio' name='q5' value='0'></input>
+                    <label htmlFor='q5Yest'>Yes</label>
+                    <input type='radio' name='q5' value='4'></input>
+                    <label htmlFor='q5No'>No</label>
+                  </div>
                 </div>
+              </ul>
+              <div className='Container-Valid'>
+                <button
+                  onClick={() => {
+                    setOpenModal(true)
+                  }}
+                  className='Valid'
+                >
+                  VALIDEZ
+                </button>
               </div>
-            </ul>
-            <div className='Container-Valid'>
-              <button
-                onClick={() => {
-                  setOpenModal(true)
-                }}
-                className='Valid'
-              >
-                VALIDER
-              </button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
-      </div>
+        <div className='connexion-sv'>
+          <Connexion super='vilain' />
+        </div>
 
-      {openModal && <Testmodal closeModal={setOpenModal} result={result} />}
+        {openModal && <Testmodal closeModal={setOpenModal} result={result} />}
       </div>
     </>
   )
