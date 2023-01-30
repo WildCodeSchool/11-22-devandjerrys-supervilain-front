@@ -5,7 +5,8 @@
 }
 .ih-page{
     width:100vw;
-    height: 140vh;
+    height: 100vh;
+    margin-bottom: 150px;
 }
 .ih-page h3{
     color:$white;
@@ -61,27 +62,36 @@ box-shadow: 4px 4px 108px rgba(0, 175, 255, 0.29);
 border-radius: 8px;
 }
 .blue{
-    color: blue;
+    color: $blue;
 }
 
 
 
-@media screen and (min-width: 500px)and (max-width:1028px) {
+@media screen and (max-width:500px) {
     .ih-page{
-        
-        height: 181vh;
+        margin-bottom: 600px;
     }
-    .Inscription{
-        left: 105px;
-        top:979px;
+
+    .Inscription {
+        position: absolute;
+        width: 370px;
+        height: 400px;
+        left: 10px;
+        top: 390px;
+        background: rgba(247, 247, 247, 0.3);
+        box-shadow: 4px 4px 108px rgba(0, 175, 255, 0.29);
+        border-radius: 8px;
     }
-    .ih-title{
-        width:558px;
-        left:28px;
-        top:237px;
-    }
+
     .Connexion{
-        left:100px;
-        top:495px;
+    width: 370px;
+    height: 258px;
+    left: 10px;
+    top: 1000px;
+    flex-direction: column;
+    }
+    .connect {
+    width: 140px;
+    height: 40px;
     }
 }

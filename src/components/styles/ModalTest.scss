@@ -11,13 +11,11 @@
 }
 
 .modalbackground{
-    
     display: flex;
     z-index: 1000;
     position: absolute;
     bottom: -20px;
     left: 1200px;
-
 }
 
 .modalcontainer{
@@ -36,18 +34,17 @@
     font-weight: 300;
     display: flex;
     justify-content: center;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 
-.texteModal{
-    padding-top: 60px;
-}
 
-.texteModal{
+
+.texteModal {
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
+    padding-top: 60px;
 }
 
 
@@ -56,25 +53,80 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    width: 95px;
+    width: 120px;
     height: 30px;
-    background-color: green;
-    color: $white;
+    background-color: $white;
+    color: $black;
     border: solid 2px;
     border-radius: 20px;
     font-family: $fontTitre ;
 }
 
-@media screen and (max-width: 1500px) {
-    .modalbackground{
-        margin-left: 270px;
-        margin-top: 38px;
-        display: block;
-        z-index: 1000;
-        position: initial;
-        bottom: -20px;
-        left: 1200px;
+@media screen and (max-width: 500px) {
     
+    .modalbackground{
+        display: flex;
+        z-index: 1000;
+        position: absolute;
+        bottom: 0px;
+        left: 10px;
+        margin-bottom: 135px ;
+
+    .buttonModalContainer{
+        display: flex;
+        justify-content: flex-end;
+        padding: 5px;
     }
     
+    .buttonModal{
+        width: 15px;
+        height: 20px;
+        
+    }
+    
+    
+    .modalcontainer{
+        border-style: solid;
+        background-image: url('../../assets/images/background-modal-red.png' );
+        width: 370px;
+        height: 400px;
+        border: solid 2px black;
+        border-radius: 8px;
+        
+    }
+    
+    .TitleModal{
+        font-family: $fontTitre;
+        color: $white;
+        font-weight: 300;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    
+    
+    
+    .texteModal {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding-top: 60px;
+    }
+    
+    
+    
+    .inscript1 {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        width: 120px;
+        height: 30px;
+        background-color: $white;
+        color: $black;
+        border: solid 2px;
+        border-radius: 20px;
+        font-family: $fontTitre ;
+    }
+}        
 }

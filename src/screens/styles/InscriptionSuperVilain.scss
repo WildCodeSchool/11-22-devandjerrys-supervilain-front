@@ -6,9 +6,10 @@
 
 .isv-page{
     width:100vw;
-    height:140vh;
+    height:100vh;
+    margin-bottom: 150px;
     .red{
-        color:red;
+        color: $red;
         }
 // .isv-container h2 {
 //     font-size: 22px;
@@ -46,21 +47,54 @@ flex-direction: column;
 }
 }
 
-@media screen and (min-width: 500px) and (max-width:1028px) {
+@media screen and (max-width: 500px) {
     
     .isv-page{
-        display:flex;
-        flex-wrap: wrap;
-        height: 181vh;
+        @include flex;
+        flex-direction: column;
+        margin-bottom: 600px;
 
     .Inscription {
-        left: 105px;
-        top: 979px;
-        
+        position: absolute;
+        width: 370px;
+        height: 400px;
+        left: 10px;
+        top: 400px;
+        background: rgba(14, 27, 46, 0.51);
+        box-shadow: 4px 4px 108px rgba(255, 0, 0, 0.48);
+        border-radius: 8px;
+    
     }
-    .Connexion{
-        left: 100px;
-        top: 495px;
+    .Connexion {
+    display: flex;
+    position: absolute;
+    width: 370px;
+    height: 250px;
+    left: 10px;
+    top: 1000px;
+    background: rgba(14, 27, 46, 0.51);
+    box-shadow: 4px 4px 108px rgba(255, 0, 0, 0.48);
+    border-radius: 8px;
+    flex-direction: column;
     }
 }
+
+
+
+
+//     .isv-page{
+//         display:flex;
+//         flex-wrap: wrap;
+//         height: 181vh;
+
+//     .Inscription {
+//         left: 105px;
+//         top: 979px;
+        
+//     }
+//     .Connexion{
+//         left: 100px;
+//         top: 495px;
+//     }
+// }
 }

@@ -13,7 +13,7 @@
 }
 
 .page h1, h3 {
-    color: white;
+    color: $white;
 }
 
 .title {
@@ -30,7 +30,7 @@
     width: 28%;
     margin: 40px;
     background-color: #0e1b2e51;
-    box-shadow: 4px 4px 84px #9d0000;
+    box-shadow: 4px 4px 84px $red;
     align-items: flex-start;
     justify-content: space-around;
 }
@@ -72,7 +72,7 @@
     height: 40px;
     font-size: 20px;
     border-radius: 22px;
-    box-shadow: 4px 4px 84px #9d0000;
+    box-shadow: 4px 4px 84px $red;
 }
 
 

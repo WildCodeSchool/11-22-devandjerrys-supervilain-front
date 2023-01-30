@@ -58,6 +58,14 @@
 }
 @media screen and (max-width: 550px){
 
+    .blocCatalogue{
+    
+        h1{
+            color: $white;
+            font-size: 3em;
+        }
+        
+
     .vilainMignature .vilainPolygon{
         height: 800px;
         width: 400px;
@@ -67,7 +75,7 @@
         height: 260px;
     }
 }
-
+}
 /* .globalcontainer {
     display: flex;
 }
