@@ -103,15 +103,6 @@ const ModalCatalogue = ({closeModal, vilain}) => {
                       defaultValue={vilain.price}
                     ></textarea>
                   </div>
-                  <div className='encartModal'>
-                    <h3>Mot de passe :</h3>
-                    <textarea
-                      type='password'
-                      readOnly='readonly'
-                      className='texteMod'
-                      defaultValue={vilain.password}
-                    ></textarea>
-                  </div>
                 </div>
               </div>
             </div>

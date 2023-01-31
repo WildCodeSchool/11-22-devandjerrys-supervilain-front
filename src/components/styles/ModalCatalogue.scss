@@ -80,7 +80,10 @@ margin-left: 365px;
 
 @media screen  and (max-width: 1545px) {
     .cadreModal {
+        height: auto;
         width: auto;
+        margin: 15px;
+        
     }
     .caractModal {
         display: block;
