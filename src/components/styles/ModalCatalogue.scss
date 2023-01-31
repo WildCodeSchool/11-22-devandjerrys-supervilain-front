@@ -20,7 +20,7 @@
 .cadreModal {
     display: flex;
     overflow: hidden;
-    height: 50%;
+    height: 60%;
     width: 28%;
     margin: 40px;
     background-color: $black;
@@ -62,11 +62,14 @@
     border-radius: 5px;
 }
 
-.picProfil {
+.picProfilModal {
 display: flex;
+position: absolute;
 top: 0;
-margin-left: 365px;
-    
+margin-top: 110px;
+margin-left: 390px;
+height: 175px;
+width: 175px;
 }
 
 
@@ -93,9 +96,8 @@ margin-left: 365px;
         height: 35px;
     }
     
-    .picProfil {
-        position: relative;
-        margin-top: 0px;
-        margin-left: 0px;
+    .picProfilModal {
+       
+        display: none;
     }
 }

@@ -21,7 +21,7 @@ const ModalCatalogue = ({closeModal, vilain}) => {
     {console.log(vilain)}
       <div onClick={() =>closeModal(false)} className='BackgroundModalCatalogue'>
           <>
-            <img src={vilain.images.miniature} className='picProfil'></img>
+            <img src={vilain.images.miniature} className='picProfilModal'></img>
             <div className='cadreModal'>
               <div className='underCadreModal'>
                 <div className='imageLineModal'>
