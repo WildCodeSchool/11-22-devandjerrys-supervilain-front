@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import BlockFiltreCatalogue from '../components/BlockFilterCatalogue'
 import ResultatCatalogue from '../components/ResultatCatalogue'
 import logoPanierTotal from '../assets/icons/icoPanierTotal.png'
+
 const Catalogue = () => {
   useEffect(() => {
     document.body.classList.add('catalogue-layout')
@@ -47,6 +48,7 @@ const Catalogue = () => {
     }
   }, [cart])
 
+  
   return (
     <div className='blocCatalogue'>
       <h1>SELECTIONNEZ LES SUPER-VILAINS</h1>
@@ -58,6 +60,7 @@ const Catalogue = () => {
       />
 
       <div className='globalcontainer'>
+      
         <div className='container'>
           <ResultatCatalogue
             filterCatalogueResult={filterCatalogueResult}
@@ -79,6 +82,7 @@ const Catalogue = () => {
           </Link>
         </div>
       </div>
+  
     </div>
   )
 }

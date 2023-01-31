@@ -14,8 +14,8 @@
     display: flex;
     z-index: 1000;
     position: absolute;
-    bottom: 100px;
-    left: 1300px;
+    top: 360px;
+    right: 80px;
 }
 
 .modalcontainer{
@@ -70,7 +70,9 @@
         position: absolute;
         bottom: 0px;
         left: 10px;
-        margin-bottom: 135px ;
+        margin-bottom: 135px;
+        right: 0;
+        top: 260px;
 
     .buttonModalContainer{
         display: flex;

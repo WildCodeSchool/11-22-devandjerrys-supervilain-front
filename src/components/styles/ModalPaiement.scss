@@ -19,13 +19,14 @@
     height: 331px;
     border: $white solid 1px;
     border-radius: 30px;
-   
+
     
     .description {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 5px;
+        margin-top: 25px;
     }
     
     .label {
@@ -43,16 +44,14 @@
     width: 100%;
     padding: 0.5rem 0.7rem;
     border-radius: 10px;
-    border: 1px black solid; 
+    border: 1px $black solid; 
 }
 
 .button-paiement {
-    margin-top: 21px;
-    background-color: green;
-    color: $white;
+    background-color: $white;
+    color: $black;
     font-family: $fontTitre;
     font-size: large;
-    border : 1px solid green;
     border-radius: 30px;
     width: 103px;
     height: 40px;
