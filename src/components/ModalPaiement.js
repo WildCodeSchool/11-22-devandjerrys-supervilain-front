@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const ModalPaiement = ({ closeModal }) => {
   return (
     <div className='background'>
@@ -19,13 +21,14 @@ const ModalPaiement = ({ closeModal }) => {
             <input type='text' name='name' placeholder=' Cryptogramme visuel' />
           </div>
           <br />
+          <Link to='/catalogue'>
           <button
             href='#'
             className='button-paiement'
             onClick={() => closeModal(false)}
           >
             &#128274; PAYEZ
-          </button>
+          </button></Link>
         </form>
       </div>
     </div>

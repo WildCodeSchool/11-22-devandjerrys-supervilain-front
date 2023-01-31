@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import Inscription from '../components/Inscription'
+import InscriptionSV from '../components/InscriptionSV'
 import Connexion from '../components/Connexion'
 
 
@@ -15,7 +15,7 @@ const SuperVilain = () => {
     <div className='isv-page'>
       {/* <h2 className='isv-title'>The Dead Agency - Inscription / connexion</h2> */}
       {/* <div className='isv-container'> */}
-      <Inscription />
+      <InscriptionSV />
       <div className='connexion-sv'>
         <Connexion />
       </div>
