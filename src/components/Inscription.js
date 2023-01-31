@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import Message from './Message'
 import Line from '../assets/images/Line.svg'
 
-const Inscription = () => {
+const Inscription = props => {
   const [pseudo, setPseudo] = useState('')
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false)
   const [password, setPassword] = useState('')
@@ -47,72 +47,60 @@ const Inscription = () => {
     }
   }
   return (
-    <div className='All'>
-      <div className='Inscription-form'>
-        <div className='ih-title'>
-          The Dead Agency -{' '}
-          <span className='red blue'> Inscription / connexion</span>
-        </div>
-        <img className='Line' src={Line} alt='ligne blanche'></img>
+    <div className='Inscription-form'>
+      <div className='ih-title'>
+        The Dead Agency -{' '}
+        <span className='red blue'> Inscription / connexion</span>
       </div>
+      <img className='Line' src={Line} alt='ligne blanche'></img>
+
       <div className='responsive'>
         <div className='inscrip'>INSCRIPTION</div>
 
-        <div className='Inscription'>
+        <form className='Inscription' onSubmit={handleSubmit}>
           <div className='Inscription-pseudo'>
-            <form onSubmit={handleSubmit}>
-              <label className='insc-form'>
-                <div className='Inscription-pseudo'>
-                  <input
-                    className='inpForm'
-                    type='text'
-                    required
-                    placeholder=' pseudo'
-                    value={pseudo}
-                    onChange={e => setPseudo(e.target.value)}
-                  />
-                </div>
-                <div className='confirm'></div>
-                <div className='Inscription-MDP'>
-                  <input
-                    className='inpForm'
-                    type='password'
-                    size='8'
-                    required
-                    placeholder='mot de passe'
-                    value={password}
-                    id='MDPI'
-                    onChange={e => setPassword(e.target.value)}
-                  />
-                  <div className='check1'>
-                    <input type='checkbox' onClick={() => myFunctionInsc()} />
-                  </div>
-                </div>
-                <div className='Inscription-MDP2'>
-                  <input
-                    className='inpForm'
-                    type='password'
-                    required
-                    size='8'
-                    placeholder=' confirmer le mot de passe'
-                    value={passwordConf}
-                    id='MDPII'
-                    onChange={e => setPasswordConf(e.target.value)}
-                  />
-                  <div className='check2'>
-                    <input type='checkbox' onClick={() => myFunctionConf()} />
-                  </div>
-                </div>
-              </label>
-              <Link to='/catalogue'>
-                <button className='I-button' type='submit' value='submit'>
-                  VALIDEZ
-                </button>
-              </Link>
-            </form>
-            {isUserLoggedIn && <Message messageConf={messageConf} />}
+            <input
+              className='inpForm'
+              type='text'
+              required
+              placeholder=' pseudo'
+              value={pseudo}
+              onChange={e => setPseudo(e.target.value)}
+            />
           </div>
-        </div>
+          <div className='Inscription-MDP'>
+            <input
+              className='inpForm'
+              type='password'
+              size='8'
+              required
+              placeholder='mot de passe'
+              value={password}
+              id='MDPI'
+              onChange={e => setPassword(e.target.value)}
+            />
+            <input type='checkbox' onClick={() => myFunctionInsc()} />
+          </div>
+          <div className='Inscription-MDP2'>
+            <input
+              className='inpForm'
+              type='password'
+              required
+              size='8'
+              placeholder=' confirmer le mot de passe'
+              value={passwordConf}
+              id='MDPII'
+              onChange={e => setPasswordConf(e.target.value)}
+            />
+            <input type='checkbox' onClick={() => myFunctionConf()} />
+          </div>
+          <Link to={props.page === 'hero' ? '/catalogue' : '/test'}>
+            <button className='I-button' type='submit' value='submit'>
+              VALIDEZ
+            </button>
+          </Link>
+        </form>
+        {isUserLoggedIn && <Message messageConf={messageConf} />}
       </div>
     </div>
   )

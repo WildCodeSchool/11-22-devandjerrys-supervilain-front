@@ -5,29 +5,21 @@
     
 
 .isv-page{
-    width:100vw;
-    height:100vh;
-    margin-bottom: 150px;
     .red{
         color: $red;
         }
 .Inscription {
-    position: absolute;
-    width: 477px;
-    height: 455px;
-    left: 634px;
-    top: 460px;
+    width: 500px;
+    height: 350px;
     background: rgba(14, 27, 46, 0.51);
     box-shadow: 4px 4px 108px rgba(255, 0, 0, 0.48);
     border-radius: 8px;
+    
 }
 .Connexion {
 display: flex;
-position: absolute;
 width: 421px;
 height: 258px;
-left: 199px;
-top: 602px;
 background: rgba(14, 27, 46, 0.51);
 box-shadow: 4px 4px 108px rgba(255, 0, 0, 0.48);
 border-radius: 8px;
@@ -38,16 +30,15 @@ flex-direction: column;
 @media screen and (max-width: 500px) {
     
     .isv-page{
-        @include flex;
-        flex-direction: column;
-        margin-bottom: 600px;
-
+        font-size: 1.2em;
+        .ih-title{
+            font-size: 1.2em;
+            margin-left: 20px;
+            margin-top: 50px;
+          }
     .Inscription {
-        position: absolute;
         width: 370px;
         height: 400px;
-        left: 10px;
-        top: 400px;
         background: rgba(14, 27, 46, 0.51);
         box-shadow: 4px 4px 108px rgba(255, 0, 0, 0.48);
         border-radius: 8px;
@@ -55,11 +46,8 @@ flex-direction: column;
     }
     .Connexion {
     display: flex;
-    position: absolute;
     width: 370px;
     height: 250px;
-    left: 10px;
-    top: 1000px;
     background: rgba(14, 27, 46, 0.51);
     box-shadow: 4px 4px 108px rgba(255, 0, 0, 0.48);
     border-radius: 8px;

@@ -44,48 +44,44 @@ const Connexion = props => {
     }
   }
   return (
-    <div className='AllC'>
+    <div className='connexion-sv'>
       <h2 className='connexion-titre'>CONNEXION</h2>
       <div className='Connexion-form'></div>
-      <div className='Connexion'>
-        <div className='Connexion-pseudo'>
-          <form onSubmit={handleSubmit}>
-            <label>
-              <div className='Connexion-pseudo'>
-                <input
-                  className='connect-pseudo'
-                  type='text'
-                  required
-                  placeholder=' pseudo'
-                  value={pseudo}
-                  onChange={e => setPseudo(e.target.value)}
-                />
-              </div>
-              <div className='Connexion-MDP'>
-                <input
-                  className='connect-mdp'
-                  type='password'
-                  size='8'
-                  required
-                  placeholder=' mot de passe'
-                  value={password}
-                  id='MDP'
-                  onChange={e => setPassword(e.target.value)}
-                />
-                <input
-                  className='check'
-                  type='checkbox'
-                  onClick={() => myFunction()}
-                />
-              </div>
-            </label>
-            <button className='connect' type='submit' value='submit'>
-              VALIDEZ
-            </button>
-          </form>
-          {isUserLoggedIn && <Message messageConf={messageConf} />}
-        </div>
-      </div>
+      <form className='Connexion' onSubmit={handleSubmit}>
+        <label>
+          <div className='Connexion-pseudo'>
+            <input
+              className='connect-pseudo'
+              type='text'
+              required
+              placeholder=' pseudo'
+              value={pseudo}
+              onChange={e => setPseudo(e.target.value)}
+            />
+          </div>
+          <div className='Connexion-MDP'>
+            <input
+              className='connect-mdp'
+              type='password'
+              size='8'
+              required
+              placeholder=' mot de passe'
+              value={password}
+              id='MDP'
+              onChange={e => setPassword(e.target.value)}
+            />
+            <input
+              className='check'
+              type='checkbox'
+              onClick={() => myFunction()}
+            />
+          </div>
+        </label>
+        <button className='connect' type='submit' value='submit'>
+          VALIDEZ
+        </button>
+      </form>
+      {isUserLoggedIn && <Message messageConf={messageConf} />}
     </div>
   )
 }

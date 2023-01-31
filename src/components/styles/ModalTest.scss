@@ -14,8 +14,8 @@
     display: flex;
     z-index: 1000;
     position: absolute;
-    bottom: -20px;
-    left: 1200px;
+    bottom: 100px;
+    left: 1300px;
 }
 
 .modalcontainer{
@@ -89,7 +89,7 @@
         border-style: solid;
         background-image: url('../../assets/images/background-modal-red.png' );
         width: 370px;
-        height: 400px;
+        height: 470px;
         border: solid 2px black;
         border-radius: 8px;
         

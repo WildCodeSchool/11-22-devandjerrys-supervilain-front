@@ -64,7 +64,7 @@ const Test = () => {
         <div className='Image'>
           <img className='line-test' src={lineTest} alt='line'></img>
         </div>
-        <h2 className='title-inscription'> Test d'Inscritpion</h2>
+        <h2 className='title-inscription'> TEST D'INSCRIPTION</h2>
         <div className='Card-container'>
           <div className='Card-Test'>
             {/* <form> */}
@@ -158,9 +158,10 @@ const Test = () => {
               </div>
             </form>
           </div>
-        </div>
-        <div className='connexion-sv'>
-          <Connexion super='vilain' />
+
+          <div className='connexion-vilain'>
+            <Connexion super='vilain' />
+          </div>
         </div>
 
         {openModal && <Testmodal closeModal={setOpenModal} result={result} />}

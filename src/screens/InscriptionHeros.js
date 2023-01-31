@@ -12,7 +12,7 @@ const Hero = () => {
 
   return (
     <div className='ih-page'>
-      <Inscription />
+      <Inscription page='hero' />
       <div className='connexion-hero'>
         <Connexion super='heros' />
       </div>

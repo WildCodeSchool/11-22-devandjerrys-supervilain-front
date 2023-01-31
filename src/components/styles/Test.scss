@@ -5,9 +5,7 @@
 
 .test-container {
     width: 100vw;
-    height: 100vh;
-    position: relative;
-    top: 100px;
+    padding-top: 60px;
 }
 .title-page-test{
     font-family: $fontTitre;
@@ -31,8 +29,9 @@
     font-weight: 300;
     font-size: 45px;
     color: $white;
-    margin-left: 100px;
+    margin-left: 150px;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
                            // &&&&&&&&&&&&&&&&&&&&&&&&&&&   CARD INSCRIPTION   &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 .Card-Test{
@@ -42,7 +41,6 @@
     width: 900px;
     height: 500px;
     border: solid 2px black;
-    margin-left: 80px;
 }
 
 .cadre-question {
@@ -146,21 +144,29 @@ text-align: center;
     border-radius: 8px;
     border: solid 2px black;
 }
+.test-layout .Card-container{
+    display: flex;
+    justify-content: space-around;
+}
 
+
+
+.test-layout .connexion-sv{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
 
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 500px) {
     .test-container {
-        width: 100vw;
-        height: 100vh;
-        position: relative;
-        top: 60px;
 
         .title-page-test{
             font-size: 1.2em;
             margin-left: 20px ;
-            
+            margin-top: 50px;
             .red {
             color: $red;
         }
@@ -180,7 +186,6 @@ text-align: center;
     .Card-Test{
         width: 370px;
         height: 400px;
-        margin-left: 10px;
     }
     
     .cadre-question {
