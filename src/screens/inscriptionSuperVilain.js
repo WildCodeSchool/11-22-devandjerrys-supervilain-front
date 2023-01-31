@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import Connexion from '../components/Connexion'
+import Inscription from '../components/Inscription'
 
 
 const SuperVilain = () => {
