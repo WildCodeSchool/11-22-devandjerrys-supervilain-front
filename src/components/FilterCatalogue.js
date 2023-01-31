@@ -35,7 +35,25 @@ const FilterCatalogue = () => {
   const [listFilterCategory, setlistFilterCategory] = useState()
   const [listChoice, setListChoice] = useState()
   const [inputChoice, setInputChoice] = useState()
+
   const [widthWindows, setWidthWindows] = useState('1900')
+  const addInputChoice = nameInput => {
+    // Se lance après qu'une catégorie de filtre qui doit afficher un input a été sélectionné
+    setListChoice() // Supprime la liste
+    setInputChoice(
+      // Affiche les éléments corespondant à la catégorie
+      <div className={`filterChoice ${nameInput}`}>
+        <input placeholder='Min' />
+        <input placeholder='Max' />
+      </div>
+    )
+  }
+  const addListChoice = nameList => {
+    // Se lance après qu'une catégorie de filtre qui doit afficher une liste a été sélectionné
+    setInputChoice() // Supprime les inputs
+    setListChoice(nameList.map(e => <option key={e}>{e}</option>)) // Affiche les éléments corespondant à la liste choisie
+  }
+
   const showListChoise = e => {
     // Se lance lors de la selection de la catégorie de filtre
     if (e.firstChild.value === 'default') {
@@ -43,7 +61,7 @@ const FilterCatalogue = () => {
       e.removeChild(e.firstChild)
     }
     switch (
-      e.value //Vérifie la catégorie choisie
+      e.value // Vérifie la catégorie choisie
     ) {
       case 'power':
         addListChoice(power)
@@ -70,22 +88,6 @@ const FilterCatalogue = () => {
         console.log(e)
         break
     }
-  }
-  const addListChoice = nameList => {
-    // Se lance après qu'une catégorie de filtre qui doit afficher une liste a été sélectionné
-    setInputChoice() // Supprime les inputs
-    setListChoice(nameList.map(e => <option key={e}>{e}</option>)) // Affiche les éléments corespondant à la liste choisie
-  }
-  const addInputChoice = nameInput => {
-    // Se lance après qu'une catégorie de filtre qui doit afficher un input a été sélectionné
-    setListChoice() // Supprime la liste
-    setInputChoice(
-      // Affiche les éléments corespondant à la catégorie
-      <div className={`filterChoice ${nameInput}`}>
-        <input placeholder='Min' />
-        <input placeholder='Max' />
-      </div>
-    )
   }
 
   const addListFilterCategory = () => {

@@ -5,18 +5,18 @@
 }
 .ih-page{
     width:100vw;
-    height: 100vh;
+    height: 55vh;
     margin-bottom: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px;
 }
 .ih-page h3{
     color:$white;
 }
 .ih-title{
-    position: absolute;
-    width: 100%;
 // height: 8vh;
-left: 102px;
-top: 210px;
 font-family: $fontTitre;
 font-style: normal;
 // font-weight: 400;
@@ -40,44 +40,55 @@ color: #F7F7F7;
     position: relative;
 }
 .Inscription {
-    position: absolute;
     width: 421px;
     height: 435px;
-    left: 1040px;
-    top: 390px;
     background: rgba(247, 247, 247, 0.3);
     box-shadow: 4px 4px 108px rgba(0, 175, 255, 0.29);
     border-radius: 8px;
+    background: rgba(14, 27, 46, 0.51);
 }
-.Connexion{
+.connexion-hero .Connexion {
     display: flex;
-position: absolute;
-width: 421px;
-height: 258px;
-left: 199px;
-top: 560px;
-flex-direction: column;
-background: rgba(247, 247, 247, 0.3);
-box-shadow: 4px 4px 108px rgba(0, 175, 255, 0.29);
-border-radius: 8px;
-}
+    width: 421px;
+    height: 258px;
+    flex-direction: column;
+    background: rgba(247, 247, 247, 0.3);
+    box-shadow: 4px 4px 108px rgba(0, 175, 255, 0.29);
+    border-radius: 8px;
+    background: rgba(14, 27, 46, 0.51);
+  }
 .blue{
     color: $blue;
 }
-
-
+.connexion-hero{
+    margin-right: 200px;
+    .connexion-sv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 200px;
+    }
+}
 
 @media screen and (max-width:500px) {
     .ih-page{
-        margin-bottom: 600px;
+        flex-direction: column;
+        height: 150vh;
+        margin-top: 100px;
     }
-
+    .connexion-hero{
+        margin-right: 0;
+    }
+    .ih-page .ih-title{
+        margin-left: 20px;
+        margin-right: 0;
+        margin-top: 0;
+        font-size: 1.4em;
+    }
     .Inscription {
-        position: absolute;
         width: 370px;
         height: 400px;
-        left: 10px;
-        top: 390px;
         background: rgba(247, 247, 247, 0.3);
         box-shadow: 4px 4px 108px rgba(0, 175, 255, 0.29);
         border-radius: 8px;

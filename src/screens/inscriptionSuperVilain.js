@@ -1,7 +1,5 @@
 import { useEffect } from 'react'
-import Connexion from '../components/Connexion'
 import Inscription from '../components/Inscription'
-
 
 const SuperVilain = () => {
   useEffect(() => {
@@ -13,12 +11,7 @@ const SuperVilain = () => {
 
   return (
     <div className='isv-page'>
-      {/* <h2 className='isv-title'>The Dead Agency - Inscription / connexion</h2> */}
-      {/* <div className='isv-container'> */}
-      <Inscription />
-      <div className='connexion-sv'>
-        <Connexion />
-      </div>
+      <Inscription page='vilain' />
     </div>
     // </div>
   )
